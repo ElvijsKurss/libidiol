@@ -1,10 +1,31 @@
 <?php
 
+
+function libidiol_theme_support()
+{
+    // manage WordPress title
+    add_theme_support('title-tag');
+    add_theme_support('custom-logo');
+}
+
+add_action('after_setup_theme', 'libidiol_theme_support');
+
+function libidiol_menus()
+{
+    $locations = array(
+        'primary' => "Main Menu",
+        'footer' => "Footer Menu"
+    );
+
+    register_nav_menus($locations);
+}
+add_action('init', 'libidiol_menus');
+
 function libidiol_register_styles()
 {
 
     $version = wp_get_theme()->get('Version');
-    wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/css/style.css", array('libidiol-bootstrap'), $version, 'all');
+    wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.scss", array('libidiol-bootstrap'), $version, 'all');
     wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
     wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '1.0', 'all');
 }
