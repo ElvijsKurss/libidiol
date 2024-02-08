@@ -55,7 +55,8 @@
                 <div id="bottom-form-header">
                     <h3>Send Your Message</h3>
                 </div>
-                
+                <div id="input-container-email"><input type="email" placeholder="Your E-mail"></input></div>
+                <div id="input-container-text"><textarea name="message"></textarea></div>
                 <div id="button-container"><button>Submit</button></div>
             </div>
         </div>

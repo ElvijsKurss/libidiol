@@ -16,7 +16,7 @@ Footer sccs
 
   .column {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     #bottom-form-header {
@@ -27,13 +27,28 @@ Footer sccs
     #input-container-email,
     #input-container-text {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: left;
       width: 100%;
       padding-top: 10px;
+      font-size: 12px;
       input {
+        align-items: center;
+        justify-content: center;
+        display: flex;
         border-radius: 5px;
-        margin-right: 10px;
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+      }
+      textarea {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 5px;
+        width: 300px;
+        height: 100px;
+        resize: none;
         padding: 5px;
       }
     }
@@ -75,6 +90,9 @@ Footer sccs
       justify-content: center;
       align-items: center;
       padding-bottom: 15px;
+      &#column-three-content {
+        justify-content: left;
+      }
       h3 {
         color: white;
         font-size: 15px;
@@ -92,12 +110,13 @@ Footer sccs
         text-decoration: none;
 
         .footer-content-text-two {
-          color: rgb(185, 179, 179);
+          color: #969696;
+          font-family: he;
           font-size: 12px;
           padding: 5px 0;
           display: flex;
           justify-content: left;
-          margin: 0 0 0 70px;
+          margin: 0 0 0 90px;
         }
       }
     }
@@ -106,11 +125,18 @@ Footer sccs
       color: white;
       font-size: 12px;
       margin: 0;
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      margin: 0 0 0 40px;
     }
     .footer-content-text-three {
       color: white;
       font-size: 12px;
       margin: 0;
+      padding: 5px 0;
+      display: flex;
+      justify-content: left;
     }
 
     .social-icons {
@@ -144,12 +170,6 @@ Footer sccs
         }
       }
     }
-
-    h3 {
-      color: white;
-      font-size: 15px;
-      margin: 0;
-    }
   }
 }
 
@@ -164,7 +184,6 @@ header.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid green;
     margin: auto;
 
     #navigation {
@@ -351,7 +370,7 @@ h6 {
   color: rgba(0, 0, 0, 0.6);
 }
 .logo {
-  width: 150px;
+  width: 140px;
 }
 .social-list a {
   width: 32px;

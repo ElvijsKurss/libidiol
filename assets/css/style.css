@@ -16,7 +16,7 @@ Footer sccs
 }
 #footer-container .column {
   width: 100%;
-  max-width: 200px;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
 }
@@ -28,15 +28,31 @@ Footer sccs
 #footer-container .column #input-container-email,
 #footer-container .column #input-container-text {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: left;
   width: 100%;
   padding-top: 10px;
+  font-size: 12px;
 }
 #footer-container .column #input-container-email input,
 #footer-container .column #input-container-text input {
+  align-items: center;
+  justify-content: center;
+  display: flex;
   border-radius: 5px;
-  margin-right: 10px;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+}
+#footer-container .column #input-container-email textarea,
+#footer-container .column #input-container-text textarea {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+  width: 300px;
+  height: 100px;
+  resize: none;
   padding: 5px;
 }
 #footer-container .column #column-four-content {
@@ -75,6 +91,11 @@ Footer sccs
   align-items: center;
   padding-bottom: 15px;
 }
+#footer-container .column #column-two-content#column-three-content,
+#footer-container .column #column-three-content#column-three-content,
+#footer-container .column #column-four-content#column-three-content {
+  justify-content: left;
+}
 #footer-container .column #column-two-content h3,
 #footer-container .column #column-three-content h3,
 #footer-container .column #column-four-content h3 {
@@ -96,22 +117,30 @@ Footer sccs
 #footer-container .column #column-two-text a .footer-content-text-two,
 #footer-container .column #column-three-text a .footer-content-text-two,
 #footer-container .column #column-four-text a .footer-content-text-two {
-  color: rgb(185, 179, 179);
+  color: #969696;
+  font-family: he;
   font-size: 12px;
   padding: 5px 0;
   display: flex;
   justify-content: left;
-  margin: 0 0 0 70px;
+  margin: 0 0 0 90px;
 }
 #footer-container .column .footer-content-text {
   color: white;
   font-size: 12px;
   margin: 0;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  margin: 0 0 0 40px;
 }
 #footer-container .column .footer-content-text-three {
   color: white;
   font-size: 12px;
   margin: 0;
+  padding: 5px 0;
+  display: flex;
+  justify-content: left;
 }
 #footer-container .column .social-icons {
   display: flex;
@@ -141,11 +170,6 @@ Footer sccs
   margin-right: 5px;
   font-size: 13px;
 }
-#footer-container .column h3 {
-  color: white;
-  font-size: 15px;
-  margin: 0;
-}
 
 /*
 Header SCSS start 
@@ -157,7 +181,6 @@ header.header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid green;
   margin: auto;
 }
 header.header nav #navigation {
@@ -345,7 +368,7 @@ h6 {
 }
 
 .logo {
-  width: 150px;
+  width: 140px;
 }
 
 .social-list a {
