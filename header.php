@@ -11,49 +11,41 @@ wp_head();
 ?>
 
 </head>
+<header class="header text-center">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body>
-
-    <header class="header text-center">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div id="navigation">
-                <div id="nav-bar-logo">
-                    <a href="#">
-                        <img class="mb-3 mx-100px logo" src="wp-content/themes/libidiol/master-template/assets/images/logo.png" alt="logo">
-                    </a>
-                </div>
-
-                <div id="nav-bar-categories">
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'menu' => 'primary',
-                            'container' => '',
-                            'theme_location' => 'primary',
-                            'items_wrap' => '<ul class="navbar-nav" >%3$s</ul>'
-                        )
-                    );
-                    ?>
-                </div>
-
-                <div id="nav-bar-icons">
-                    <ul class="social-list list-inline py-3 mx-auto">
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
-                    </ul>
-                </div>
+        <div id="navigation">
+            <div id="nav-bar-logo">
+                <a href="#">
+                    <img class="mb-3 mx-100px logo" src="wp-content/themes/libidiol/master-template/assets/images/logo.png" alt="logo">
+                </a>
             </div>
-        </nav>
-    </header>
 
-    <div class="main-wrapper">
-        <!-- <header class="page-title theme-bg-light text-center gradient py-5">
-            <h1 class="heading"><?php the_title(); ?></h1>
-        </header> -->
+            <div id="nav-bar-categories">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'menu' => 'primary',
+                        'container' => '',
+                        'theme_location' => 'primary',
+                        'items_wrap' => '<ul class="navbar-nav" >%3$s</ul>'
+                    )
+                );
+                ?>
+            </div>
+
+            <div id="nav-bar-icons">
+                <ul class="social-list list-inline py-3 mx-auto">
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

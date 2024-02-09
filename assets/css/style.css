@@ -1,3 +1,7 @@
+body {
+  background: red !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -885,4 +889,8 @@ div.comment:first-of-type {
 .comment-reply-title small a:focus,
 .comment-reply-title small a:hover {
   text-decoration: underline;
+}
+
+.section-content {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */

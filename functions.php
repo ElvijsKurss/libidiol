@@ -43,3 +43,7 @@ function libidiol_register_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'libidiol_register_scripts');
+
+?>
+
+<?php
