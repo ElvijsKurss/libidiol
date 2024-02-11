@@ -2,6 +2,212 @@ body {
   background: red !important;
 }
 
+/*
+Footer sccs doesnt work with import
+*/
+#footer-container {
+  background-color: #062a4d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4em 0em;
+  width: 100%;
+}
+#footer-container .column {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+#footer-container .column #bottom-form-header {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+#footer-container .column #input-container-email,
+#footer-container .column #input-container-text {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  padding-top: 10px;
+  font-size: 12px;
+}
+#footer-container .column #input-container-email input,
+#footer-container .column #input-container-text input {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+}
+#footer-container .column #input-container-email textarea,
+#footer-container .column #input-container-text textarea {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+  width: 300px;
+  height: 100px;
+  resize: none;
+  padding: 5px;
+}
+#footer-container .column #column-four-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+}
+#footer-container .column #column-four-content #button-container {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  padding-top: 10px;
+}
+#footer-container .column #column-four-content #button-container button {
+  background-color: #76b600;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 7px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#footer-container .column #column-four-content #button-container button:hover {
+  background-color: #558300;
+}
+#footer-container .column #column-two-content,
+#footer-container .column #column-three-content,
+#footer-container .column #column-four-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+#footer-container .column #column-two-content#column-three-content,
+#footer-container .column #column-three-content#column-three-content,
+#footer-container .column #column-four-content#column-three-content {
+  justify-content: left;
+}
+#footer-container .column #column-two-content h3,
+#footer-container .column #column-three-content h3,
+#footer-container .column #column-four-content h3 {
+  color: white;
+  font-size: 15px;
+  margin: 0;
+}
+#footer-container .column #column-two-text,
+#footer-container .column #column-three-text,
+#footer-container .column #column-four-text {
+  display: flex;
+  flex-direction: column;
+}
+#footer-container .column #column-two-text a,
+#footer-container .column #column-three-text a,
+#footer-container .column #column-four-text a {
+  text-decoration: none;
+}
+#footer-container .column #column-two-text a .footer-content-text-two,
+#footer-container .column #column-three-text a .footer-content-text-two,
+#footer-container .column #column-four-text a .footer-content-text-two {
+  color: #969696;
+  font-family: he;
+  font-size: 12px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: left;
+  margin: 0 0 0 90px;
+}
+#footer-container .column .footer-content-text {
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  margin: 0 0 0 40px;
+}
+#footer-container .column .footer-content-text-three {
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  padding: 5px 0;
+  display: flex;
+  justify-content: left;
+}
+#footer-container .column .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+#footer-container .column .social-icons .footer-icons {
+  padding: 0;
+  margin: 0;
+}
+#footer-container .column .social-icons .footer-icons a {
+  text-decoration: none;
+}
+#footer-container .column .social-icons .footer-icons a .fab {
+  color: white;
+  background-color: #76b600;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+/*
+Header SCSS start / doesnt work with iport
+*/
+header.header {
+  text-align: center;
+}
+header.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.header nav #navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+header.header nav #navigation #nav-bar-logo {
+  flex: 1;
+}
+header.header nav #navigation #nav-bar-categories {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+header.header nav #navigation #nav-bar-icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .nav-item a {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+
+/*
+  Header SCSS end 
+  */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +219,7 @@ Footer sccs
 #footer-container {
   background-color: #062a4d;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 4em 0em;
   width: 100%;
@@ -185,7 +391,6 @@ header.header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
 }
 header.header nav #navigation {
   display: flex;
@@ -392,7 +597,7 @@ h6 {
 }
 
 .main-wrapper {
-  background: #fff;
+  background: transparent;
 }
 
 .main-wrapper .container {
@@ -584,7 +789,7 @@ h6 {
   .header .btn-primary {
     width: 100%;
   }
-  .header .navbar {
+  .header .navbar .main-wrapper .container {
     padding: 1rem;
   }
   .main-wrapper {
@@ -898,13 +1103,13 @@ div.comment:first-of-type {
 .bowl-left {
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 0;
 }
 
 .bowl-right {
   display: flex;
   position: absolute;
-  top: 70%;
+  bottom: 5%;
   right: 0;
 }/*# sourceMappingURL=style.css.map */

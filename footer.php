@@ -1,5 +1,5 @@
 <footer class="footer text-center py-2 theme-bg-dark">
-    <div id="footer-container">
+    <div id="footer-container" class="main-wrapper container">
 
         <div class="column one">
             <a href="#">

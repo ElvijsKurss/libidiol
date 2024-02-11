@@ -1,0 +1,42 @@
+/*
+Header SCSS start / doesnt work with iport
+*/
+
+header.header {
+  text-align: center;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #navigation {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      #nav-bar-logo {
+        flex: 1;
+      }
+
+      #nav-bar-categories {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+      }
+
+      #nav-bar-icons {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+.header .nav-item a {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+/*
+  Header SCSS end 
+  */

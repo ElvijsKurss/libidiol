@@ -1,4 +1,6 @@
 @import "test";
+@import "footer";
+@import "header";
 
 * {
   margin: 0;
@@ -11,7 +13,7 @@ Footer sccs
 #footer-container {
   background-color: #062a4d;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 4em 0em;
   width: 100%;
@@ -186,7 +188,6 @@ header.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
 
     #navigation {
       display: flex;
@@ -391,7 +392,7 @@ h6 {
 }
 
 .main-wrapper {
-  background: #fff;
+  background: transparent;
 }
 
 .main-wrapper .container {
@@ -598,7 +599,7 @@ h6 {
     width: 100%;
   }
 
-  .header .navbar {
+  .header .navbar .main-wrapper .container {
     padding: 1rem;
   }
 
@@ -933,12 +934,12 @@ div.comment:first-of-type {
 .bowl-left {
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 0;
 }
 .bowl-right {
   display: flex;
   position: absolute;
-  top: 70%;
+  bottom: 5%;
   right: 0;
 }

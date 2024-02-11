@@ -1,0 +1,169 @@
+/*
+Footer sccs doesnt work with import
+*/
+#footer-container {
+  background-color: #062a4d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4em 0em;
+  width: 100%;
+
+  .column {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    #bottom-form-header {
+      display: flex;
+      justify-content: left;
+      width: 100%;
+    }
+    #input-container-email,
+    #input-container-text {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      width: 100%;
+      padding-top: 10px;
+      font-size: 12px;
+      input {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 5px;
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+      }
+      textarea {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 5px;
+        width: 300px;
+        height: 100px;
+        resize: none;
+        padding: 5px;
+      }
+    }
+
+    #column-four-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      width: 100%;
+      #button-container {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        padding-top: 10px;
+        button {
+          background-color: #76b600;
+          color: white;
+          border: none;
+          border-radius: 30px;
+          padding: 7px 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          text-transform: uppercase;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#76b600, 10%);
+          }
+        }
+      }
+    }
+
+    #column-two-content,
+    #column-three-content,
+    #column-four-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 15px;
+      &#column-three-content {
+        justify-content: left;
+      }
+      h3 {
+        color: white;
+        font-size: 15px;
+        margin: 0;
+      }
+    }
+
+    #column-two-text,
+    #column-three-text,
+    #column-four-text {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        text-decoration: none;
+
+        .footer-content-text-two {
+          color: #969696;
+          font-family: he;
+          font-size: 12px;
+          padding: 5px 0;
+          display: flex;
+          justify-content: left;
+          margin: 0 0 0 90px;
+        }
+      }
+    }
+
+    .footer-content-text {
+      color: white;
+      font-size: 12px;
+      margin: 0;
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      margin: 0 0 0 40px;
+    }
+    .footer-content-text-three {
+      color: white;
+      font-size: 12px;
+      margin: 0;
+      padding: 5px 0;
+      display: flex;
+      justify-content: left;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+
+      .footer-icons {
+        padding: 0;
+        margin: 0;
+
+        a {
+          text-decoration: none;
+
+          .fab {
+            color: white;
+            background-color: #76b600;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 5px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
