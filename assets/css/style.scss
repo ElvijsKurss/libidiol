@@ -930,3 +930,15 @@ div.comment:first-of-type {
 .section-content {
   background-color: red;
 }
+.bowl-left {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.bowl-right {
+  display: flex;
+  position: absolute;
+  top: 70%;
+  right: 0;
+}
