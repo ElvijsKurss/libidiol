@@ -38,13 +38,15 @@ wp_head();
             </div>
 
             <div id="nav-bar-icons">
-                <ul class="social-list list-inline py-3 mx-auto">
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+                <ul class="social-list">
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><img src="wp-content/themes/libidiol/master-template/assets/images/euro.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><img src="wp-content/themes/libidiol/master-template/assets/images/language.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="wp-content/themes/libidiol/master-template/assets/images/search-symbol.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="wp-content/themes/libidiol/master-template/assets/images/basket.png"></a></li>
                 </ul>
+            </div>
+            <div class="head-button-container">
+                <div class="head-button-body"><a href="#" class="header-button-link">Order now</a></div>
             </div>
         </div>
     </nav>

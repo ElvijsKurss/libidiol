@@ -14,10 +14,11 @@ Footer sccs doesnt work with import
     max-width: 250px;
     display: flex;
     flex-direction: column;
-    #bottom-form-header {
+   h3 {
       display: flex;
       justify-content: left;
       width: 100%;
+      margin: 0;
     }
     #input-container-email,
     #input-container-text {
