@@ -1,6 +1,8 @@
+@import "breakpoints";
 /*
-Footer sccs doesnt work with import
+Footer sccs
 */
+
 #footer-container {
   background-color: #062a4d;
   display: flex;
@@ -14,11 +16,10 @@ Footer sccs doesnt work with import
     max-width: 250px;
     display: flex;
     flex-direction: column;
-   h3 {
+    #bottom-form-header {
       display: flex;
       justify-content: left;
       width: 100%;
-      margin: 0;
     }
     #input-container-email,
     #input-container-text {

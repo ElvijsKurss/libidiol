@@ -1,5 +1,7 @@
+@import "breakpoints";
+
 /*
-Header SCSS start / doesnt work with iport
+Header SCSS start
 */
 
 header.header {
@@ -14,6 +16,16 @@ header.header {
       display: flex;
       align-items: center;
       width: 100%;
+      flex-direction: column;
+      @include respond-to("average") {
+        flex-direction: row;
+      }
+      @include respond-to("medium") {
+        flex-direction: row;
+      }
+      @include respond-to("large") {
+        flex-direction: row;
+      }
 
       #nav-bar-logo {
         flex: 1;
@@ -27,8 +39,32 @@ header.header {
 
       #nav-bar-icons {
         flex: 1;
-        display: flex;
-        justify-content: flex-end;
+        // display: flex;
+        // justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        .social-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+
+          a {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* AFTER ELEMENT HERE! */
+            .fa {
+              font-size: 10px;
+              margin-right: 3px;
+              color: white;
+            }
+          }
+        }
       }
     }
   }
@@ -37,6 +73,22 @@ header.header {
   color: rgba(255, 255, 255, 0.8);
   padding: 10px;
 }
+.head-button-container {
+  display: flex;
+  .head-button-body {
+    display: flex;
+    .header-button-link {
+      display: flex;
+      background-color: #76b600;
+      text-decoration: none;
+      padding: 10px 25px;
+      font-size: 17px;
+      color: white;
+      border-radius: 30px;
+    }
+  }
+}
+
 /*
-  Header SCSS end 
-  */
+Header SCSS end 
+*/

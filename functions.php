@@ -23,15 +23,24 @@ add_action('init', 'libidiol_menus');
 
 function libidiol_register_styles()
 {
-
     $version = wp_get_theme()->get('Version');
-    wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.scss", array('libidiol-bootstrap'), $version, 'all');
+    wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.css", array('libidiol-bootstrap'), $version, 'all');
     wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
     wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '1.0', 'all');
 }
 
 add_action('wp_enqueue_scripts', 'libidiol_register_styles');
 
+function libidiol_register_admin_styles()
+{
+    $version = wp_get_theme()->get('Version');
+    wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.css", array('libidiol-bootstrap'), $version, 'all');
+    wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
+    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '1.0', 'all');
+}
+
+// comment this line to disable additional admin stylesheets
+add_action('admin_enqueue_scripts', 'libidiol_register_admin_styles');
 
 
 function libidiol_register_scripts()

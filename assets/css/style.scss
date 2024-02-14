@@ -1,266 +1,12 @@
-@import "test";
 @import "footer";
 @import "header";
+@import "breakpoints";
 
 * {
   margin: 0;
   padding: 0;
 }
 
-/*
-Footer sccs
-*/
-#footer-container {
-  background-color: #062a4d;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 4em 0em;
-  width: 100%;
-
-  .column {
-    width: 100%;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    #bottom-form-header {
-      display: flex;
-      justify-content: left;
-      width: 100%;
-    }
-    #input-container-email,
-    #input-container-text {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      width: 100%;
-      padding-top: 10px;
-      font-size: 12px;
-      input {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        border-radius: 5px;
-        width: 100%;
-        height: 30px;
-        padding: 5px;
-      }
-      textarea {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        border-radius: 5px;
-        width: 300px;
-        height: 100px;
-        resize: none;
-        padding: 5px;
-      }
-    }
-
-    #column-four-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: left;
-      width: 100%;
-      #button-container {
-        display: flex;
-        justify-content: left;
-        width: 100%;
-        padding-top: 10px;
-        button {
-          background-color: #76b600;
-          color: white;
-          border: none;
-          border-radius: 30px;
-          padding: 7px 30px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 12px;
-          text-transform: uppercase;
-          cursor: pointer;
-
-          &:hover {
-            background-color: darken(#76b600, 10%);
-          }
-        }
-      }
-    }
-
-    #column-two-content,
-    #column-three-content,
-    #column-four-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 15px;
-      &#column-three-content {
-        justify-content: left;
-      }
-      h3 {
-        color: white;
-        font-size: 15px;
-        margin: 0;
-      }
-    }
-
-    #column-two-text,
-    #column-three-text,
-    #column-four-text {
-      display: flex;
-      flex-direction: column;
-
-      a {
-        text-decoration: none;
-
-        .footer-content-text-two {
-          color: #969696;
-          font-family: he;
-          font-size: 12px;
-          padding: 5px 0;
-          display: flex;
-          justify-content: left;
-          margin: 0 0 0 90px;
-        }
-      }
-    }
-
-    .footer-content-text {
-      color: white;
-      font-size: 12px;
-      margin: 0;
-      display: flex;
-      text-align: left;
-      justify-content: center;
-      margin: 0 0 0 40px;
-    }
-    .footer-content-text-three {
-      color: white;
-      font-size: 12px;
-      margin: 0;
-      padding: 5px 0;
-      display: flex;
-      justify-content: left;
-    }
-
-    .social-icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row;
-      list-style-type: none;
-      padding: 0;
-      margin-top: 20px;
-
-      .footer-icons {
-        padding: 0;
-        margin: 0;
-
-        a {
-          text-decoration: none;
-
-          .fab {
-            color: white;
-            background-color: #76b600;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            margin-right: 5px;
-            font-size: 13px;
-          }
-        }
-      }
-    }
-  }
-}
-
-/*
-Header SCSS start 
-*/
-
-header.header {
-  text-align: center;
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    #navigation {
-      display: flex;
-      align-items: center;
-      width: 100%;
-
-      #nav-bar-logo {
-        flex: 1;
-      }
-
-      #nav-bar-categories {
-        flex: 2;
-        display: flex;
-        justify-content: center;
-      }
-
-      #nav-bar-icons {
-        flex: 1;
-        // display: flex;
-        // justify-content: center;
-        align-items: center;
-        margin: auto;
-
-        .social-list {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-
-          a {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            /* AFTER ELEMENT HERE! */
-            .fa {
-              font-size: 10px;
-              margin-right: 3px;
-              color: white;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-.header .nav-item a {
-  color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-}
-.head-button-container {
-  display: flex;
-  .head-button-body {
-    display: flex;
-    .header-button-link {
-      display: flex;
-      background-color: #76b600;
-      text-decoration: none;
-      padding: 10px 25px;
-      font-size: 17px;
-      color: white;
-      border-radius: 30px;
-    }
-  }
-}
-// <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-//                 <div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background has-link-color wp-element-button" style="background-color:#76b600">Order now</a></div>
-//             </div>
-/*
-Header SCSS end 
-*/
 :root {
   /* Color Variables */
   --blue: #007bff;
@@ -370,10 +116,6 @@ h6 {
 
         &:hover {
           opacity: 1;
-        }
-
-        &-icon {
-          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
       }
     }
@@ -574,13 +316,13 @@ h6 {
 }
 .bowl-left {
   display: flex;
-  position: absolute;
+  position: absolute !important;
   top: 55%;
   left: 0;
 }
 .bowl-right {
   display: flex;
-  position: absolute;
+  position: absolute !important;
   bottom: 5%;
   right: 0;
 }
@@ -591,42 +333,77 @@ h6 {
   color: #76b600;
 }
 
-// .top-left-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: left;
-//   flex-direction: column;
-/* doesnt work as intended, why?*/
-// }
+.top-left-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 230px;
+}
 
-.helper-line {
-  position: relative;
+.universal-separator {
+  hr {
+    border: none;
+    border-bottom: 3px solid #c4c4c4;
+    width: 150px;
+    margin: auto;
+    position: relative;
+    display: block;
+    padding-top: 5px;
+    margin-bottom: 15px;
 
-  &::after {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2px;
-    width: 165px;
-    background-color: #c4c4c4;
-    content: "";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    &::before {
+      position: absolute;
+      left: -3px;
+      top: 1px;
+      content: " ";
+      width: 10px;
+      height: 10px;
+      background-color: #54ade1;
+      border-radius: 50%;
+    }
   }
-  /* Ball styling, probably no the way to do this and its not, help */
-  // &::before {
-  //   position: absolute;
-  //   top: 155%;
-  //   left: calc(40% - 10px);
-  //   transform: translateY(-50%);
-  //   content: "";
-  //   width: 10px;
-  //   height: 10px;
-  //   background-color: #54ade1;
-  //   border-radius: 50%;
-  //   z-index: 99;
-  // }
+}
+
+.universal-button-style {
+  a.wp-block-button__link {
+    display: flex;
+    background-color: #76b600;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 15px;
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.column-one,
+.column-two {
+  display: flex;
+
+  &.column-one {
+    justify-content: flex-end;
+  }
+  &.column-two {
+    justify-content: flex-start;
+  }
+  .white-box {
+    background-color: white;
+    height: 220px;
+    padding-top: 20px;
+    max-width: 170px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-left: 30px;
+  }
+}
+.image-container-column {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  height: 130px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
