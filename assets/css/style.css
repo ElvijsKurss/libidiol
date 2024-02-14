@@ -542,9 +542,27 @@ h6 {
 .top-left-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  padding-left: 230px;
+  padding-left: 0;
+}
+@media (min-width: 800px) {
+  .top-left-container {
+    padding-left: 230px;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .top-left-container {
+    padding-left: 230px;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1080px) {
+  .top-left-container {
+    padding-left: 230px;
+    align-items: flex-start;
+  }
 }
 
 .universal-separator hr {
@@ -572,12 +590,28 @@ h6 {
   display: flex;
   background-color: #76b600;
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 15px 40px;
   font-size: 15px;
   color: white;
   border-radius: 30px;
   text-transform: uppercase;
   font-weight: bold;
+  justify-content: center;
+}
+@media (min-width: 800px) {
+  .universal-button-style a.wp-block-button__link {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 992px) {
+  .universal-button-style a.wp-block-button__link {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 1080px) {
+  .universal-button-style a.wp-block-button__link {
+    padding: 15px 30px;
+  }
 }
 
 .column-one,
@@ -610,4 +644,69 @@ h6 {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.universal-logo-image img {
+  display: flex;
+  justify-content: center;
+  min-width: 125px;
+  height: auto;
+}
+@media (min-width: 800px) {
+  .universal-logo-image img {
+    min-width: 125px;
+  }
+}
+@media (min-width: 992px) {
+  .universal-logo-image img {
+    min-width: 115px;
+  }
+}
+@media (min-width: 1080px) {
+  .universal-logo-image img {
+    min-width: 105px;
+  }
+}
+
+.blue-section-header {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  font-size: 17px;
+}
+@media (min-width: 800px) {
+  .blue-section-header {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .blue-section-header {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1080px) {
+  .blue-section-header {
+    font-size: 30px;
+  }
+}
+
+.blue-section-paragraph {
+  font-size: 15px;
+  padding: 20px 10px 0 10px;
+}
+@media (min-width: 800px) {
+  .blue-section-paragraph {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .blue-section-paragraph {
+    font-size: 23px;
+  }
+}
+@media (min-width: 1080px) {
+  .blue-section-paragraph {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=style.css.map */

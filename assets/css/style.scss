@@ -336,9 +336,21 @@ h6 {
 .top-left-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  padding-left: 230px;
+  padding-left: 0;
+  @include respond-to("average") {
+    padding-left: 230px;
+    align-items: flex-start;
+  }
+  @include respond-to("medium") {
+    padding-left: 230px;
+    align-items: flex-start;
+  }
+  @include respond-to("large") {
+    padding-left: 230px;
+    align-items: flex-start;
+  }
 }
 
 .universal-separator {
@@ -370,12 +382,22 @@ h6 {
     display: flex;
     background-color: #76b600;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 15px 40px;
     font-size: 15px;
     color: white;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
+    justify-content: center;
+    @include respond-to("average") {
+      padding: 15px 30px;
+    }
+    @include respond-to("medium") {
+      padding: 15px 30px;
+    }
+    @include respond-to("large") {
+      padding: 15px 30px;
+    }
   }
 }
 
@@ -406,4 +428,53 @@ h6 {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.universal-logo-image {
+  img {
+    display: flex;
+    justify-content: center;
+    min-width: 125px;
+    height: auto;
+    @include respond-to("average") {
+      min-width: 125px;
+    }
+    @include respond-to("medium") {
+      min-width: 115px;
+    }
+    @include respond-to("large") {
+      min-width: 105px;
+    }
+  }
+}
+
+.blue-section-header {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  font-size: 17px;
+  @include respond-to("average") {
+    font-size: 20px;
+  }
+  @include respond-to("medium") {
+    font-size: 25px;
+  }
+  @include respond-to("large") {
+    font-size: 30px;
+  }
+}
+
+.blue-section-paragraph {
+  font-size: 15px;
+  padding: 20px 10px 0 10px;
+  @include respond-to("average") {
+    font-size: 18px;
+  }
+  @include respond-to("medium") {
+    font-size: 23px;
+  }
+  @include respond-to("large") {
+    font-size: 28px;
+  }
 }
