@@ -472,9 +472,23 @@ h6 {
     font-size: 18px;
   }
   @include respond-to("medium") {
-    font-size: 23px;
+    font-size: 20px;
   }
   @include respond-to("large") {
-    font-size: 28px;
+    font-size: 22px;
   }
+}
+
+.about-us-column {
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  .about-use-image {
+  }
+}
+
+.about-us-header,
+.about-us-paragraph,
+.about-us-read-more {
+  padding: 20px 0px 20px 20px;
 }
