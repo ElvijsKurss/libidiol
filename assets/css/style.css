@@ -399,10 +399,9 @@ h6 {
 
 /* Main Wrapper */
 .main-wrapper {
-  background: transparent;
-}
-.main-wrapper .container {
-  max-width: var(--content-max-width);
+  max-width: 1300px !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Page Title */
@@ -587,25 +586,55 @@ h6 {
   margin: auto;
   position: relative;
   display: block;
-  padding-top: 5px;
+  padding-top: 15px;
   margin-bottom: 15px;
+}
+@media (min-width: 800px) {
+  .universal-separator hr {
+    padding-top: 5px;
+  }
+}
+@media (min-width: 992px) {
+  .universal-separator hr {
+    padding-top: 5px;
+  }
+}
+@media (min-width: 1080px) {
+  .universal-separator hr {
+    padding-top: 5px;
+  }
 }
 .universal-separator hr::before {
   position: absolute;
   left: -3px;
-  top: 1px;
+  top: 11px;
   content: " ";
   width: 10px;
   height: 10px;
   background-color: #54ade1;
   border-radius: 50%;
 }
+@media (min-width: 800px) {
+  .universal-separator hr::before {
+    top: 1px;
+  }
+}
+@media (min-width: 992px) {
+  .universal-separator hr::before {
+    top: 1px;
+  }
+}
+@media (min-width: 1080px) {
+  .universal-separator hr::before {
+    top: 1px;
+  }
+}
 
 .universal-button-style a.wp-block-button__link {
   display: flex;
   background-color: #76b600;
   text-decoration: none;
-  padding: 12px 35px;
+  padding: 15px 35px;
   font-size: 12px;
   color: white;
   border-radius: 30px;
@@ -615,27 +644,31 @@ h6 {
 }
 @media (min-width: 800px) {
   .universal-button-style a.wp-block-button__link {
-    padding: 10px 40px;
+    padding: 15px 40px;
     font-size: 15px;
   }
 }
 @media (min-width: 992px) {
   .universal-button-style a.wp-block-button__link {
-    padding: 10px 40px;
+    padding: 15px 40px;
     font-size: 15px;
   }
 }
 @media (min-width: 1080px) {
   .universal-button-style a.wp-block-button__link {
-    padding: 10px 40px;
+    padding: 15px 40px;
     font-size: 15px;
   }
+}
+
+/* PROBLEM, gap between columns being responsive*/
+.white-box-gap :where(.wp-block-columns.is-layout-flex) {
+  gap: 1em;
 }
 
 .column-one,
 .column-two {
   display: flex;
-  /* PROBLEM, gap between columns being responsive*/
 }
 .column-one.column-one,
 .column-two.column-one {
@@ -767,48 +800,19 @@ h6 {
   max-width: 125px;
   height: auto;
 }
-@media (min-width: 800px) {
-  .universal-logo-image img {
-    max-width: 135px;
-  }
-}
-@media (min-width: 992px) {
-  .universal-logo-image img {
-    max-width: 135px;
-  }
-}
-@media (min-width: 1080px) {
-  .universal-logo-image img {
-    max-width: 135px;
-  }
-}
 
 .blue-section-header {
   justify-content: center;
   display: flex;
   align-items: center;
   margin: auto;
-  font-size: 17px;
-}
-@media (min-width: 800px) {
-  .blue-section-header {
-    font-size: 20px;
-  }
-}
-@media (min-width: 992px) {
-  .blue-section-header {
-    font-size: 25px;
-  }
-}
-@media (min-width: 1080px) {
-  .blue-section-header {
-    font-size: 30px;
-  }
+  font-size: 30px;
 }
 
 .blue-section-paragraph {
   font-size: 15px;
   padding: 20px 10px 0 10px;
+  line-height: 20px;
 }
 @media (min-width: 800px) {
   .blue-section-paragraph {
@@ -833,105 +837,155 @@ h6 {
 }
 .about-us-header,
 .about-us-paragraph,
-.about-us-read-more {
-  padding: 10px;
+.about-us-read-more,
+.about-us-read-less {
+  padding: 0px 10px 20px 20px !important;
 }
 @media (min-width: 800px) {
   .about-us-header,
   .about-us-paragraph,
-  .about-us-read-more {
-    padding: 20px;
+  .about-us-read-more,
+  .about-us-read-less {
+    padding: 0px 10px 20px 20px !important;
   }
 }
 @media (min-width: 992px) {
   .about-us-header,
   .about-us-paragraph,
-  .about-us-read-more {
-    padding: 20px;
+  .about-us-read-more,
+  .about-us-read-less {
+    padding: 0px 10px 20px 20px !important;
   }
 }
 @media (min-width: 1080px) {
   .about-us-header,
   .about-us-paragraph,
-  .about-us-read-more {
-    padding: 20px;
+  .about-us-read-more,
+  .about-us-read-less {
+    padding: 0px 10px 20px 20px !important;
   }
 }
 .about-us-header.about-us-header,
 .about-us-paragraph.about-us-header,
-.about-us-read-more.about-us-header {
+.about-us-read-more.about-us-header,
+.about-us-read-less.about-us-header {
   font-size: 30px !important;
 }
 @media (min-width: 800px) {
   .about-us-header.about-us-header,
   .about-us-paragraph.about-us-header,
-  .about-us-read-more.about-us-header {
+  .about-us-read-more.about-us-header,
+  .about-us-read-less.about-us-header {
     font-size: 30px;
   }
 }
 @media (min-width: 992px) {
   .about-us-header.about-us-header,
   .about-us-paragraph.about-us-header,
-  .about-us-read-more.about-us-header {
+  .about-us-read-more.about-us-header,
+  .about-us-read-less.about-us-header {
     font-size: 30px;
   }
 }
 @media (min-width: 1080px) {
   .about-us-header.about-us-header,
   .about-us-paragraph.about-us-header,
-  .about-us-read-more.about-us-header {
+  .about-us-read-more.about-us-header,
+  .about-us-read-less.about-us-header {
     font-size: 30px;
   }
 }
 .about-us-header.about-us-paragraph,
 .about-us-paragraph.about-us-paragraph,
-.about-us-read-more.about-us-paragraph {
+.about-us-read-more.about-us-paragraph,
+.about-us-read-less.about-us-paragraph {
   font-size: 15px !important;
 }
 @media (min-width: 800px) {
   .about-us-header.about-us-paragraph,
   .about-us-paragraph.about-us-paragraph,
-  .about-us-read-more.about-us-paragraph {
+  .about-us-read-more.about-us-paragraph,
+  .about-us-read-less.about-us-paragraph {
     font-size: 15px !important;
   }
 }
 @media (min-width: 992px) {
   .about-us-header.about-us-paragraph,
   .about-us-paragraph.about-us-paragraph,
-  .about-us-read-more.about-us-paragraph {
+  .about-us-read-more.about-us-paragraph,
+  .about-us-read-less.about-us-paragraph {
     font-size: 15px !important;
   }
 }
 @media (min-width: 1080px) {
   .about-us-header.about-us-paragraph,
   .about-us-paragraph.about-us-paragraph,
-  .about-us-read-more.about-us-paragraph {
+  .about-us-read-more.about-us-paragraph,
+  .about-us-read-less.about-us-paragraph {
     font-size: 15px !important;
   }
 }
 .about-us-header.about-us-read-more,
 .about-us-paragraph.about-us-read-more,
-.about-us-read-more.about-us-read-more {
+.about-us-read-more.about-us-read-more,
+.about-us-read-less.about-us-read-more {
+  color: #009f1e;
   font-size: 15px !important;
+  font-weight: 700;
 }
 @media (min-width: 800px) {
   .about-us-header.about-us-read-more,
   .about-us-paragraph.about-us-read-more,
-  .about-us-read-more.about-us-read-more {
+  .about-us-read-more.about-us-read-more,
+  .about-us-read-less.about-us-read-more {
     font-size: 14px !important;
   }
 }
 @media (min-width: 992px) {
   .about-us-header.about-us-read-more,
   .about-us-paragraph.about-us-read-more,
-  .about-us-read-more.about-us-read-more {
+  .about-us-read-more.about-us-read-more,
+  .about-us-read-less.about-us-read-more {
     font-size: 13px !important;
   }
 }
 @media (min-width: 1080px) {
   .about-us-header.about-us-read-more,
   .about-us-paragraph.about-us-read-more,
-  .about-us-read-more.about-us-read-more {
+  .about-us-read-more.about-us-read-more,
+  .about-us-read-less.about-us-read-more {
+    font-size: 12px !important;
+  }
+}
+.about-us-header.about-us-read-less,
+.about-us-paragraph.about-us-read-less,
+.about-us-read-more.about-us-read-less,
+.about-us-read-less.about-us-read-less {
+  color: #009f1e;
+  font-size: 15px !important;
+  font-weight: 700;
+}
+@media (min-width: 800px) {
+  .about-us-header.about-us-read-less,
+  .about-us-paragraph.about-us-read-less,
+  .about-us-read-more.about-us-read-less,
+  .about-us-read-less.about-us-read-less {
+    font-size: 14px !important;
+  }
+}
+@media (min-width: 992px) {
+  .about-us-header.about-us-read-less,
+  .about-us-paragraph.about-us-read-less,
+  .about-us-read-more.about-us-read-less,
+  .about-us-read-less.about-us-read-less {
+    font-size: 13px !important;
+  }
+}
+@media (min-width: 1080px) {
+  .about-us-header.about-us-read-less,
+  .about-us-paragraph.about-us-read-less,
+  .about-us-read-more.about-us-read-less,
+  .about-us-read-less.about-us-read-less {
     font-size: 12px !important;
   }
 }
@@ -1032,4 +1086,36 @@ h6 {
   .welcome-paragraph-text {
     font-size: 20px;
   }
+}
+
+.universal-header {
+  font-size: 30px;
+}
+
+.universal-sub-text {
+  font-size: 18px;
+}
+
+.universal-paragraph {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.wp-block-ub-content-toggle-accordion-title {
+  color: #062a4d !important;
+  font-weight: 700 !important;
+}
+
+.partner-us-paragraph {
+  font-size: 15px;
+  line-height: 17px;
+  text-align: justify;
+}
+
+.partner-us-sub-paragraph {
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: justify;
+  line-height: 15px;
 }/*# sourceMappingURL=style.css.map */

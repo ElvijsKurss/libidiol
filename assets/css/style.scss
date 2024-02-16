@@ -148,11 +148,14 @@ h6 {
 
 /* Main Wrapper */
 .main-wrapper {
-  background: transparent;
+  //background: transparent;
+  max-width: 1300px !important;
+  margin-left: auto;
+  margin-right: auto;
 
-  .container {
-    max-width: var(--content-max-width);
-  }
+  // .container {
+  //   max-width: var(--content-max-width);
+  // }
 }
 
 /* Page Title */
@@ -361,18 +364,36 @@ h6 {
     margin: auto;
     position: relative;
     display: block;
-    padding-top: 5px;
+    padding-top: 15px;
     margin-bottom: 15px;
+    @include respond-to("average") {
+      padding-top: 5px;
+    }
+    @include respond-to("medium") {
+      padding-top: 5px;
+    }
+    @include respond-to("large") {
+      padding-top: 5px;
+    }
 
     &::before {
       position: absolute;
       left: -3px;
-      top: 1px;
+      top: 11px;
       content: " ";
       width: 10px;
       height: 10px;
       background-color: #54ade1;
       border-radius: 50%;
+      @include respond-to("average") {
+        top: 1px;
+      }
+      @include respond-to("medium") {
+        top: 1px;
+      }
+      @include respond-to("large") {
+        top: 1px;
+      }
     }
   }
 }
@@ -382,7 +403,7 @@ h6 {
     display: flex;
     background-color: #76b600;
     text-decoration: none;
-    padding: 12px 35px;
+    padding: 15px 35px;
     font-size: 12px;
     color: white;
     border-radius: 30px;
@@ -390,17 +411,24 @@ h6 {
     font-weight: bold;
     justify-content: center;
     @include respond-to("average") {
-      padding: 10px 40px;
+      padding: 15px 40px;
       font-size: 15px;
     }
     @include respond-to("medium") {
-      padding: 10px 40px;
+      padding: 15px 40px;
       font-size: 15px;
     }
     @include respond-to("large") {
-      padding: 10px 40px;
+      padding: 15px 40px;
       font-size: 15px;
     }
+  }
+}
+
+/* PROBLEM, gap between columns being responsive*/
+.white-box-gap {
+  :where(.wp-block-columns.is-layout-flex) {
+    gap: 1em;
   }
 }
 
@@ -433,10 +461,6 @@ h6 {
     }
   }
 
-  /* PROBLEM, gap between columns being responsive*/
-  // .white-box-gap {
-  //   gap: 1em !important;
-  // }
   .white-box {
     background-color: white;
     height: 180px;
@@ -503,9 +527,9 @@ h6 {
     max-width: 125px;
     height: auto;
 
-    @include respond-to("average", "medium", "large") {
-      max-width: 135px;
-    }
+    // @include respond-to("average", "medium", "large") {
+    //   max-width: 135px;
+    // }
   }
 }
 
@@ -514,21 +538,13 @@ h6 {
   display: flex;
   align-items: center;
   margin: auto;
-  font-size: 17px;
-  @include respond-to("average") {
-    font-size: 20px;
-  }
-  @include respond-to("medium") {
-    font-size: 25px;
-  }
-  @include respond-to("large") {
-    font-size: 30px;
-  }
+  font-size: 30px;
 }
 
 .blue-section-paragraph {
   font-size: 15px;
   padding: 20px 10px 0 10px;
+  line-height: 20px;
   @include respond-to("average") {
     font-size: 18px;
   }
@@ -550,16 +566,17 @@ h6 {
 
 .about-us-header,
 .about-us-paragraph,
-.about-us-read-more {
-  padding: 10px;
+.about-us-read-more,
+.about-us-read-less {
+  padding: 0px 10px 20px 20px !important;
   @include respond-to("average") {
-    padding: 20px;
+    padding: 0px 10px 20px 20px !important;
   }
   @include respond-to("medium") {
-    padding: 20px;
+    padding: 0px 10px 20px 20px !important;
   }
   @include respond-to("large") {
-    padding: 20px;
+    padding: 0px 10px 20px 20px !important;
   }
   &.about-us-header {
     font-size: 30px !important;
@@ -586,7 +603,23 @@ h6 {
     }
   }
   &.about-us-read-more {
+    color: #009f1e;
     font-size: 15px !important;
+    font-weight: 700;
+    @include respond-to("average") {
+      font-size: 14px !important;
+    }
+    @include respond-to("medium") {
+      font-size: 13px !important;
+    }
+    @include respond-to("large") {
+      font-size: 12px !important;
+    }
+  }
+  &.about-us-read-less {
+    color: #009f1e;
+    font-size: 15px !important;
+    font-weight: 700;
     @include respond-to("average") {
       font-size: 14px !important;
     }
@@ -703,4 +736,51 @@ h6 {
   @include respond-to("large") {
     font-size: 20px;
   }
+}
+
+.universal-header {
+  font-size: 30px;
+}
+.universal-sub-text {
+  font-size: 18px;
+}
+.universal-paragraph {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+// .top-section-order {
+//   display: flex;
+//   flex-direction: column;
+// }
+// .welcome-heading {
+//   order: 3;
+//   display: flex;
+// }
+// .welcome-paragraph-text {
+//   order: 1;
+//   display: flex;
+// }
+// .top-image-left {
+//   order: 2;
+//   display: flex;
+// }
+
+.wp-block-ub-content-toggle-accordion-title {
+  color: #062a4d !important;
+  font-weight: 700 !important;
+}
+
+.partner-us-paragraph {
+  font-size: 15px;
+  line-height: 17px;
+  text-align: justify;
+}
+
+.partner-us-sub-paragraph {
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: justify;
+  line-height: 15px;
 }
