@@ -382,21 +382,24 @@ h6 {
     display: flex;
     background-color: #76b600;
     text-decoration: none;
-    padding: 15px 40px;
-    font-size: 15px;
+    padding: 12px 35px;
+    font-size: 12px;
     color: white;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
     justify-content: center;
     @include respond-to("average") {
-      padding: 15px 30px;
+      padding: 10px 40px;
+      font-size: 15px;
     }
     @include respond-to("medium") {
-      padding: 15px 30px;
+      padding: 10px 40px;
+      font-size: 15px;
     }
     @include respond-to("large") {
-      padding: 15px 30px;
+      padding: 10px 40px;
+      font-size: 15px;
     }
   }
 }
@@ -406,44 +409,102 @@ h6 {
   display: flex;
 
   &.column-one {
-    justify-content: flex-end;
+    justify-content: center;
+    @include respond-to("average") {
+      justify-content: flex-end;
+    }
+    @include respond-to("medium") {
+      justify-content: flex-end;
+    }
+    @include respond-to("large") {
+      justify-content: flex-end;
+    }
   }
   &.column-two {
-    justify-content: flex-start;
+    justify-content: center;
+    @include respond-to("average") {
+      justify-content: flex-start;
+    }
+    @include respond-to("medium") {
+      justify-content: flex-start;
+    }
+    @include respond-to("large") {
+      justify-content: flex-start;
+    }
   }
+
+  /* PROBLEM, gap between columns being responsive*/
+  // .white-box-gap {
+  //   gap: 1em !important;
+  // }
   .white-box {
     background-color: white;
-    height: 220px;
-    padding-top: 20px;
-    max-width: 170px;
+    height: 180px;
+    padding-top: 0;
+    max-width: 135px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    margin-left: 30px;
+    margin-left: 0;
+    @include respond-to("average") {
+      height: 220px;
+      padding-top: 20px;
+      max-width: 170px;
+      margin-left: 30px;
+    }
+    @include respond-to("medium") {
+      height: 220px;
+      padding-top: 20px;
+      max-width: 170px;
+      margin-left: 30px;
+    }
+    @include respond-to("large") {
+      height: 220px;
+      padding-top: 20px;
+      max-width: 170px;
+      margin-left: 30px;
+    }
+    .wp-image-110,
+    .wp-image-112,
+    .wp-image-113,
+    .wp-image-114 {
+      height: 90px;
+      width: auto;
+    }
+  }
+  p {
+    font-size: 15px;
   }
 }
 .image-container-column {
-  padding-bottom: 30px;
+  padding-bottom: 5px;
   padding-top: 10px;
   height: 130px;
   justify-content: center;
   display: flex;
   align-items: center;
+  @include respond-to("average") {
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  @include respond-to("medium") {
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  @include respond-to("large") {
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
 }
 
 .universal-logo-image {
   img {
     display: flex;
     justify-content: center;
-    min-width: 125px;
+    max-width: 125px;
     height: auto;
-    @include respond-to("average") {
-      min-width: 125px;
-    }
-    @include respond-to("medium") {
-      min-width: 115px;
-    }
-    @include respond-to("large") {
-      min-width: 105px;
+
+    @include respond-to("average", "medium", "large") {
+      max-width: 135px;
     }
   }
 }
@@ -490,5 +551,156 @@ h6 {
 .about-us-header,
 .about-us-paragraph,
 .about-us-read-more {
-  padding: 20px 0px 20px 20px;
+  padding: 10px;
+  @include respond-to("average") {
+    padding: 20px;
+  }
+  @include respond-to("medium") {
+    padding: 20px;
+  }
+  @include respond-to("large") {
+    padding: 20px;
+  }
+  &.about-us-header {
+    font-size: 30px !important;
+    @include respond-to("average") {
+      font-size: 30px;
+    }
+    @include respond-to("medium") {
+      font-size: 30px;
+    }
+    @include respond-to("large") {
+      font-size: 30px;
+    }
+  }
+  &.about-us-paragraph {
+    font-size: 15px !important;
+    @include respond-to("average") {
+      font-size: 15px !important;
+    }
+    @include respond-to("medium") {
+      font-size: 15px !important;
+    }
+    @include respond-to("large") {
+      font-size: 15px !important;
+    }
+  }
+  &.about-us-read-more {
+    font-size: 15px !important;
+    @include respond-to("average") {
+      font-size: 14px !important;
+    }
+    @include respond-to("medium") {
+      font-size: 13px !important;
+    }
+    @include respond-to("large") {
+      font-size: 12px !important;
+    }
+  }
+}
+
+.universal-button-style-white {
+  a.wp-block-button__link {
+    display: none;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 12px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+    border: none;
+
+    @include respond-to("average") {
+      padding: 10px 40px;
+      font-size: 15px;
+      display: flex;
+      border: 2px solid #54ade1;
+    }
+
+    @include respond-to("medium") {
+      padding: 10px 40px;
+      font-size: 15px;
+      display: flex;
+      border: 2px solid #54ade1;
+    }
+
+    @include respond-to("large") {
+      padding: 10px 40px;
+      font-size: 15px;
+      display: flex;
+      border: 2px solid #54ade1;
+    }
+  }
+}
+
+/* PROBLEM, image responsivness on phone */
+
+// .top-image-left {
+//   display: flex;
+//   .wp-image-42 {
+//     justify-content: center;
+//     display: flex;
+//     align-items: center;
+//     min-width: 100%;
+//   }
+// }
+
+.welcome-paragraph {
+  font-weight: bold;
+  color: #062a4d;
+  justify-content: center;
+  display: flex;
+  @include respond-to("average") {
+    font-weight: 400;
+    justify-content: center;
+    display: inline-block;
+  }
+
+  @include respond-to("medium") {
+    font-weight: 400;
+    justify-content: center;
+    display: inline-block;
+  }
+
+  @include respond-to("large") {
+    font-weight: 400;
+    justify-content: center;
+    display: inline-block;
+  }
+}
+
+.hide {
+  display: none;
+  @include respond-to("average") {
+    display: inline-block;
+  }
+
+  @include respond-to("medium") {
+    display: inline-block;
+  }
+
+  @include respond-to("large") {
+    display: inline-block;
+  }
+}
+
+.welcome-heading {
+  font-size: 55px !important;
+}
+
+.welcome-paragraph-text {
+  font-size: 18px;
+  padding-top: 15px;
+  // @include respond-to("average") {
+  //   font-size: 18px;
+  // }
+
+  // @include respond-to("medium") {
+  //   font-size: 18px;
+  // }
+
+  @include respond-to("large") {
+    font-size: 20px;
+  }
 }
