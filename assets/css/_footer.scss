@@ -5,26 +5,45 @@ Footer sccs
 
 #footer-container {
   background-color: #062a4d;
-  display: none;
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 4em 0em;
+  padding: 2em 0em;
   width: 100%;
   @include respond-to("average") {
     display: flex;
+    justify-content: space-around;
+    padding: 4em 0em;
+    flex-direction: row;
   }
   @include respond-to("medium") {
     display: flex;
+    justify-content: space-around;
+    padding: 4em 0em;
+    flex-direction: row;
   }
   @include respond-to("large") {
     display: flex;
+    justify-content: space-around;
+    padding: 4em 0em;
+    flex-direction: row;
   }
 
   .column {
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
+    @include respond-to("average") {
+      max-width: 250px;
+    }
+    @include respond-to("medium") {
+      max-width: 250px;
+    }
+    @include respond-to("large") {
+      max-width: 250px;
+    }
     #bottom-form-header {
       display: flex;
       justify-content: left;
@@ -36,16 +55,34 @@ Footer sccs
       align-items: center;
       justify-content: left;
       width: 100%;
-      padding-top: 10px;
+      padding-top: 13px;
       font-size: 12px;
+      @include respond-to("average") {
+        padding-top: 10px;
+      }
+      @include respond-to("medium") {
+        padding-top: 10px;
+      }
+      @include respond-to("large") {
+        padding-top: 10px;
+      }
       input {
         align-items: center;
         justify-content: center;
         display: flex;
         border-radius: 5px;
         width: 100%;
-        height: 30px;
+        height: 45px;
         padding: 5px;
+        @include respond-to("average") {
+          height: 30px;
+        }
+        @include respond-to("medium") {
+          height: 30px;
+        }
+        @include respond-to("large") {
+          height: 30px;
+        }
       }
       textarea {
         align-items: center;
@@ -66,9 +103,21 @@ Footer sccs
       width: 100%;
       #button-container {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         width: 100%;
         padding-top: 10px;
+        @include respond-to("average") {
+          justify-content: left;
+          padding-top: 25px;
+        }
+        @include respond-to("medium") {
+          justify-content: left;
+          padding-top: 10px;
+        }
+        @include respond-to("large") {
+          justify-content: left;
+          padding-top: 10px;
+        }
         button {
           background-color: #76b600;
           color: white;
@@ -93,11 +142,29 @@ Footer sccs
     #column-three-content,
     #column-four-content {
       display: flex;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
       padding-bottom: 15px;
-      &#column-three-content {
+      @include respond-to("average") {
         justify-content: left;
+      }
+      @include respond-to("medium") {
+        justify-content: left;
+      }
+      @include respond-to("large") {
+        justify-content: left;
+      }
+      &#column-two-content {
+        justify-content: left;
+        @include respond-to("average") {
+          justify-content: center;
+        }
+        @include respond-to("medium") {
+          justify-content: center;
+        }
+        @include respond-to("large") {
+          justify-content: center;
+        }
       }
       h3 {
         color: white;
@@ -117,24 +184,54 @@ Footer sccs
 
         .footer-content-text-two {
           color: #969696;
-          font-family: he;
           font-size: 12px;
           padding: 5px 0;
           display: flex;
           justify-content: left;
-          margin: 0 0 0 90px;
+          margin: 0;
+          @include respond-to("average") {
+            justify-content: left;
+            margin: 0 0 0 90px;
+          }
+          @include respond-to("medium") {
+            justify-content: left;
+            margin: 0 0 0 90px;
+          }
+          @include respond-to("large") {
+            justify-content: left;
+            margin: 0 0 0 90px;
+          }
         }
       }
     }
 
     .footer-content-text {
       color: white;
-      font-size: 12px;
+      font-size: 15px;
       margin: 0;
       display: flex;
-      text-align: left;
+      text-align: center;
       justify-content: center;
-      margin: 0 0 0 40px;
+      margin: 0;
+      padding-top: 20px;
+      @include respond-to("average") {
+        margin: 0 0 0 40px;
+        text-align: left;
+        font-size: 12px;
+        padding-top: 0;
+      }
+      @include respond-to("medium") {
+        margin: 0 0 0 43px;
+        text-align: left;
+        font-size: 12px;
+        padding-top: 0;
+      }
+      @include respond-to("large") {
+        margin: 0 0 0 45px;
+        text-align: left;
+        font-size: 12px;
+        padding-top: 0;
+      }
     }
     .footer-content-text-three {
       color: white;
@@ -164,14 +261,29 @@ Footer sccs
           .fab {
             color: white;
             background-color: #76b600;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
             margin-right: 5px;
-            font-size: 13px;
+            font-size: 18px;
+            @include respond-to("average") {
+              font-size: 13px;
+              width: 30px;
+              height: 30px;
+            }
+            @include respond-to("medium") {
+              font-size: 13px;
+              width: 30px;
+              height: 30px;
+            }
+            @include respond-to("large") {
+              font-size: 13px;
+              width: 30px;
+              height: 30px;
+            }
           }
         }
       }

@@ -99,10 +99,18 @@ h6 {
   background-color: #062a4d !important;
 }
 
-
 /* Logo */
 .logo {
-  width: 140px;
+  width: 160px;
+  @include respond-to("average") {
+    width: 140px;
+  }
+  @include respond-to("medium") {
+    width: 140px;
+  }
+  @include respond-to("large") {
+    width: 140px;
+  }
 }
 
 /* Main Wrapper */
