@@ -238,7 +238,11 @@ header.header nav #navigation #nav-bar-icons .social-list a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   /* AFTER ELEMENT HERE! */
+}
+header.header nav #navigation #nav-bar-icons .social-list a:hover {
+  color: #76b600;
 }
 header.header nav #navigation #nav-bar-icons .social-list a .fa {
   font-size: 10px;
@@ -249,6 +253,7 @@ header.header nav #navigation #nav-bar-icons .social-list a .fa {
 .header .nav-item a {
   color: rgba(255, 255, 255, 0.8);
   padding: 10px;
+  text-decoration: none;
 }
 
 .head-button-container {
@@ -265,6 +270,37 @@ header.header nav #navigation #nav-bar-icons .social-list a .fa {
   font-size: 17px;
   color: white;
   border-radius: 30px;
+}
+
+/* Header */
+.header {
+  height: auto;
+  width: 100%;
+  background-color: #062a4d;
+  color: #fff;
+}
+.header .navbar {
+  padding: 1rem 1rem;
+}
+.header .navbar .navbar-dark .navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.6rem;
+}
+.header .navbar .navbar-dark .navbar-toggler:hover {
+  opacity: 1;
+}
+.header .navbar .nav-item {
+  font-weight: bold;
+}
+.header .navbar .nav-item.active a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.header .navbar .nav-item.active a:hover {
+  text-decoration: none;
+}
+.header .navbar .nav-item a:hover {
+  text-decoration: underline;
+  color: #76b600;
 }
 
 /*
@@ -359,37 +395,6 @@ h6 {
 
 .theme-bg-dark {
   background-color: #062a4d !important;
-}
-
-/* Header */
-.header {
-  height: auto;
-  width: 100%;
-  background-color: #062a4d;
-  color: #fff;
-}
-.header .navbar {
-  padding: 1rem 1rem;
-}
-.header .navbar .navbar-dark .navbar-toggler {
-  border: none;
-  padding: 0.25rem 0.6rem;
-}
-.header .navbar .navbar-dark .navbar-toggler:hover {
-  opacity: 1;
-}
-.header .navbar .nav-item {
-  font-weight: bold;
-}
-.header .navbar .nav-item.active a {
-  color: rgba(0, 0, 0, 0.5);
-}
-.header .navbar .nav-item.active a:hover {
-  text-decoration: none;
-}
-.header .navbar .nav-item a:hover {
-  text-decoration: underline;
-  color: #76b600;
 }
 
 /* Logo */
@@ -532,17 +537,47 @@ h6 {
 }
 
 .bowl-left {
-  display: flex;
+  display: none;
   position: absolute !important;
   top: 55%;
   left: 0;
 }
+@media (min-width: 800px) {
+  .bowl-left {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .bowl-left {
+    display: flex;
+  }
+}
+@media (min-width: 1080px) {
+  .bowl-left {
+    display: flex;
+  }
+}
 
 .bowl-right {
-  display: flex;
+  display: none;
   position: absolute !important;
   bottom: 5%;
   right: 0;
+}
+@media (min-width: 800px) {
+  .bowl-right {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .bowl-right {
+    display: flex;
+  }
+}
+@media (min-width: 1080px) {
+  .bowl-right {
+    display: flex;
+  }
 }
 
 .text-helper-guarantee {
@@ -562,19 +597,19 @@ h6 {
 }
 @media (min-width: 800px) {
   .top-left-container {
-    padding-left: 230px;
+    padding-left: 150px;
     align-items: flex-start;
   }
 }
 @media (min-width: 992px) {
   .top-left-container {
-    padding-left: 230px;
+    padding-left: 160px;
     align-items: flex-start;
   }
 }
 @media (min-width: 1080px) {
   .top-left-container {
-    padding-left: 230px;
+    padding-left: 170px;
     align-items: flex-start;
   }
 }
@@ -582,7 +617,7 @@ h6 {
 .universal-separator hr {
   border: none;
   border-bottom: 3px solid #c4c4c4;
-  width: 150px;
+  width: 90px;
   margin: auto;
   position: relative;
   display: block;
@@ -592,16 +627,19 @@ h6 {
 @media (min-width: 800px) {
   .universal-separator hr {
     padding-top: 5px;
+    width: 150px;
   }
 }
 @media (min-width: 992px) {
   .universal-separator hr {
     padding-top: 5px;
+    width: 150px;
   }
 }
 @media (min-width: 1080px) {
   .universal-separator hr {
     padding-top: 5px;
+    width: 150px;
   }
 }
 .universal-separator hr::before {
@@ -634,8 +672,8 @@ h6 {
   display: flex;
   background-color: #76b600;
   text-decoration: none;
-  padding: 15px 35px;
-  font-size: 12px;
+  padding: 15px 45px;
+  font-size: 14px;
   color: white;
   border-radius: 30px;
   text-transform: uppercase;
@@ -717,9 +755,9 @@ h6 {
 .column-one .white-box,
 .column-two .white-box {
   background-color: white;
-  height: 180px;
+  height: 200px;
   padding-top: 0;
-  max-width: 135px;
+  max-width: 145px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin-left: 0;
@@ -801,12 +839,35 @@ h6 {
   height: auto;
 }
 
-.blue-section-header {
+.blue-section-header-two {
   justify-content: center;
   display: flex;
   align-items: center;
   margin: auto;
   font-size: 30px;
+}
+
+.blue-section-header {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  font-size: 15px;
+}
+@media (min-width: 800px) {
+  .blue-section-header {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .blue-section-header {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1080px) {
+  .blue-section-header {
+    font-size: 30px;
+  }
 }
 
 .blue-section-paragraph {
@@ -840,6 +901,7 @@ h6 {
 .about-us-read-more,
 .about-us-read-less {
   padding: 0px 10px 20px 20px !important;
+  font-weight: 500;
 }
 @media (min-width: 800px) {
   .about-us-header,
@@ -869,7 +931,7 @@ h6 {
 .about-us-paragraph.about-us-header,
 .about-us-read-more.about-us-header,
 .about-us-read-less.about-us-header {
-  font-size: 30px !important;
+  font-size: 23px !important;
 }
 @media (min-width: 800px) {
   .about-us-header.about-us-header,
@@ -1099,6 +1161,7 @@ h6 {
 .universal-paragraph {
   font-size: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .wp-block-ub-content-toggle-accordion-title {
@@ -1118,4 +1181,34 @@ h6 {
   padding-bottom: 10px;
   text-align: justify;
   line-height: 15px;
+}
+
+.five-min-read {
+  padding: 0px 10px 20px 20px !important;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.benefits-info {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}
+.benefits-info .wp-block-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid green;
+  flex: 2;
+}
+.benefits-info .wp-block-heading p {
+  border: 1px solid red;
+}
+.benefits-info figure {
+  display: flex;
+  border: 1px solid yellow;
+  flex: 1;
+}
+
+.email-color-helper {
+  color: #009f1e;
 }/*# sourceMappingURL=style.css.map */

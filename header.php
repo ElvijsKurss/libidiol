@@ -17,7 +17,7 @@ wp_head();
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div id="navigation">
+        <div id="navigation" class="main-wrapper container">
             <div id="nav-bar-logo">
                 <a href="#">
                     <img class="mb-3 mx-100px logo" src="wp-content/themes/libidiol/master-template/assets/images/logo.png" alt="logo">
@@ -39,7 +39,7 @@ wp_head();
 
             <div id="nav-bar-icons">
                 <ul class="social-list">
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><img src="wp-content/themes/libidiol/master-template/assets/images/euro.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a></li>
                     <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><img src="wp-content/themes/libidiol/master-template/assets/images/language.png"></a></li>
                     <li class="list-inline-item"><a href="#"><img src="wp-content/themes/libidiol/master-template/assets/images/search-symbol.png"></a></li>
                     <li class="list-inline-item"><a href="#"><img src="wp-content/themes/libidiol/master-template/assets/images/basket.png"></a></li>
