@@ -1,10 +1,20 @@
 @import "footer";
 @import "header";
 @import "breakpoints";
-@import "fonts";
+
+/* Section SCSS */
+@import "section css/about-us-section";
+@import "section css/blue-section";
+@import "section css/universal-helpers";
+
+/* Fonts */
+@import "fonts/fonts";
+
+/* Default main project settings */
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -27,59 +37,6 @@
   --light: #c2c2c2;
   --lightgray: #eeeeee;
   --dark: #434242;
-
-  /* Font Variables */
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-
-  /* Font Sizes */
-  --font-normal: 1em;
-  --font-small: 0.8125rem;
-
-  /* Sidebar */
-  --sidebar-width: 280px;
-  --content-max-width: 860px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  line-height: 1.15;
-}
-
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--gray-dark);
-  font-weight: bold;
-}
-
-/* Buttons */
-.btn {
-  font-weight: bold;
-  padding: 0.375rem 1rem;
-  height: 2.75rem;
-  transition: all 0.4s ease-in-out;
-
-  &:focus,
-  &.focus {
-    box-shadow: none !important;
-  }
-
-  &.btn-primary {
-    color: #fff;
-  }
 }
 
 /* Form Controls */
@@ -119,12 +76,10 @@ h6 {
   max-width: 1300px !important;
   margin-left: auto;
   margin-right: auto;
-
-  // .container {
-  //   max-width: var(--content-max-width);
-  // }
 }
-
+// .container {
+//   padding: 0 !important;
+// }
 /* Page Title */
 .page-title {
   position: sticky;
@@ -229,31 +184,31 @@ h6 {
   }
 }
 
-@media (max-width: 991.98px) {
-  .page-title {
-    position: static;
-  }
+// @media (max-width: 991.98px) {
+//   .page-title {
+//     position: static;
+//   }
 
-  .header {
-    position: sticky;
-    width: inherit;
-    height: auto;
+//   .header {
+//     position: sticky;
+//     width: inherit;
+//     height: auto;
 
-    .btn-primary {
-      width: 100%;
-    }
+//     .btn-primary {
+//       width: 100%;
+//     }
 
-    .navbar {
-      .main-wrapper .container {
-        padding: 1rem;
-      }
-    }
-  }
+//     .navbar {
+//       .main-wrapper .container {
+//         padding: 1rem;
+//       }
+//     }
+//   }
 
-  .main-wrapper {
-    margin-left: 0;
-  }
-}
+//   .main-wrapper {
+//     margin-left: 0;
+//   }
+// }
 
 /* Comments */
 .comments-wrapper {
@@ -328,11 +283,11 @@ h6 {
   flex-direction: column;
   padding-left: 0;
   @include respond-to("average") {
-    padding-left: 150px;
+    padding-left: 60px;
     align-items: flex-start;
   }
   @include respond-to("medium") {
-    padding-left: 160px;
+    padding-left: 70px;
     align-items: flex-start;
   }
   @include respond-to("large") {
@@ -341,83 +296,25 @@ h6 {
   }
 }
 
-.universal-separator {
-  hr {
-    border: none;
-    border-bottom: 3px solid #c4c4c4;
-    width: 90px;
-    margin: auto;
-    position: relative;
-    display: block;
-    padding-top: 15px;
-    margin-bottom: 15px;
-
-    @include respond-to("average") {
-      padding-top: 5px;
-      width: 150px;
-    }
-    @include respond-to("medium") {
-      padding-top: 5px;
-      width: 150px;
-    }
-    @include respond-to("large") {
-      padding-top: 5px;
-      width: 150px;
-    }
-
-    &::before {
-      position: absolute;
-      left: -3px;
-      top: 11px;
-      content: " ";
-      width: 10px;
-      height: 10px;
-      background-color: #54ade1;
-      border-radius: 50%;
-      @include respond-to("average") {
-        top: 1px;
-      }
-      @include respond-to("medium") {
-        top: 1px;
-      }
-      @include respond-to("large") {
-        top: 1px;
-      }
-    }
-  }
+.white-box-text {
+  font-family: HelveticaNeueMedium;
+}
+.white-box-paragraph {
+  font-family: HelveticaNeueLight;
 }
 
-.universal-button-style {
-  a.wp-block-button__link {
-    display: flex;
-    background-color: #76b600;
-    text-decoration: none;
-    padding: 15px 45px;
-    font-size: 14px;
-    color: white;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    justify-content: center;
-    @include respond-to("average") {
-      padding: 15px 40px;
-      font-size: 15px;
-    }
-    @include respond-to("medium") {
-      padding: 15px 40px;
-      font-size: 15px;
-    }
-    @include respond-to("large") {
-      padding: 15px 40px;
-      font-size: 15px;
-    }
-  }
-}
-
-/* PROBLEM, gap between columns being responsive*/
 .white-box-gap {
   :where(.wp-block-columns.is-layout-flex) {
     gap: 1em;
+    @include respond-to("average") {
+      gap: 2em !important;
+    }
+    @include respond-to("medium") {
+      gap: 2em !important;
+    }
+    @include respond-to("large") {
+      gap: 2em !important;
+    }
   }
 }
 
@@ -459,22 +356,22 @@ h6 {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     margin-left: 0;
     @include respond-to("average") {
-      height: 220px;
+      height: 200px;
       padding-top: 20px;
-      max-width: 170px;
-      margin-left: 30px;
+      max-width: 160px;
+      margin-left: 0;
     }
     @include respond-to("medium") {
-      height: 220px;
+      height: 200px;
       padding-top: 20px;
-      max-width: 170px;
-      margin-left: 30px;
+      max-width: 160px;
+      margin-left: 0;
     }
     @include respond-to("large") {
       height: 220px;
       padding-top: 20px;
       max-width: 170px;
-      margin-left: 30px;
+      margin-left: 0;
     }
     .wp-image-110,
     .wp-image-112,
@@ -482,6 +379,15 @@ h6 {
     .wp-image-114 {
       height: 90px;
       width: auto;
+      @include respond-to("average") {
+        height: 80px;
+      }
+      @include respond-to("medium") {
+        height: 80px;
+      }
+      @include respond-to("large") {
+        height: 100px;
+      }
     }
   }
   p {
@@ -498,179 +404,17 @@ h6 {
   @include respond-to("average") {
     padding-bottom: 30px;
     padding-top: 10px;
+    height: 110px;
   }
   @include respond-to("medium") {
     padding-bottom: 30px;
     padding-top: 10px;
+    height: 110px;
   }
   @include respond-to("large") {
     padding-bottom: 30px;
     padding-top: 10px;
-  }
-}
-
-.universal-logo-image {
-  img {
-    display: flex;
-    justify-content: center;
-    max-width: 125px;
-    height: auto;
-
-    // @include respond-to("average", "medium", "large") {
-    //   max-width: 135px;
-    // }
-  }
-}
-
-.blue-section-header-two {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  font-size: 30px;
-}
-
-.blue-section-header {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  font-size: 15px;
-  @include respond-to("average") {
-    font-size: 30px;
-  }
-  @include respond-to("medium") {
-    font-size: 30px;
-  }
-  @include respond-to("large") {
-    font-size: 30px;
-  }
-}
-
-.blue-section-paragraph {
-  font-size: 15px;
-  padding: 20px 10px 0 10px;
-  line-height: 20px;
-  @include respond-to("average") {
-    font-size: 18px;
-  }
-  @include respond-to("medium") {
-    font-size: 20px;
-  }
-  @include respond-to("large") {
-    font-size: 22px;
-  }
-}
-
-.about-us-column {
-  background-color: white;
-  border-radius: 25px;
-  overflow: hidden;
-  .about-use-image {
-  }
-}
-
-.about-us-header,
-.about-us-paragraph,
-.about-us-read-more,
-.about-us-read-less {
-  padding: 0px 10px 20px 20px !important;
-  font-weight: 500;
-  @include respond-to("average") {
-    padding: 0px 10px 20px 20px !important;
-  }
-  @include respond-to("medium") {
-    padding: 0px 10px 20px 20px !important;
-  }
-  @include respond-to("large") {
-    padding: 0px 10px 20px 20px !important;
-  }
-  &.about-us-header {
-    font-size: 23px !important;
-    @include respond-to("average") {
-      font-size: 30px;
-    }
-    @include respond-to("medium") {
-      font-size: 30px;
-    }
-    @include respond-to("large") {
-      font-size: 30px;
-    }
-  }
-  &.about-us-paragraph {
-    font-size: 15px !important;
-    @include respond-to("average") {
-      font-size: 15px !important;
-    }
-    @include respond-to("medium") {
-      font-size: 15px !important;
-    }
-    @include respond-to("large") {
-      font-size: 15px !important;
-    }
-  }
-  &.about-us-read-more {
-    color: #009f1e;
-    font-size: 15px !important;
-    font-weight: 700;
-    @include respond-to("average") {
-      font-size: 14px !important;
-    }
-    @include respond-to("medium") {
-      font-size: 13px !important;
-    }
-    @include respond-to("large") {
-      font-size: 12px !important;
-    }
-  }
-  &.about-us-read-less {
-    color: #009f1e;
-    font-size: 15px !important;
-    font-weight: 700;
-    @include respond-to("average") {
-      font-size: 14px !important;
-    }
-    @include respond-to("medium") {
-      font-size: 13px !important;
-    }
-    @include respond-to("large") {
-      font-size: 12px !important;
-    }
-  }
-}
-
-.universal-button-style-white {
-  a.wp-block-button__link {
-    display: none;
-    text-decoration: none;
-    padding: 10px 25px;
-    font-size: 12px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    justify-content: center;
-    border: none;
-
-    @include respond-to("average") {
-      padding: 10px 40px;
-      font-size: 15px;
-      display: flex;
-      border: 2px solid #54ade1;
-    }
-
-    @include respond-to("medium") {
-      padding: 10px 40px;
-      font-size: 15px;
-      display: flex;
-      border: 2px solid #54ade1;
-    }
-
-    @include respond-to("large") {
-      padding: 10px 40px;
-      font-size: 15px;
-      display: flex;
-      border: 2px solid #54ade1;
-    }
+    height: 130px;
   }
 }
 
@@ -727,11 +471,14 @@ h6 {
 
 .welcome-heading {
   font-size: 55px !important;
+  font-family: HelveticaNeueMedium;
+  font-weight: 500;
 }
 
 .welcome-paragraph-text {
   font-size: 18px;
   padding-top: 15px;
+  font-family: HelveticaNeueLight;
   // @include respond-to("average") {
   //   font-size: 18px;
   // }
@@ -745,22 +492,9 @@ h6 {
   }
 }
 
-.universal-header {
-  font-size: 30px;
+.top-section-order {
+  padding-top: 60px;
 }
-.universal-sub-text {
-  font-size: 18px;
-}
-.universal-paragraph {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-// .top-section-order {
-//   display: flex;
-//   flex-direction: column;
-// }
 // .welcome-heading {
 //   order: 3;
 //   display: flex;
@@ -773,6 +507,22 @@ h6 {
 //   order: 2;
 //   display: flex;
 // }
+
+.top-section-image {
+  margin-left: 45px;
+  min-width: 100%;
+  @include respond-to("average") {
+    margin-left: 0;
+  }
+
+  @include respond-to("medium") {
+    margin-left: 0;
+  }
+
+  @include respond-to("large") {
+    margin-left: 0;
+  }
+}
 
 .wp-block-ub-content-toggle-accordion-title {
   color: #062a4d !important;
@@ -791,12 +541,6 @@ h6 {
   padding-bottom: 10px;
   text-align: justify;
   line-height: 15px;
-}
-
-.five-min-read {
-  padding: 0px 10px 20px 20px !important;
-  font-size: 15px;
-  font-weight: 700;
 }
 
 .benefits-info {
@@ -824,4 +568,28 @@ h6 {
 
 .email-color-helper {
   color: #009f1e;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  @include respond-to("average") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include respond-to("medium") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include respond-to("large") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.partner {
+  padding-bottom: 60px;
 }

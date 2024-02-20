@@ -1,0 +1,151 @@
+.universal-separator {
+  hr {
+    border: none;
+    border-bottom: 3px solid #c4c4c4;
+    width: 110px;
+    margin: auto;
+    position: relative;
+    display: block;
+    padding-top: 20px;
+    margin-bottom: 15px;
+
+    @include respond-to("average") {
+      padding-top: 12px;
+      width: 150px;
+    }
+    @include respond-to("medium") {
+      padding-top: 12px;
+      width: 150px;
+    }
+    @include respond-to("large") {
+      padding-top: 12px;
+      width: 150px;
+    }
+
+    &::before {
+      position: absolute;
+      left: -3px;
+      top: 16px;
+      content: " ";
+      width: 10px;
+      height: 10px;
+      background-color: #54ade1;
+      border-radius: 50%;
+      @include respond-to("average") {
+        top: 8px;
+      }
+      @include respond-to("medium") {
+        top: 9px;
+      }
+      @include respond-to("large") {
+        top: 8px;
+      }
+    }
+  }
+}
+
+.universal-button-style {
+  a.wp-block-button__link {
+    display: flex;
+    background-color: #76b600;
+    text-decoration: none;
+    padding: 15px 45px;
+    font-size: 14px;
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+    cursor: pointer;
+    @include respond-to("average") {
+      padding: 15px 30px;
+      font-size: 15px;
+    }
+    @include respond-to("medium") {
+      padding: 15px 40px;
+      font-size: 15px;
+    }
+    @include respond-to("large") {
+      padding: 15px 40px;
+      font-size: 15px;
+    }
+  }
+}
+.universal-sub-text {
+  font-size: 18px;
+}
+.universal-paragraph {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.universal-logo-image {
+  img {
+    display: flex;
+    justify-content: center;
+    max-width: 125px;
+    height: auto;
+
+    // @include respond-to("average", "medium", "large") {
+    //   max-width: 135px;
+    // }
+  }
+}
+
+.universal-button-style-white {
+  a.wp-block-button__link {
+    display: none;
+    text-decoration: none;
+    padding: 15px 45px;
+    font-size: 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+
+    @include respond-to("average") {
+      padding: 15px 30px;
+      font-size: 15px;
+      display: flex;
+      border: 2px solid #54ade1;
+    }
+
+    @include respond-to("medium") {
+      padding: 15px 30px;
+      font-size: 15px;
+      display: flex;
+      border: 2px solid #54ade1;
+    }
+
+    @include respond-to("large") {
+      padding: 15px 40px;
+      font-size: 15px;
+      display: flex;
+      border: 2px solid #54ade1;
+    }
+  }
+}
+
+.universal-header {
+  font-size: 30px;
+  font-family: HelveticaNeueMedium;
+  font-weight: 500;
+  @include respond-to("average") {
+    font-size: 35px;
+  }
+
+  @include respond-to("medium") {
+    font-size: 35px;
+  }
+
+  @include respond-to("large") {
+    font-size: 40px;
+  }
+}
+
+.universal-sub-text {
+  font-family: HelveticaNeueLight;
+}

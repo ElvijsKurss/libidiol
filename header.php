@@ -46,7 +46,7 @@ wp_head();
                 </ul>
             </div>
             <div class="head-button-container">
-                <div class="head-button-body"><a href="#" class="header-button-link">Order now</a></div>
+                <div class="head-button-body"><a href="#order-now-section" class="header-button-link">Order now</a></div>
             </div>
         </div>
     </nav>

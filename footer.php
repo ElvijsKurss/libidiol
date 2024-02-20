@@ -18,7 +18,7 @@
                 <h3>Useful Links</h3>
             </div>
             <div id="column-two-text">
-                <div><a href="#">
+                <div><a href="#about-us-section">
                         <p class="footer-content-text-two">About us</p>
                     </a></div>
                 <div><a href="#">
