@@ -6,6 +6,9 @@ Header SCSS start
 
 header.header {
   text-align: center;
+  z-index: 999;
+  margin: 0 auto;
+  width: 100%;
 
   nav {
     display: flex;
@@ -34,15 +37,37 @@ header.header {
       #nav-bar-categories {
         flex: 2;
         display: flex;
-        justify-content: center;
+        justify-content: left;
+        margin: 0;
+        flex-direction: column;
+        @include respond-to("average") {
+          flex-direction: row;
+          justify-content: center;
+        }
+        @include respond-to("medium") {
+          flex-direction: row;
+          justify-content: center;
+        }
+        @include respond-to("large") {
+          flex-direction: row;
+          justify-content: center;
+        }
       }
 
       #nav-bar-icons {
         flex: 1;
-        // display: flex;
-        // justify-content: center;
         align-items: center;
         margin: auto;
+        display: none;
+        @include respond-to("average") {
+          display: none;
+        }
+        @include respond-to("medium") {
+          display: none;
+        }
+        @include respond-to("large") {
+          display: flex;
+        }
 
         .social-list {
           display: flex;
@@ -72,11 +97,7 @@ header.header {
     }
   }
 }
-.header .nav-item a {
-  color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  text-decoration: none;
-}
+
 .head-button-container {
   display: flex;
   .head-button-body {
@@ -89,6 +110,9 @@ header.header {
       font-size: 17px;
       color: white;
       border-radius: 30px;
+      &:hover {
+        background-color: darken(#76b600, 10%);
+      }
     }
   }
 }
@@ -113,18 +137,13 @@ header.header {
       }
     }
 
-    .nav-item {
+    .nav-item,
+    .menu-item {
       font-weight: bold;
 
-      &.active a {
-        color: rgba(0, 0, 0, 0.5);
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
       a {
+        color: white;
+        padding: 10px;
         &:hover {
           text-decoration: underline;
           color: #76b600;
@@ -136,3 +155,7 @@ header.header {
 /*
 Header SCSS end 
 */
+
+.collapse.show {
+  display: none !important;
+}

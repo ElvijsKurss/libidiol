@@ -47,7 +47,7 @@
 .universal-button-style {
   a.wp-block-button__link {
     display: flex;
-    background-color: #76b600;
+    background-color: #76b600 !important;
     text-decoration: none;
     padding: 15px 45px;
     font-size: 14px;
@@ -56,23 +56,32 @@
     text-transform: uppercase;
     font-weight: bold;
     justify-content: center;
+    // -webkit-transition: 0.5s ease-in-out;
+    // -moz-transition:  0.5s ease-in-out;
+    // -ms-transition:  0.5s ease-in-out;
+    // -o-transition:  0.5s ease-in-out;
+    // transition: 0.5s ease-in-out;
     cursor: pointer;
+    &:hover {
+      background-color: darken(#76b600, 10%) !important;
+    }
     @include respond-to("average") {
-      padding: 15px 30px;
+      padding: 10px 25px;
       font-size: 15px;
     }
     @include respond-to("medium") {
-      padding: 15px 40px;
+      padding: 10px 25px;
       font-size: 15px;
     }
     @include respond-to("large") {
-      padding: 15px 40px;
+      padding: 10px 30px;
       font-size: 15px;
     }
   }
 }
 .universal-sub-text {
   font-size: 18px;
+  padding-bottom: 10px;
 }
 .universal-paragraph {
   font-size: 20px;
@@ -105,23 +114,31 @@
     justify-content: center;
     border: none;
     cursor: pointer;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    &:hover {
+      background-color: darken(#ffffff, 10%) !important;
+    }
 
     @include respond-to("average") {
-      padding: 15px 30px;
+      padding: 10px 30px;
       font-size: 15px;
       display: flex;
       border: 2px solid #54ade1;
     }
 
     @include respond-to("medium") {
-      padding: 15px 30px;
+      padding: 10px 30px;
       font-size: 15px;
       display: flex;
       border: 2px solid #54ade1;
     }
 
     @include respond-to("large") {
-      padding: 15px 40px;
+      padding: 10px 30px;
       font-size: 15px;
       display: flex;
       border: 2px solid #54ade1;

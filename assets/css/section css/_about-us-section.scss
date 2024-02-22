@@ -38,6 +38,8 @@
   &.about-us-paragraph {
     font-size: 15px !important;
     font-family: HelveticaNeueLight;
+    line-height: 17px;
+    font-weight: 700;
     @include respond-to("average") {
       font-size: 15px !important;
     }
@@ -82,7 +84,7 @@
 
 /* 5 min to read scss*/
 .five-min-read {
-  padding: 0px 10px 20px 20px !important;
+  padding: 15px 10px 20px 20px !important;
   font-size: 10px;
   font-weight: 700;
 }

@@ -26,10 +26,10 @@
     font-size: 30px;
   }
   @include respond-to("medium") {
-    font-size: 35px;
+    font-size: 30px;
   }
   @include respond-to("large") {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
@@ -45,6 +45,6 @@
     font-size: 20px;
   }
   @include respond-to("large") {
-    font-size: 22px;
+    font-size: 20px;
   }
 }

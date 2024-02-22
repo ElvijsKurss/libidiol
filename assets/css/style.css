@@ -9,11 +9,11 @@ Footer sccs
   align-items: center;
   padding: 2em 0em;
   width: 100%;
+  margin-top: auto;
 }
 @media (min-width: 800px) {
   #footer-container {
     display: flex;
-    justify-content: space-around;
     padding: 4em 0em;
     flex-direction: row;
   }
@@ -21,7 +21,6 @@ Footer sccs
 @media (min-width: 992px) {
   #footer-container {
     display: flex;
-    justify-content: space-around;
     padding: 4em 0em;
     flex-direction: row;
   }
@@ -29,7 +28,6 @@ Footer sccs
 @media (min-width: 1080px) {
   #footer-container {
     display: flex;
-    justify-content: space-around;
     padding: 4em 0em;
     flex-direction: row;
   }
@@ -287,7 +285,7 @@ Footer sccs
   text-align: center;
   justify-content: center;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 @media (min-width: 800px) {
   #footer-container .column .footer-content-text {
@@ -328,7 +326,22 @@ Footer sccs
   flex-direction: row;
   list-style-type: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 35px;
+}
+@media (min-width: 800px) {
+  #footer-container .column .social-icons {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 992px) {
+  #footer-container .column .social-icons {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  #footer-container .column .social-icons {
+    margin-top: 20px;
+  }
 }
 #footer-container .column .social-icons .footer-icons {
   padding: 0;
@@ -348,6 +361,9 @@ Footer sccs
   border-radius: 50%;
   margin-right: 5px;
   font-size: 18px;
+}
+#footer-container .column .social-icons .footer-icons a .fab:hover {
+  background-color: #558300;
 }
 @media (min-width: 800px) {
   #footer-container .column .social-icons .footer-icons a .fab {
@@ -371,11 +387,33 @@ Footer sccs
   }
 }
 
+.column.three {
+  display: none !important;
+}
+@media (min-width: 800px) {
+  .column.three {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .column.three {
+    display: flex !important;
+  }
+}
+@media (min-width: 1080px) {
+  .column.three {
+    display: flex !important;
+  }
+}
+
 /*
 Header SCSS start
 */
 header.header {
   text-align: center;
+  z-index: 999;
+  margin: 0 auto;
+  width: 100%;
 }
 header.header nav {
   display: flex;
@@ -409,12 +447,48 @@ header.header nav #navigation #nav-bar-logo {
 header.header nav #navigation #nav-bar-categories {
   flex: 2;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  margin: 0;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  header.header nav #navigation #nav-bar-categories {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  header.header nav #navigation #nav-bar-categories {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width: 1080px) {
+  header.header nav #navigation #nav-bar-categories {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 header.header nav #navigation #nav-bar-icons {
   flex: 1;
   align-items: center;
   margin: auto;
+  display: none;
+}
+@media (min-width: 800px) {
+  header.header nav #navigation #nav-bar-icons {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  header.header nav #navigation #nav-bar-icons {
+    display: none;
+  }
+}
+@media (min-width: 1080px) {
+  header.header nav #navigation #nav-bar-icons {
+    display: flex;
+  }
 }
 header.header nav #navigation #nav-bar-icons .social-list {
   display: flex;
@@ -440,12 +514,6 @@ header.header nav #navigation #nav-bar-icons .social-list a .fa {
   color: white;
 }
 
-.header .nav-item a {
-  color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  text-decoration: none;
-}
-
 .head-button-container {
   display: flex;
 }
@@ -460,6 +528,9 @@ header.header nav #navigation #nav-bar-icons .social-list a .fa {
   font-size: 17px;
   color: white;
   border-radius: 30px;
+}
+.head-button-container .head-button-body .header-button-link:hover {
+  background-color: #558300;
 }
 
 /* Header */
@@ -479,16 +550,17 @@ header.header nav #navigation #nav-bar-icons .social-list a .fa {
 .header .navbar .navbar-dark .navbar-toggler:hover {
   opacity: 1;
 }
-.header .navbar .nav-item {
+.header .navbar .nav-item,
+.header .navbar .menu-item {
   font-weight: bold;
 }
-.header .navbar .nav-item.active a {
-  color: rgba(0, 0, 0, 0.5);
+.header .navbar .nav-item a,
+.header .navbar .menu-item a {
+  color: white;
+  padding: 10px;
 }
-.header .navbar .nav-item.active a:hover {
-  text-decoration: none;
-}
-.header .navbar .nav-item a:hover {
+.header .navbar .nav-item a:hover,
+.header .navbar .menu-item a:hover {
   text-decoration: underline;
   color: #76b600;
 }
@@ -496,6 +568,10 @@ header.header nav #navigation #nav-bar-icons .social-list a .fa {
 /*
 Header SCSS end 
 */
+.collapse.show {
+  display: none !important;
+}
+
 /* Section SCSS */
 .about-us-column {
   background-color: white;
@@ -570,6 +646,8 @@ Header SCSS end
 .about-us-read-less.about-us-paragraph {
   font-size: 15px !important;
   font-family: HelveticaNeueLight;
+  line-height: 17px;
+  font-weight: 700;
 }
 @media (min-width: 800px) {
   .about-us-header.about-us-paragraph,
@@ -664,7 +742,7 @@ Header SCSS end
 
 /* 5 min to read scss*/
 .five-min-read {
-  padding: 0px 10px 20px 20px !important;
+  padding: 15px 10px 20px 20px !important;
   font-size: 10px;
   font-weight: 700;
 }
@@ -707,12 +785,12 @@ Header SCSS end
 }
 @media (min-width: 992px) {
   .blue-section-header {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 @media (min-width: 1080px) {
   .blue-section-header {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
@@ -734,7 +812,7 @@ Header SCSS end
 }
 @media (min-width: 1080px) {
   .blue-section-paragraph {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -794,7 +872,7 @@ Header SCSS end
 
 .universal-button-style a.wp-block-button__link {
   display: flex;
-  background-color: #76b600;
+  background-color: #76b600 !important;
   text-decoration: none;
   padding: 15px 45px;
   font-size: 14px;
@@ -805,27 +883,31 @@ Header SCSS end
   justify-content: center;
   cursor: pointer;
 }
+.universal-button-style a.wp-block-button__link:hover {
+  background-color: #558300 !important;
+}
 @media (min-width: 800px) {
   .universal-button-style a.wp-block-button__link {
-    padding: 15px 30px;
+    padding: 10px 25px;
     font-size: 15px;
   }
 }
 @media (min-width: 992px) {
   .universal-button-style a.wp-block-button__link {
-    padding: 15px 40px;
+    padding: 10px 25px;
     font-size: 15px;
   }
 }
 @media (min-width: 1080px) {
   .universal-button-style a.wp-block-button__link {
-    padding: 15px 40px;
+    padding: 10px 30px;
     font-size: 15px;
   }
 }
 
 .universal-sub-text {
   font-size: 18px;
+  padding-bottom: 10px;
 }
 
 .universal-paragraph {
@@ -852,10 +934,14 @@ Header SCSS end
   justify-content: center;
   border: none;
   cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+}
+.universal-button-style-white a.wp-block-button__link:hover {
+  background-color: #e6e6e6 !important;
 }
 @media (min-width: 800px) {
   .universal-button-style-white a.wp-block-button__link {
-    padding: 15px 30px;
+    padding: 10px 30px;
     font-size: 15px;
     display: flex;
     border: 2px solid #54ade1;
@@ -863,7 +949,7 @@ Header SCSS end
 }
 @media (min-width: 992px) {
   .universal-button-style-white a.wp-block-button__link {
-    padding: 15px 30px;
+    padding: 10px 30px;
     font-size: 15px;
     display: flex;
     border: 2px solid #54ade1;
@@ -871,7 +957,7 @@ Header SCSS end
 }
 @media (min-width: 1080px) {
   .universal-button-style-white a.wp-block-button__link {
-    padding: 15px 40px;
+    padding: 10px 30px;
     font-size: 15px;
     display: flex;
     border: 2px solid #54ade1;
@@ -921,6 +1007,7 @@ Header SCSS end
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  transition: 0.3s ease-in-out;
 }
 
 :root {
@@ -963,21 +1050,41 @@ Header SCSS end
 }
 
 /* Logo */
-.logo {
+.bottom-logo {
   width: 160px;
+  padding-bottom: 30px;
 }
 @media (min-width: 800px) {
-  .logo {
+  .bottom-logo {
     width: 140px;
   }
 }
 @media (min-width: 992px) {
-  .logo {
+  .bottom-logo {
     width: 140px;
   }
 }
 @media (min-width: 1080px) {
-  .logo {
+  .bottom-logo {
+    width: 140px;
+  }
+}
+
+.top-logo {
+  width: 160px;
+}
+@media (min-width: 800px) {
+  .top-logo {
+    width: 140px;
+  }
+}
+@media (min-width: 992px) {
+  .top-logo {
+    width: 140px;
+  }
+}
+@media (min-width: 1080px) {
+  .top-logo {
     width: 140px;
   }
 }
@@ -1158,29 +1265,32 @@ Header SCSS end
 }
 @media (min-width: 800px) {
   .top-left-container {
-    padding-left: 60px;
+    padding-left: 90px !important;
     align-items: flex-start;
   }
 }
 @media (min-width: 992px) {
   .top-left-container {
-    padding-left: 70px;
+    padding-left: 100px !important;
     align-items: flex-start;
   }
 }
 @media (min-width: 1080px) {
   .top-left-container {
-    padding-left: 170px;
+    padding-left: 170px !important;
     align-items: flex-start;
   }
 }
 
 .white-box-text {
   font-family: HelveticaNeueMedium;
+  font-size: 13px !important;
 }
 
 .white-box-paragraph {
   font-family: HelveticaNeueLight;
+  font-size: 25px;
+  line-height: 25px;
 }
 
 .white-box-gap :where(.wp-block-columns.is-layout-flex) {
@@ -1193,12 +1303,12 @@ Header SCSS end
 }
 @media (min-width: 992px) {
   .white-box-gap :where(.wp-block-columns.is-layout-flex) {
-    gap: 2em !important;
+    gap: 3em !important;
   }
 }
 @media (min-width: 1080px) {
   .white-box-gap :where(.wp-block-columns.is-layout-flex) {
-    gap: 2em !important;
+    gap: 4em !important;
   }
 }
 
@@ -1253,9 +1363,8 @@ Header SCSS end
 .column-one .white-box,
 .column-two .white-box {
   background-color: white;
-  height: 200px;
-  padding-top: 0;
-  max-width: 145px;
+  height: 180px;
+  max-width: 140px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin-left: 0;
@@ -1263,27 +1372,24 @@ Header SCSS end
 @media (min-width: 800px) {
   .column-one .white-box,
   .column-two .white-box {
-    height: 200px;
-    padding-top: 20px;
-    max-width: 160px;
+    height: 160px;
+    max-width: 130px;
     margin-left: 0;
   }
 }
 @media (min-width: 992px) {
   .column-one .white-box,
   .column-two .white-box {
-    height: 200px;
-    padding-top: 20px;
-    max-width: 160px;
+    height: 170px;
+    max-width: 140px;
     margin-left: 0;
   }
 }
 @media (min-width: 1080px) {
   .column-one .white-box,
   .column-two .white-box {
-    height: 220px;
-    padding-top: 20px;
-    max-width: 170px;
+    height: 180px;
+    max-width: 150px;
     margin-left: 0;
   }
 }
@@ -1295,7 +1401,7 @@ Header SCSS end
 .column-two .white-box .wp-image-112,
 .column-two .white-box .wp-image-113,
 .column-two .white-box .wp-image-114 {
-  height: 90px;
+  height: 80px;
   width: auto;
 }
 @media (min-width: 800px) {
@@ -1307,7 +1413,7 @@ Header SCSS end
   .column-two .white-box .wp-image-112,
   .column-two .white-box .wp-image-113,
   .column-two .white-box .wp-image-114 {
-    height: 80px;
+    height: 60px;
   }
 }
 @media (min-width: 992px) {
@@ -1319,7 +1425,7 @@ Header SCSS end
   .column-two .white-box .wp-image-112,
   .column-two .white-box .wp-image-113,
   .column-two .white-box .wp-image-114 {
-    height: 80px;
+    height: 65px;
   }
 }
 @media (min-width: 1080px) {
@@ -1331,7 +1437,7 @@ Header SCSS end
   .column-two .white-box .wp-image-112,
   .column-two .white-box .wp-image-113,
   .column-two .white-box .wp-image-114 {
-    height: 100px;
+    height: 70px;
   }
 }
 .column-one p,
@@ -1340,8 +1446,6 @@ Header SCSS end
 }
 
 .image-container-column {
-  padding-bottom: 5px;
-  padding-top: 10px;
   height: 130px;
   justify-content: center;
   display: flex;
@@ -1349,23 +1453,17 @@ Header SCSS end
 }
 @media (min-width: 800px) {
   .image-container-column {
-    padding-bottom: 30px;
-    padding-top: 10px;
-    height: 110px;
+    height: 100px;
   }
 }
 @media (min-width: 992px) {
   .image-container-column {
-    padding-bottom: 30px;
-    padding-top: 10px;
     height: 110px;
   }
 }
 @media (min-width: 1080px) {
   .image-container-column {
-    padding-bottom: 30px;
-    padding-top: 10px;
-    height: 130px;
+    height: 120px;
   }
 }
 
@@ -1434,10 +1532,6 @@ Header SCSS end
   }
 }
 
-.top-section-order {
-  padding-top: 60px;
-}
-
 .top-section-image {
   margin-left: 45px;
   min-width: 100%;
@@ -1480,16 +1574,40 @@ Header SCSS end
 .benefits-info {
   display: flex !important;
   flex-direction: row-reverse !important;
+  position: relative;
+}
+.benefits-info .one {
+  position: absolute;
+  top: 10%;
+}
+.benefits-info .two {
+  position: absolute;
+  top: 20%;
+}
+.benefits-info .three {
+  position: absolute;
+  top: 40%;
+}
+.benefits-info .four {
+  position: absolute;
+  top: 50%;
+}
+.benefits-info .five {
+  position: absolute;
+  top: 70%;
 }
 .benefits-info .wp-block-heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid green;
+  font-size: 20px;
   flex: 2;
 }
-.benefits-info .wp-block-heading p {
+.benefits-info p {
   border: 1px solid red;
+  display: flex;
+  font-size: 12px;
 }
 .benefits-info figure {
   display: flex;
@@ -1498,7 +1616,7 @@ Header SCSS end
 }
 
 .email-color-helper {
-  color: #009f1e;
+  color: #009f1e !important;
 }
 
 .container {
@@ -1527,4 +1645,50 @@ Header SCSS end
 
 .partner {
   padding-bottom: 60px;
+}
+
+.top-spacer {
+  height: 70px !important;
+}
+@media (min-width: 800px) {
+  .top-spacer {
+    height: 100px !important;
+  }
+}
+@media (min-width: 992px) {
+  .top-spacer {
+    height: 120px !important;
+  }
+}
+@media (min-width: 1080px) {
+  .top-spacer {
+    height: 140px !important;
+  }
+}
+
+.header-spacer {
+  height: 15px !important;
+}
+@media (min-width: 800px) {
+  .header-spacer {
+    height: 20px !important;
+  }
+}
+@media (min-width: 992px) {
+  .header-spacer {
+    height: 25px !important;
+  }
+}
+@media (min-width: 1080px) {
+  .header-spacer {
+    height: 30px !important;
+  }
+}
+
+.custome-page-header {
+  font-size: 30px;
+}
+
+.custome-page-paragraph {
+  font-size: 15px;
 }/*# sourceMappingURL=style.css.map */
