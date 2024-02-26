@@ -554,43 +554,34 @@ header.header nav #navigation #nav-bar-icons {
   margin: auto;
   display: none;
 }
-@media (min-width: 768px) {
-  header.header nav #navigation #nav-bar-icons {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  header.header nav #navigation #nav-bar-icons {
-    display: none;
-  }
-}
 @media (min-width: 1080px) {
   header.header nav #navigation #nav-bar-icons {
     display: flex;
   }
-}
-header.header nav #navigation #nav-bar-icons .social-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-header.header nav #navigation #nav-bar-icons .social-list a {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  /* AFTER ELEMENT HERE! */
-}
-header.header nav #navigation #nav-bar-icons .social-list a:hover {
-  color: #76b600;
-}
-header.header nav #navigation #nav-bar-icons .social-list a .fa {
-  font-size: 10px;
-  margin-right: 3px;
-  color: white;
+  header.header nav #navigation #nav-bar-icons .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  header.header nav #navigation #nav-bar-icons .social-list a {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    align-items: center;
+    /* Doesnt work as intended? Nesting issue?*/
+  }
+  header.header nav #navigation #nav-bar-icons .social-list a:hover {
+    color: #76b600;
+  }
+  header.header nav #navigation #nav-bar-icons .social-list a .fa {
+    font-size: 6px;
+    color: white;
+  }
 }
 
 .head-button-container {
@@ -619,7 +610,7 @@ header.header nav #navigation #nav-bar-icons .social-list a .fa {
   background-color: #76b600;
   text-decoration: none;
   padding: 10px 25px;
-  font-size: 17px;
+  font-size: 15px;
   color: white;
   border-radius: 30px;
 }
@@ -665,9 +656,9 @@ Header SCSS end
 /* Footer elements in header on mobile version scss*/
 .mobile-contact-us-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  display: flex;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .mobile-contact-us-container {
@@ -684,16 +675,25 @@ Header SCSS end
     display: none;
   }
 }
-.mobile-contact-us-container a {
-  display: flex;
-  text-decoration: none;
-}
-.mobile-contact-us-container a .header-content-text-mobile {
+.mobile-contact-us-container .header-content-text-mobile {
   display: flex;
   padding: 5px 15px;
   margin: 0;
   color: white;
   font-size: 16px;
+}
+
+/* Mobile version social icons css*/
+.fab {
+  color: white;
+  background-color: #76b600;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
 }
 
 .mobile-social-icons-container {
@@ -736,16 +736,29 @@ Header SCSS end
   text-decoration: none;
 }
 
-.fab {
-  color: white;
-  background-color: #76b600;
-  width: 55px;
-  height: 55px;
+/* Fontello icon scss*/
+.menu-icon {
+  color: #54ade1;
+  font-size: 17px;
+}
+
+.icon-euro,
+.icon-search,
+.icon-language {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 22px;
+  padding-right: 8px;
+}
+.icon-euro:nth-child(-n+3)::after,
+.icon-search:nth-child(-n+3)::after,
+.icon-language:nth-child(-n+3)::after {
+  content: "";
+  position: absolute;
+  height: 120%;
+  width: 1px;
+  background-color: white;
+  right: 0;
+  top: 0;
 }
 
 /* Section SCSS */
@@ -1955,11 +1968,4 @@ Header SCSS end
   .desktop-reviews {
     display: flex;
   }
-}
-
-.menu-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #6610f2;
-  color: white;
 }/*# sourceMappingURL=style.css.map */

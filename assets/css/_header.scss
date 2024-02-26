@@ -101,37 +101,35 @@ header.header {
         align-items: center;
         margin: auto;
         display: none;
-        @include respond-to("average") {
-          display: none;
-        }
-        @include respond-to("medium") {
-          display: none;
-        }
+
         @include respond-to("large") {
           display: flex;
-        }
 
-        .social-list {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-
-          a {
-            width: 32px;
-            height: 32px;
+          .social-list {
             display: flex;
             justify-content: center;
             align-items: center;
-            text-decoration: none;
-            &:hover {
-              color: #76b600;
-            }
-            /* AFTER ELEMENT HERE! */
-            .fa {
-              font-size: 10px;
-              margin-right: 3px;
-              color: white;
+            margin: auto;
+
+            a {
+              width: 32px;
+              height: 32px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              position: relative;
+              align-items: center;
+
+              /* Doesnt work as intended? Nesting issue?*/
+              &:hover {
+                color: #76b600;
+              }
+
+              .fa {
+                font-size: 6px;
+                color: white;
+              }
             }
           }
         }
@@ -158,7 +156,7 @@ header.header {
       background-color: #76b600;
       text-decoration: none;
       padding: 10px 25px;
-      font-size: 17px;
+      font-size: 15px;
       color: white;
       border-radius: 30px;
       &:hover {
@@ -208,12 +206,11 @@ Header SCSS end
 */
 
 /* Footer elements in header on mobile version scss*/
-
 .mobile-contact-us-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  display: flex;
+  width: 100%;
   @include respond-to("average") {
     display: none;
   }
@@ -223,19 +220,28 @@ Header SCSS end
   @include respond-to("large") {
     display: none;
   }
-  a {
+
+  .header-content-text-mobile {
     display: flex;
-    text-decoration: none;
-    .header-content-text-mobile {
-      display: flex;
-      padding: 5px 15px;
-      margin: 0;
-      color: white;
-      font-size: 16px;
-    }
+    padding: 5px 15px;
+    margin: 0;
+    color: white;
+    font-size: 16px;
   }
 }
 
+/* Mobile version social icons css*/
+.fab {
+  color: white;
+  background-color: #76b600;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
 .mobile-social-icons-container {
   display: flex;
   justify-content: center;
@@ -270,14 +276,24 @@ Header SCSS end
   }
 }
 
-.fab {
-  color: white;
-  background-color: #76b600;
-  width: 55px;
-  height: 55px;
+/* Fontello icon scss*/
+.menu-icon {
+  color: #54ade1;
+  font-size: 17px;
+}
+.icon-euro,
+.icon-search,
+.icon-language {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 22px;
+  padding-right: 8px;
+  &:nth-child(-n + 3)::after {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 1px;
+    background-color: white;
+    right: 0;
+    top: 0;
+  }
 }

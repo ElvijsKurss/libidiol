@@ -39,15 +39,15 @@
             <div id="column-three-content">
                 <h3>Contact Us</h3>
             </div>
-            <div><a href="#">
-                    <p class="footer-content-text-three">Thailand, Ramkhamhaeng road</p>
-                </a></div>
-            <div><a href="#">
-                    <p class="footer-content-text-three">+66858576671</p>
-                </a></div>
-            <div><a href="#">
-                    <p class="footer-content-text-three">office@libidiol.com</p>
-                </a></div>
+            <div>
+                <p class="header-content-text-mobile">Thailand, Ramkhamhaeng road</p>
+            </div>
+            <div>
+                <p class="header-content-text-mobile">+66858576671</p>
+            </div>
+            <div>
+                <p class="header-content-text-mobile">office@libidiol.com</p>
+            </div>
 
         </div>
         <div class="column four" id="contact-us">

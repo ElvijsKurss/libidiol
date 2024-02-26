@@ -38,15 +38,15 @@ wp_head();
             </div>
 
             <div class="mobile-contact-us-container">
-                <div><a href="#">
-                        <p class="header-content-text-mobile">Thailand, Ramkhamhaeng road</p>
-                    </a></div>
-                <div><a href="#">
-                        <p class="header-content-text-mobile">+66858576671</p>
-                    </a></div>
-                <div><a href="#">
-                        <p class="header-content-text-mobile">office@libidiol.com</p>
-                    </a></div>
+                <div>
+                    <p class="header-content-text-mobile">Thailand, Ramkhamhaeng road</p>
+                </div>
+                <div>
+                    <p class="header-content-text-mobile">+66858576671</p>
+                </div>
+                <div>
+                    <p class="header-content-text-mobile">office@libidiol.com</p>
+                </div>
 
             </div>
 
