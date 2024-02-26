@@ -1,6 +1,5 @@
 <?php
 
-
 function libidiol_theme_support()
 {
     // manage WordPress title
@@ -24,9 +23,10 @@ add_action('init', 'libidiol_menus');
 function libidiol_register_styles()
 {
     $version = wp_get_theme()->get('Version');
+    wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
+    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
     wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.css", array('libidiol-bootstrap'), $version, 'all');
-    wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
-    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '1.0', 'all');
+    wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/fontello.css", array('libidiol-bootstrap'), $version, 'all');
 }
 
 add_action('wp_enqueue_scripts', 'libidiol_register_styles');
@@ -34,10 +34,12 @@ add_action('wp_enqueue_scripts', 'libidiol_register_styles');
 function libidiol_register_admin_styles()
 {
     $version = wp_get_theme()->get('Version');
+    wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
+    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
     wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.css", array('libidiol-bootstrap'), $version, 'all');
-    wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
-    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '1.0', 'all');
+    wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/fontello.css", array('libidiol-bootstrap'), $version, 'all');
 }
+
 
 // comment this line to disable additional admin stylesheets
 add_action('admin_enqueue_scripts', 'libidiol_register_admin_styles');
@@ -46,14 +48,9 @@ add_action('admin_enqueue_scripts', 'libidiol_register_admin_styles');
 function libidiol_register_scripts()
 {
     $version = wp_get_theme()->get('Version');
-    wp_enqueue_script('libidiol-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
-    wp_enqueue_script('libidiol-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', array(), '1.16.0', true);
-    wp_enqueue_script('libidiol-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array(), '3.4.1', true);
+    wp_enqueue_script('libidiol-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
+    wp_enqueue_script('libidiol-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', array('libidiol-jquery'), '3.4.1', true);
     wp_enqueue_script('libidiol-main', get_template_directory_uri() . '/assets/js/main.js', array(), $version, true);
 }
 
 add_action('wp_enqueue_scripts', 'libidiol_register_scripts');
-
-?>
-
-<?php

@@ -17,21 +17,50 @@ header.header {
 
     #navigation {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       width: 100%;
       flex-direction: column;
       @include respond-to("average") {
         flex-direction: row;
+        align-items: center;
       }
       @include respond-to("medium") {
         flex-direction: row;
+        align-items: center;
       }
       @include respond-to("large") {
         flex-direction: row;
+        align-items: center;
+      }
+      .menu-item {
+        display: flex;
+        align-items: flex-start;
+        @include respond-to("average") {
+          align-items: center;
+        }
+        @include respond-to("medium") {
+          align-items: center;
+        }
+        @include respond-to("large") {
+          align-items: center;
+        }
       }
 
       #nav-bar-logo {
         flex: 1;
+        display: none;
+        @include respond-to("average") {
+          flex-direction: row;
+          display: flex;
+        }
+        @include respond-to("medium") {
+          flex-direction: row;
+          display: flex;
+        }
+        @include respond-to("large") {
+          flex-direction: row;
+          display: flex;
+        }
       }
 
       #nav-bar-categories {
@@ -40,6 +69,19 @@ header.header {
         justify-content: left;
         margin: 0;
         flex-direction: column;
+        a {
+          font-size: 20px;
+          padding: 10px 15px;
+          @include respond-to("average") {
+            font-size: 15px;
+          }
+          @include respond-to("medium") {
+            font-size: 15px;
+          }
+          @include respond-to("large") {
+            font-size: 15px;
+          }
+        }
         @include respond-to("average") {
           flex-direction: row;
           justify-content: center;
@@ -99,7 +141,16 @@ header.header {
 }
 
 .head-button-container {
-  display: flex;
+  display: none;
+  @include respond-to("average") {
+    display: flex;
+  }
+  @include respond-to("medium") {
+    display: flex;
+  }
+  @include respond-to("large") {
+    display: flex;
+  }
   .head-button-body {
     display: flex;
     .header-button-link {
@@ -156,6 +207,77 @@ header.header {
 Header SCSS end 
 */
 
-.collapse.show {
-  display: none !important;
+/* Footer elements in header on mobile version scss*/
+
+.mobile-contact-us-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  @include respond-to("average") {
+    display: none;
+  }
+  @include respond-to("medium") {
+    display: none;
+  }
+  @include respond-to("large") {
+    display: none;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    .header-content-text-mobile {
+      display: flex;
+      padding: 5px 15px;
+      margin: 0;
+      color: white;
+      font-size: 16px;
+    }
+  }
+}
+
+.mobile-social-icons-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  margin: auto;
+  @include respond-to("average") {
+    display: none;
+  }
+  @include respond-to("medium") {
+    display: none;
+  }
+  @include respond-to("large") {
+    display: none;
+  }
+  .mobile-social-icons-container-content {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.footer-icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  a {
+    text-decoration: none;
+  }
+}
+
+.fab {
+  color: white;
+  background-color: #76b600;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
 }

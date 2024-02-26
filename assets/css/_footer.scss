@@ -104,7 +104,7 @@ Footer sccs
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-top: 10px;
+        padding-top: 20px;
         @include respond-to("average") {
           justify-content: left;
           padding-top: 25px;
@@ -122,16 +122,28 @@ Footer sccs
           color: white;
           border: none;
           border-radius: 30px;
-          padding: 7px 30px;
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 12px;
           text-transform: uppercase;
+          padding: 15px 45px;
+          font-size: 14px;
+          font-weight: 500;
           cursor: pointer;
-
           &:hover {
             background-color: darken(#76b600, 10%);
+          }
+          @include respond-to("average") {
+            padding: 10px 35px;
+            font-size: 13px;
+          }
+          @include respond-to("medium") {
+            padding: 10px 35px;
+            font-size: 13px;
+          }
+          @include respond-to("large") {
+            padding: 10px 35px;
+            font-size: 13px;
           }
         }
       }

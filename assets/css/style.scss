@@ -91,14 +91,11 @@
 
 /* Main Wrapper */
 .main-wrapper {
-  //background: transparent;
-  max-width: 1300px !important;
+  max-width: 1170px !important;
   margin-left: auto;
   margin-right: auto;
 }
-// .container {
-//   padding: 0 !important;
-// }
+
 /* Page Title */
 .page-title {
   position: sticky;
@@ -127,133 +124,6 @@
     var(--primary) 100%
   ) !important;
 }
-
-/* Content */
-.content {
-  .post {
-    .title {
-      font-size: 1.275rem;
-      a {
-        color: var(--gray-dark);
-
-        &:hover {
-          color: var(--gray-dark);
-        }
-      }
-    }
-
-    .post-thumb {
-      max-width: 160px;
-      border-radius: 2px;
-    }
-
-    .intro {
-      font-size: 0.875rem;
-    }
-
-    .more-link {
-      font-size: var(--font-small);
-    }
-  }
-
-  .meta {
-    color: #8f8f8f;
-    font-size: var(--font-small);
-
-    span {
-      display: inline-block;
-      margin-right: 0.25em;
-
-      a {
-        color: #8f8f8f;
-      }
-
-      &.tag {
-        background-color: var(--lightgray);
-        padding: 0 0.5em;
-        border-radius: 5px;
-      }
-
-      &:last-child:after {
-        display: none;
-      }
-
-      a:hover {
-        color: var(--secondary);
-      }
-    }
-  }
-
-  .blockquote {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    border-left: 2px solid var(--gray-dark);
-    font-size: 1.5rem;
-
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
-  /* Media Queries */
-  @media (prefers-reduced-motion: reduce) {
-    .social-list a,
-    .btn {
-      transition: none;
-    }
-  }
-}
-
-// @media (max-width: 991.98px) {
-//   .page-title {
-//     position: static;
-//   }
-
-//   .header {
-//     position: sticky;
-//     width: inherit;
-//     height: auto;
-
-//     .btn-primary {
-//       width: 100%;
-//     }
-
-//     .navbar {
-//       .main-wrapper .container {
-//         padding: 1rem;
-//       }
-//     }
-//   }
-
-//   .main-wrapper {
-//     margin-left: 0;
-//   }
-// }
-
-/* Comments */
-.comments-wrapper {
-  margin-top: 3rem;
-}
-
-.comment-reply-title {
-  margin: 0 0 4rem 0;
-  text-align: center;
-}
-
-.comment,
-.pingback,
-.trackback,
-.review {
-  padding-top: 3.5rem;
-}
-
-.comment-meta {
-  line-height: 1.1;
-  margin-bottom: 0;
-}
-
-// .service-items {
-//   background-color: black;
-// }
 
 .section-content {
   background-color: red;
@@ -313,6 +183,9 @@
     padding-left: 170px !important;
     align-items: flex-start;
   }
+  // .welcome-heading {
+  //   order: 3;
+  // }
 }
 
 .white-box-text {
@@ -321,8 +194,21 @@
 }
 .white-box-paragraph {
   font-family: HelveticaNeueLight;
-  font-size: 25px;
+  font-size: 16px;
   line-height: 25px;
+  padding: 40px 0 0 0;
+  @include respond-to("average") {
+    font-size: 25px;
+    padding: 0;
+  }
+  @include respond-to("medium") {
+    font-size: 25px;
+    padding: 0;
+  }
+  @include respond-to("large") {
+    font-size: 25px;
+    padding: 0;
+  }
 }
 
 .white-box-gap {
@@ -445,6 +331,7 @@
   color: #062a4d;
   justify-content: center;
   display: flex;
+  font-size: 20px;
   @include respond-to("average") {
     font-weight: 400;
     justify-content: center;
@@ -483,20 +370,15 @@
   font-size: 55px !important;
   font-family: HelveticaNeueMedium;
   font-weight: 500;
+  flex-direction: column;
 }
 
 .welcome-paragraph-text {
   font-size: 18px;
   padding-top: 15px;
   font-family: HelveticaNeueLight;
-  // @include respond-to("average") {
-  //   font-size: 18px;
-  // }
-
-  // @include respond-to("medium") {
-  //   font-size: 18px;
-  // }
-
+  line-height: 25px;
+  flex-direction: column;
   @include respond-to("large") {
     font-size: 20px;
   }
@@ -557,6 +439,30 @@
   display: flex !important;
   flex-direction: row-reverse !important;
   position: relative;
+  .wp-block-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid green;
+    font-size: 18px;
+    flex: 2;
+  }
+  p {
+    border: 1px solid red;
+    display: flex;
+    font-size: 12px;
+  }
+
+  figure {
+    display: flex;
+    border: 1px solid yellow;
+    flex: 1;
+    max-width: 60px;
+  }
+}
+.benefits-info-image {
+  display: flex;
+  position: relative;
   .one {
     position: absolute;
     top: 10%;
@@ -572,30 +478,11 @@
   .four {
     position: absolute;
     top: 50%;
+    left: 10%;
   }
   .five {
     position: absolute;
     top: 70%;
-  }
-
-  .wp-block-heading {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid green;
-    font-size: 20px;
-    flex: 2;
-  }
-  p {
-    border: 1px solid red;
-    display: flex;
-    font-size: 12px;
-  }
-
-  figure {
-    display: flex;
-    border: 1px solid yellow;
-    flex: 1;
   }
 }
 
@@ -662,4 +549,69 @@
 }
 .custome-page-paragraph {
   font-size: 15px;
+}
+
+.libidiol-product-text {
+  font-size: 12px;
+}
+
+.mobile-button {
+  display: flex;
+  padding: 20px 0 40px 0;
+  @include respond-to("average") {
+    padding: 0;
+  }
+
+  @include respond-to("medium") {
+    padding: 0;
+  }
+
+  @include respond-to("large") {
+    padding: 0;
+  }
+}
+
+.mobile-bowl-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wp-image-457 {
+    max-width: 80%;
+    width: 300px;
+    padding: 20px 0;
+  }
+  @include respond-to("average") {
+    display: none;
+  }
+
+  @include respond-to("medium") {
+    display: none;
+  }
+
+  @include respond-to("large") {
+    display: none;
+  }
+}
+
+.desktop-reviews {
+  display: none;
+  width: 100%;
+  @include respond-to("average") {
+    display: flex;
+  }
+
+  @include respond-to("medium") {
+    display: flex;
+  }
+
+  @include respond-to("large") {
+    display: flex;
+  }
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #6610f2;
+  color: white;
 }

@@ -93,12 +93,23 @@
   img {
     display: flex;
     justify-content: center;
-    max-width: 125px;
+    max-width: 140px;
     height: auto;
+    padding: 40px 0;
+    @include respond-to("average") {
+      padding: 0;
+      max-width: 125px;
+    }
 
-    // @include respond-to("average", "medium", "large") {
-    //   max-width: 135px;
-    // }
+    @include respond-to("medium") {
+      padding: 0;
+      max-width: 125px;
+    }
+
+    @include respond-to("large") {
+      padding: 0;
+      max-width: 125px;
+    }
   }
 }
 
@@ -150,19 +161,40 @@
   font-size: 30px;
   font-family: HelveticaNeueMedium;
   font-weight: 500;
+  padding: 40px 0 0 0;
   @include respond-to("average") {
     font-size: 35px;
+    padding: 0;
   }
 
   @include respond-to("medium") {
     font-size: 35px;
+    padding: 0;
   }
 
   @include respond-to("large") {
     font-size: 40px;
+    padding: 0;
   }
 }
 
 .universal-sub-text {
   font-family: HelveticaNeueLight;
+}
+
+/* Wordpres spacer*/
+
+.wp-block-spacer {
+  display: none;
+  @include respond-to("average") {
+    display: flex;
+  }
+
+  @include respond-to("medium") {
+    display: flex;
+  }
+
+  @include respond-to("large") {
+    display: flex;
+  }
 }

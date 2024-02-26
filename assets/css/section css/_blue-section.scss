@@ -34,10 +34,29 @@
 }
 
 .blue-section-paragraph {
-  font-size: 15px;
-  padding: 20px 10px 0 10px;
+  font-size: 16px;
+  padding: 20px 5px 0 5px;
+  font-family: HelveticaNeueMedium;
+  line-height: 22px !important;
+  @include respond-to("average") {
+    font-size: 18px;
+    padding: 20px 10px 0 10px;
+  }
+  @include respond-to("medium") {
+    font-size: 20px;
+    padding: 20px 10px 0 10px;
+  }
+  @include respond-to("large") {
+    font-size: 20px;
+    padding: 20px 10px 0 10px;
+  }
+}
+
+#blue-section-sub-paragraph {
+  font-size: 17px;
+  padding: 0 10px;
   font-family: HelveticaNeueLight;
-  line-height: 35px !important;
+  line-height: 20px !important;
   @include respond-to("average") {
     font-size: 18px;
   }
