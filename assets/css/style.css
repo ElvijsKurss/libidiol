@@ -222,12 +222,14 @@ Footer sccs
 #footer-container .column #column-three-content#column-two-content,
 #footer-container .column #column-four-content#column-two-content {
   justify-content: left;
+  padding-top: 20px;
 }
 @media (min-width: 768px) {
   #footer-container .column #column-two-content#column-two-content,
   #footer-container .column #column-three-content#column-two-content,
   #footer-container .column #column-four-content#column-two-content {
     justify-content: center;
+    padding-top: 0;
   }
 }
 @media (min-width: 992px) {
@@ -235,6 +237,7 @@ Footer sccs
   #footer-container .column #column-three-content#column-two-content,
   #footer-container .column #column-four-content#column-two-content {
     justify-content: center;
+    padding-top: 0;
   }
 }
 @media (min-width: 1080px) {
@@ -242,14 +245,36 @@ Footer sccs
   #footer-container .column #column-three-content#column-two-content,
   #footer-container .column #column-four-content#column-two-content {
     justify-content: center;
+    padding-top: 0;
   }
 }
 #footer-container .column #column-two-content h3,
 #footer-container .column #column-three-content h3,
 #footer-container .column #column-four-content h3 {
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
+}
+@media (min-width: 768px) {
+  #footer-container .column #column-two-content h3,
+  #footer-container .column #column-three-content h3,
+  #footer-container .column #column-four-content h3 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  #footer-container .column #column-two-content h3,
+  #footer-container .column #column-three-content h3,
+  #footer-container .column #column-four-content h3 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1080px) {
+  #footer-container .column #column-two-content h3,
+  #footer-container .column #column-three-content h3,
+  #footer-container .column #column-four-content h3 {
+    font-size: 15px;
+  }
 }
 #footer-container .column #column-two-text,
 #footer-container .column #column-three-text,
@@ -266,11 +291,12 @@ Footer sccs
 #footer-container .column #column-three-text a .footer-content-text-two,
 #footer-container .column #column-four-text a .footer-content-text-two {
   color: #969696;
-  font-size: 12px;
+  font-size: 15px;
   padding: 5px 0;
   display: flex;
   justify-content: left;
   margin: 0;
+  padding: 10px 0;
 }
 @media (min-width: 768px) {
   #footer-container .column #column-two-text a .footer-content-text-two,
@@ -278,6 +304,8 @@ Footer sccs
   #footer-container .column #column-four-text a .footer-content-text-two {
     justify-content: left;
     margin: 0 0 0 90px;
+    padding: 0;
+    font-size: 12px;
   }
 }
 @media (min-width: 992px) {
@@ -286,6 +314,8 @@ Footer sccs
   #footer-container .column #column-four-text a .footer-content-text-two {
     justify-content: left;
     margin: 0 0 0 90px;
+    padding: 0;
+    font-size: 12px;
   }
 }
 @media (min-width: 1080px) {
@@ -294,6 +324,8 @@ Footer sccs
   #footer-container .column #column-four-text a .footer-content-text-two {
     justify-content: left;
     margin: 0 0 0 90px;
+    padding: 0;
+    font-size: 12px;
   }
 }
 #footer-container .column .footer-content-text {

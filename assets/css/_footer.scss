@@ -167,20 +167,33 @@ Footer sccs
       }
       &#column-two-content {
         justify-content: left;
+        padding-top: 20px;
         @include respond-to("average") {
           justify-content: center;
+          padding-top: 0;
         }
         @include respond-to("medium") {
           justify-content: center;
+          padding-top: 0;
         }
         @include respond-to("large") {
           justify-content: center;
+          padding-top: 0;
         }
       }
       h3 {
         color: white;
-        font-size: 15px;
+        font-size: 16px;
         margin: 0;
+        @include respond-to("average") {
+          font-size: 15px;
+        }
+        @include respond-to("medium") {
+          font-size: 15px;
+        }
+        @include respond-to("large") {
+          font-size: 15px;
+        }
       }
     }
 
@@ -195,22 +208,29 @@ Footer sccs
 
         .footer-content-text-two {
           color: #969696;
-          font-size: 12px;
+          font-size: 15px;
           padding: 5px 0;
           display: flex;
           justify-content: left;
           margin: 0;
+          padding: 10px 0;
           @include respond-to("average") {
             justify-content: left;
             margin: 0 0 0 90px;
+            padding: 0;
+            font-size: 12px;
           }
           @include respond-to("medium") {
             justify-content: left;
             margin: 0 0 0 90px;
+            padding: 0;
+            font-size: 12px;
           }
           @include respond-to("large") {
             justify-content: left;
             margin: 0 0 0 90px;
+            padding: 0;
+            font-size: 12px;
           }
         }
       }
