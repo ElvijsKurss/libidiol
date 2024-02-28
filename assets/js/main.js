@@ -41,19 +41,11 @@ $(document).ready(function () {
   });
 });
 
-/* Scroll up button JS*/
-
-var scrollToTopButton = document.getElementById("scrollToTop");
-scrollToTopButton.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+$(document).ready(function () {
+  $(".navbar-collapse").click(function (event) {
+    event.stopPropagation();
   });
 });
-window.addEventListener("scroll", function () {
-  if (document.documentElement.scrollTop > 100) {
-    scrollToTopButton.style.display = "block";
-  } else {
-    scrollToTopButton.style.display = "none";
-  }
+$(document).click(function () {
+  $(".navbar-collapse").collapse("hide");
 });

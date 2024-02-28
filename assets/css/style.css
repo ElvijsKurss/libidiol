@@ -425,6 +425,65 @@ Footer sccs
   }
 }
 
+.seperator-hr-element {
+  margin: 0;
+  border-top: 1px dashed #464547;
+  display: flex !important;
+}
+@media (min-width: 768px) {
+  .seperator-hr-element {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .seperator-hr-element {
+    display: none !important;
+  }
+}
+@media (min-width: 1080px) {
+  .seperator-hr-element {
+    display: none !important;
+  }
+}
+
+#mobile-version-useful-links {
+  display: flex !important;
+}
+@media (min-width: 768px) {
+  #mobile-version-useful-links {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  #mobile-version-useful-links {
+    display: none !important;
+  }
+}
+@media (min-width: 1080px) {
+  #mobile-version-useful-links {
+    display: none !important;
+  }
+}
+
+#desktop-version-useful-links {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  #desktop-version-useful-links {
+    display: flex !important;
+  }
+}
+@media (min-width: 992px) {
+  #desktop-version-useful-links {
+    display: flex !important;
+  }
+}
+@media (min-width: 1080px) {
+  #desktop-version-useful-links {
+    display: flex !important;
+  }
+}
+
 /*
 Header SCSS start
 */
@@ -572,14 +631,12 @@ header.header nav #navigation #nav-bar-icons {
     align-items: center;
     text-decoration: none;
     position: relative;
-    align-items: center;
-    /* Doesnt work as intended? Nesting issue?*/
   }
   header.header nav #navigation #nav-bar-icons .social-list a:hover {
     color: #76b600;
   }
   header.header nav #navigation #nav-bar-icons .social-list a .fa {
-    font-size: 6px;
+    font-size: 8px;
     color: white;
   }
 }

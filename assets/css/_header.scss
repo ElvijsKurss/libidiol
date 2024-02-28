@@ -119,15 +119,13 @@ header.header {
               align-items: center;
               text-decoration: none;
               position: relative;
-              align-items: center;
 
-              /* Doesnt work as intended? Nesting issue?*/
               &:hover {
                 color: #76b600;
               }
 
               .fa {
-                font-size: 6px;
+                font-size: 8px;
                 color: white;
               }
             }

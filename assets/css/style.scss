@@ -386,18 +386,25 @@
 
 // .top-section-order {
 //   padding-top: 100px;
-// }
-// .welcome-heading {
-//   order: 3;
+//   border: 1px solid red;
 //   display: flex;
-// }
-// .welcome-paragraph-text {
-//   order: 1;
-//   display: flex;
-// }
-// .top-image-left {
-//   order: 2;
-//   display: flex;
+//   flex-direction: column;
+//   .p {
+//     order: 1;
+//     display: flex;
+//   }
+//   .wp-block-heading {
+//     order: 3;
+//     display: flex;
+//   }
+//   .wp-image-42 {
+//     order: 2;
+//     display: flex;
+//   }
+//   .wp-block-group {
+//     order: 4;
+//     display: flex;
+//   }
 // }
 
 .top-section-image {
@@ -608,5 +615,3 @@
     display: flex;
   }
 }
-
-

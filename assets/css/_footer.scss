@@ -325,3 +325,44 @@ Footer sccs
     display: flex !important;
   }
 }
+
+.seperator-hr-element {
+  margin: 0;
+  border-top: 1px dashed #464547;
+  display: flex !important;
+  @include respond-to("average") {
+    display: none !important;
+  }
+  @include respond-to("medium") {
+    display: none !important;
+  }
+  @include respond-to("large") {
+    display: none !important;
+  }
+}
+
+#mobile-version-useful-links {
+  display: flex !important;
+  @include respond-to("average") {
+    display: none !important;
+  }
+  @include respond-to("medium") {
+    display: none !important;
+  }
+  @include respond-to("large") {
+    display: none !important;
+  }
+}
+
+#desktop-version-useful-links {
+  display: none !important;
+  @include respond-to("average") {
+    display: flex !important;
+  }
+  @include respond-to("medium") {
+    display: flex !important;
+  }
+  @include respond-to("large") {
+    display: flex !important;
+  }
+}

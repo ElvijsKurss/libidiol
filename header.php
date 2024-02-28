@@ -60,12 +60,6 @@ wp_head();
             </div>
 
             <div id="nav-bar-icons">
-                <!-- <ul class="social-list">
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><img src="wp-content/themes/libidiol/master-template/assets/images/euro.png"></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><img src="wp-content/themes/libidiol/master-template/assets/images/language.png"></a></li>
-                    <li class="list-inline-item"><a href="#"><img src="wp-content/themes/libidiol/master-template/assets/images/search-symbol.png"></a></li>
-                    <li class="list-inline-item"><a href="#"><img src="wp-content/themes/libidiol/master-template/assets/images/basket.png"></a></li>
-                </ul> -->
                 <ul class="social-list">
                     <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-euro menu-icon"></i></a></li>
                     <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></a></li>
