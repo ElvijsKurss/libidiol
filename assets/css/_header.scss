@@ -68,7 +68,7 @@ header.header {
         display: flex;
         justify-content: left;
         margin: 0;
-        flex-direction: column;
+        flex-direction: row !important;
         a {
           font-size: 20px;
           padding: 10px 15px;
@@ -83,11 +83,11 @@ header.header {
           }
         }
         @include respond-to("average") {
-          flex-direction: row;
+          flex-direction: row !important;
           justify-content: center;
         }
         @include respond-to("medium") {
-          flex-direction: row;
+          flex-direction: row !important;
           justify-content: center;
         }
         @include respond-to("large") {

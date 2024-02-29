@@ -22,28 +22,6 @@
   transition: 0.3s ease-in-out;
 }
 
-:root {
-  /* Color Variables */
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #ee3577;
-  --red: #dc3545;
-  --orange: #f68e62;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #767575;
-  --gray-dark: #434242;
-  --primary: #6f42c1;
-  --secondary: #4f4f4f;
-  --light: #c2c2c2;
-  --lightgray: #eeeeee;
-  --dark: #434242;
-}
-
 /* Form Controls */
 .form-control {
   padding-top: 0.875rem;
@@ -114,20 +92,6 @@
   }
 }
 
-/* Gradient */
-.gradient {
-  background: rgb(43, 43, 43);
-  background: linear-gradient(
-    151deg,
-    var(--orange) 0%,
-    var(--pink) 35%,
-    var(--primary) 100%
-  ) !important;
-}
-
-.section-content {
-  background-color: red;
-}
 .bowl-left {
   display: none;
   position: absolute !important;

@@ -130,31 +130,31 @@ Footer sccs
   justify-content: left;
   width: 100%;
 }
-#footer-container .column #column-four-content #button-container {
+#footer-container .column #column-four-content #send-email {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 @media (min-width: 768px) {
-  #footer-container .column #column-four-content #button-container {
+  #footer-container .column #column-four-content #send-email {
     justify-content: left;
     padding-top: 25px;
   }
 }
 @media (min-width: 992px) {
-  #footer-container .column #column-four-content #button-container {
+  #footer-container .column #column-four-content #send-email {
     justify-content: left;
     padding-top: 10px;
   }
 }
 @media (min-width: 1080px) {
-  #footer-container .column #column-four-content #button-container {
+  #footer-container .column #column-four-content #send-email {
     justify-content: left;
     padding-top: 10px;
   }
 }
-#footer-container .column #column-four-content #button-container button {
+#footer-container .column #column-four-content #send-email button {
   background-color: #76b600;
   color: white;
   border: none;
@@ -168,23 +168,23 @@ Footer sccs
   font-weight: 500;
   cursor: pointer;
 }
-#footer-container .column #column-four-content #button-container button:hover {
+#footer-container .column #column-four-content #send-email button:hover {
   background-color: #558300;
 }
 @media (min-width: 768px) {
-  #footer-container .column #column-four-content #button-container button {
+  #footer-container .column #column-four-content #send-email button {
     padding: 10px 35px;
     font-size: 13px;
   }
 }
 @media (min-width: 992px) {
-  #footer-container .column #column-four-content #button-container button {
+  #footer-container .column #column-four-content #send-email button {
     padding: 10px 35px;
     font-size: 13px;
   }
 }
 @media (min-width: 1080px) {
-  #footer-container .column #column-four-content #button-container button {
+  #footer-container .column #column-four-content #send-email button {
     padding: 10px 35px;
     font-size: 13px;
   }
@@ -296,7 +296,7 @@ Footer sccs
   display: flex;
   justify-content: left;
   margin: 0;
-  padding: 10px 0;
+  padding: 5px 0 !important;
 }
 @media (min-width: 768px) {
   #footer-container .column #column-two-text a .footer-content-text-two,
@@ -378,20 +378,24 @@ Footer sccs
   list-style-type: none;
   padding: 0;
   margin-top: 35px;
+  margin-bottom: 30px;
 }
 @media (min-width: 768px) {
   #footer-container .column .social-icons {
     margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 992px) {
   #footer-container .column .social-icons {
     margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1080px) {
   #footer-container .column .social-icons {
     margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 #footer-container .column .social-icons .footer-icons {
@@ -600,7 +604,7 @@ header.header nav #navigation #nav-bar-categories {
   display: flex;
   justify-content: left;
   margin: 0;
-  flex-direction: column;
+  flex-direction: row !important;
 }
 header.header nav #navigation #nav-bar-categories a {
   font-size: 20px;
@@ -623,13 +627,13 @@ header.header nav #navigation #nav-bar-categories a {
 }
 @media (min-width: 768px) {
   header.header nav #navigation #nav-bar-categories {
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: center;
   }
 }
 @media (min-width: 992px) {
   header.header nav #navigation #nav-bar-categories {
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: center;
   }
 }
@@ -1358,28 +1362,6 @@ Header SCSS end
   transition: 0.3s ease-in-out;
 }
 
-:root {
-  /* Color Variables */
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #ee3577;
-  --red: #dc3545;
-  --orange: #f68e62;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #767575;
-  --gray-dark: #434242;
-  --primary: #6f42c1;
-  --secondary: #4f4f4f;
-  --light: #c2c2c2;
-  --lightgray: #eeeeee;
-  --dark: #434242;
-}
-
 /* Form Controls */
 .form-control {
   padding-top: 0.875rem;
@@ -1458,16 +1440,6 @@ Header SCSS end
   font-size: 2rem;
   font-weight: bold;
   color: white;
-}
-
-/* Gradient */
-.gradient {
-  background: rgb(43, 43, 43);
-  background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%, var(--primary) 100%) !important;
-}
-
-.section-content {
-  background-color: red;
 }
 
 .bowl-left {

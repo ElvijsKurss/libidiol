@@ -63,11 +63,15 @@
                 <div id="bottom-form-header">
                     <h3>Send Your Message</h3>
                 </div>
-                <div id="input-container-email"><input type="email" placeholder="Your E-mail"></input></div>
-                <div id="input-container-text"><textarea name="message"></textarea></div>
-                <div id="button-container"><button>Submit</button></div>
+
+                <div id="input-container-email"><input type="email" name="email" placeholder="Your E-mail"></input></div>
+                <div id="input-container-text">
+                    <textarea name="message"></textarea>
+                </div>
+                <div type="submit" name="send" class="putSend" value="Send" id="send-email"><button>Submit</button></div>
             </div>
         </div>
+
         <!-- Mobile version Useful links content -->
         <div class="column two" id="mobile-version-useful-links">
             <div id="column-two-content">

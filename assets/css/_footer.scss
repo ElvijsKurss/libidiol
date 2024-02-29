@@ -100,11 +100,11 @@ Footer sccs
       flex-direction: column;
       justify-content: left;
       width: 100%;
-      #button-container {
+      #send-email {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-top: 20px;
+        padding-top: 40px;
         @include respond-to("average") {
           justify-content: left;
           padding-top: 25px;
@@ -213,7 +213,7 @@ Footer sccs
           display: flex;
           justify-content: left;
           margin: 0;
-          padding: 10px 0;
+          padding: 5px 0 !important;
           @include respond-to("average") {
             justify-content: left;
             margin: 0 0 0 90px;
@@ -281,14 +281,18 @@ Footer sccs
       list-style-type: none;
       padding: 0;
       margin-top: 35px;
+      margin-bottom: 30px;
       @include respond-to("average") {
         margin-top: 20px;
+        margin-bottom: 0;
       }
       @include respond-to("medium") {
         margin-top: 20px;
+        margin-bottom: 0;
       }
       @include respond-to("large") {
         margin-top: 20px;
+        margin-bottom: 0;
       }
 
       .footer-icons {
