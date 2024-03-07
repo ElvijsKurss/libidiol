@@ -1,0 +1,27 @@
+/* Logo */
+.bottom-logo {
+  width: 160px;
+  padding-bottom: 30px;
+  @include respond-to("average") {
+    width: 140px;
+  }
+  @include respond-to("medium") {
+    width: 140px;
+  }
+  @include respond-to("large") {
+    width: 140px;
+  }
+}
+
+.top-logo {
+  width: 120px;
+  @include respond-to("average") {
+    width: 140px;
+  }
+  @include respond-to("medium") {
+    width: 140px;
+  }
+  @include respond-to("large") {
+    width: 140px;
+  }
+}

@@ -87,3 +87,12 @@
   font-size: 10px;
   font-weight: 700;
 }
+
+.about-us-image {
+  display: block;
+  .wp-image-171,
+  .wp-image-169 {
+    width: 100%;
+    display: block;
+  }
+}

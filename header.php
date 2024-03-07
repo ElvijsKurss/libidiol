@@ -16,26 +16,23 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <a class="navbar-brand" href="http://custom-theme-website.test/">
+                <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
+            </a>
 
-            <div id="navigation" class="main-wrapper collapse navbar-collapse">
-                <div id="nav-bar-logo">
-                    <a href="http://custom-theme-website.test/">
-                        <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
-                    </a>
-                </div>
 
-                <div id="nav-bar-categories">
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'menu' => 'primary',
-                            'container' => '',
-                            'theme_location' => 'primary',
-                            'items_wrap' => '<ul class="navbar-nav">%3$s</ul>'
-                        )
-                    );
-                    ?>
-                </div>
+            <div class="collapse navbar-collapse" id="navigation">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'menu' => 'primary',
+                        'container' => '',
+                        'theme_location' => 'primary',
+                        'items_wrap' => '<ul class="navbar-nav mr-auto">%3$s</ul>',
+                        'menu_class' => 'navbar-nav mr-auto'
+                    )
+                );
+                ?>
 
                 <div class="mobile-contact-us-container">
                     <div>
@@ -47,7 +44,6 @@
                     <div>
                         <p class="header-content-text-mobile">office@libidiol.com</p>
                     </div>
-
                 </div>
 
                 <div class="mobile-social-icons-container">
@@ -72,6 +68,9 @@
                 </div>
             </div>
         </nav>
+
+
+
     </header>
 
     <?php wp_footer(); ?>

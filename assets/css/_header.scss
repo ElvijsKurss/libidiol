@@ -119,14 +119,15 @@ header.header {
               align-items: center;
               text-decoration: none;
               position: relative;
-
-              &:hover {
-                color: #76b600;
-              }
+              border: 1px solid red;
 
               .fa {
                 font-size: 8px;
                 color: white;
+              }
+
+              &:hover {
+                color: #76b600 !important;
               }
             }
           }
@@ -203,68 +204,6 @@ header.header {
 Header SCSS end 
 */
 
-/* Footer elements in header on mobile version scss*/
-.mobile-contact-us-container {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 100%;
-  @include respond-to("average") {
-    display: none;
-  }
-  @include respond-to("medium") {
-    display: none;
-  }
-  @include respond-to("large") {
-    display: none;
-  }
-
-  .header-content-text-mobile {
-    display: flex;
-    padding: 5px 15px;
-    margin: 0;
-    color: white;
-    font-size: 16px;
-  }
-}
-
-/* Mobile version social icons css*/
-.fab {
-  color: white;
-  background-color: #76b600;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 22px;
-}
-.mobile-social-icons-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  margin: auto;
-  @include respond-to("average") {
-    display: none;
-  }
-  @include respond-to("medium") {
-    display: none;
-  }
-  @include respond-to("large") {
-    display: none;
-  }
-  .mobile-social-icons-container-content {
-    display: flex;
-    text-decoration: none;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 30px;
-  }
-}
-
 .footer-icons {
   padding: 0;
   margin: 0;
@@ -293,5 +232,20 @@ Header SCSS end
     background-color: white;
     right: 0;
     top: 0;
+  }
+}
+
+.header-spacer {
+  height: 15px !important;
+  @include respond-to("average") {
+    height: 20px !important;
+  }
+
+  @include respond-to("medium") {
+    height: 25px !important;
+  }
+
+  @include respond-to("large") {
+    height: 30px !important;
   }
 }

@@ -1,0 +1,101 @@
+.mobile-button {
+  display: flex;
+  padding: 20px 0 40px 0;
+  @include respond-to("average") {
+    padding: 0;
+  }
+
+  @include respond-to("medium") {
+    padding: 0;
+  }
+
+  @include respond-to("large") {
+    padding: 0;
+  }
+}
+
+.mobile-bowl-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wp-image-457 {
+    max-width: 80%;
+    width: 300px;
+    padding: 20px 0;
+  }
+  @include respond-to("average") {
+    display: none;
+  }
+
+  @include respond-to("medium") {
+    display: none;
+  }
+
+  @include respond-to("large") {
+    display: none;
+  }
+}
+
+/* MOBILE HEADER CSS*/
+
+/* Footer elements in header on mobile version scss*/
+.mobile-contact-us-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  @include respond-to("average") {
+    display: none;
+  }
+  @include respond-to("medium") {
+    display: none;
+  }
+  @include respond-to("large") {
+    display: none;
+  }
+
+  .header-content-text-mobile {
+    display: flex;
+    padding: 5px 15px;
+    margin: 0;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+/* Mobile version social icons css*/
+.fab {
+  color: white;
+  background-color: #76b600;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.mobile-social-icons-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  margin: auto;
+  @include respond-to("average") {
+    display: none;
+  }
+  @include respond-to("medium") {
+    display: none;
+  }
+  @include respond-to("large") {
+    display: none;
+  }
+  .mobile-social-icons-container-content {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+  }
+}
