@@ -45,13 +45,19 @@ function libidiol_register_admin_styles()
 add_action('admin_enqueue_scripts', 'libidiol_register_admin_styles');
 
 
+
 function libidiol_register_scripts()
 {
     $version = wp_get_theme()->get('Version');
+
+    // Enqueue jQuery first
     wp_enqueue_script('libidiol-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
-    wp_enqueue_script('libidiol-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', array('libidiol-jquery'), '3.4.1', true);
-    wp_enqueue_script('libidiol-main', get_template_directory_uri() . '/assets/js/main.js', array(), $version, true);
-    wp_enqueue_script('libidiol-bootstrap-two', 'https://code.jquery.com/jquery-3.6.0.min.js', array('libidiol-jquery'), '3.4.1', true);
+
+    // Enqueue Bootstrap JS
+    wp_enqueue_script('libidiol-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('libidiol-jquery'), '4.4.1', true);
+
+    // Enqueue your custom script
+    wp_enqueue_script('libidiol-main', get_template_directory_uri() . '/assets/js/main.js', array('libidiol-jquery'), $version, true);
 }
 
 add_action('wp_enqueue_scripts', 'libidiol_register_scripts');

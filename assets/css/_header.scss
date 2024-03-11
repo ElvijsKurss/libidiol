@@ -3,140 +3,133 @@
 /*
 Header SCSS start
 */
-
-header.header {
-  text-align: center;
-  z-index: 999;
-  margin: 0 auto;
-  width: 100%;
-
-  nav {
+#nav-bar-logo {
+  flex: 1;
+  display: none;
+  @include respond-to("average") {
+    flex-direction: row;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+  }
+  @include respond-to("medium") {
+    flex-direction: row;
+    display: flex;
+  }
+  @include respond-to("large") {
+    flex-direction: row;
+    display: flex;
+  }
+}
+#nav-bar-categories {
+  flex: 2;
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  flex-direction: row !important;
+  a {
+    font-size: 20px;
+    padding: 10px 15px;
+    @include respond-to("average") {
+      font-size: 15px;
+    }
+    @include respond-to("medium") {
+      font-size: 15px;
+    }
+    @include respond-to("large") {
+      font-size: 15px;
+    }
+  }
+  @include respond-to("average") {
+    flex-direction: row !important;
+    justify-content: center;
+  }
+  @include respond-to("medium") {
+    flex-direction: row !important;
+    justify-content: center;
+  }
+  @include respond-to("large") {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
-    #navigation {
+#nav-bar-icons {
+  flex: 1;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: none;
+  @include respond-to("large") {
+    display: flex;
+
+    .social-list {
       display: flex;
-      align-items: flex-start;
-      width: 100%;
-      flex-direction: column;
-      @include respond-to("average") {
-        flex-direction: row;
-        align-items: center;
-      }
-      @include respond-to("medium") {
-        flex-direction: row;
-        align-items: center;
-      }
-      @include respond-to("large") {
-        flex-direction: row;
-        align-items: center;
-      }
-      .menu-item {
+      justify-content: center;
+      align-items: center;
+      flex-direction: row !important;
+      margin: auto;
+      a {
         display: flex;
-        align-items: flex-start;
-        @include respond-to("average") {
-          align-items: center;
-        }
-        @include respond-to("medium") {
-          align-items: center;
-        }
-        @include respond-to("large") {
-          align-items: center;
-        }
-      }
-
-      #nav-bar-logo {
-        flex: 1;
-        display: none;
-        @include respond-to("average") {
-          flex-direction: row;
+        text-decoration: none;
+        .menu-icon {
+          width: 32px;
+          height: 32px;
           display: flex;
-        }
-        @include respond-to("medium") {
-          flex-direction: row;
-          display: flex;
-        }
-        @include respond-to("large") {
-          flex-direction: row;
-          display: flex;
-        }
-      }
-
-      #nav-bar-categories {
-        flex: 2;
-        display: flex;
-        justify-content: left;
-        margin: 0;
-        flex-direction: row !important;
-        a {
-          font-size: 20px;
-          padding: 10px 15px;
-          @include respond-to("average") {
-            font-size: 15px;
-          }
-          @include respond-to("medium") {
-            font-size: 15px;
-          }
-          @include respond-to("large") {
-            font-size: 15px;
-          }
-        }
-        @include respond-to("average") {
-          flex-direction: row !important;
           justify-content: center;
-        }
-        @include respond-to("medium") {
-          flex-direction: row !important;
-          justify-content: center;
-        }
-        @include respond-to("large") {
+          align-items: center;
+          text-decoration: none;
           flex-direction: row;
-          justify-content: center;
-        }
-      }
+          position: relative;
+          color: #54ade1;
+          font-size: 17px;
 
-      #nav-bar-icons {
-        flex: 1;
-        align-items: center;
-        margin: auto;
-        display: none;
-
-        @include respond-to("large") {
-          display: flex;
-
-          .social-list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-
-            a {
-              width: 32px;
-              height: 32px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-decoration: none;
-              position: relative;
-              border: 1px solid red;
-
-              .fa {
-                font-size: 8px;
-                color: white;
-              }
-
-              &:hover {
-                color: #76b600 !important;
-              }
-            }
+          &:hover {
+            color: #76b600 !important;
+            text-decoration: none;
           }
+        }
+        .fa {
+          font-size: 8px;
+          color: white;
+          display: flex;
+          align-items: center;
         }
       }
     }
   }
-}
 
+  .search-icon:hover + #search-window {
+    display: block;
+  }
+}
+#search-overlay {
+  display: none;
+  position: fixed;
+  top: 20%;
+  right: 20%;
+  width: 150px;
+  height: 70px;
+  background-color: transparent;
+  z-index: 9999;
+}
+.search-form {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #062a4d;
+  padding: 20px;
+  border: 1px solid white;
+  .close-search {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 10px;
+    width: 22px;
+    height: auto;
+  }
+}
 .head-button-container {
   display: none;
   @include respond-to("average") {
@@ -164,8 +157,32 @@ header.header {
     }
   }
 }
-/* Header */
-.header {
+.mobile-menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include respond-to("average") {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include respond-to("medium") {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include respond-to("large") {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+  }
+}
+.main-header {
   height: auto;
   width: 100%;
   background-color: #062a4d;
@@ -214,10 +231,6 @@ Header SCSS end
 }
 
 /* Fontello icon scss*/
-.menu-icon {
-  color: #54ade1;
-  font-size: 17px;
-}
 .icon-euro,
 .icon-search,
 .icon-language {
@@ -227,7 +240,7 @@ Header SCSS end
   &:nth-child(-n + 3)::after {
     content: "";
     position: absolute;
-    height: 120%;
+    height: 100%;
     width: 1px;
     background-color: white;
     right: 0;

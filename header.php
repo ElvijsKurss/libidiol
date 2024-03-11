@@ -10,8 +10,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-    <header class="header text-center" id="home">
+    <header class="main-header text-center" id="home">
         <nav class="navbar navbar-expand-lg navbar-dark main-wrapper container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,8 +19,7 @@
                 <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
 
-
-            <div class="collapse navbar-collapse" id="navigation">
+            <div class="mobile-menu collapse navbar-collapse" id="navigation">
                 <?php
                 wp_nav_menu(
                     array(
@@ -59,19 +57,33 @@
                     <ul class="social-list">
                         <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-euro menu-icon"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="icon-search menu-icon"></i></a></li>
+                        <!-- <li class="list-inline-item">
+                            <a href="#" class="search-icon"><i class="icon-search menu-icon"></i></a>
+                        </li> -->
                         <li class="list-inline-item"><a href="#"><i class="icon-shopping-basket menu-icon"></i></a></li>
                     </ul>
                 </div>
+
+                <!-- Search Field -->
+                <!-- <div id="search-overlay">
+                    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+                        <label>
+                            <span class="screen-reader-text"><?php echo _x('Search for:', 'label'); ?></span>
+                            <input type="search" class="search-field" placeholder="<?php echo esc_attr_x('Search …', 'placeholder'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                        </label>
+                        <input type="submit" class="search-submit" value="<?php echo esc_attr_x('Search', 'submit button'); ?>" />
+                        <button type="button" class="close-search">X</button>
+                    </form>
+                </div> -->
                 <div class="head-button-container">
                     <div class="head-button-body"><a href="#order-now-section" class="header-button-link">Order now</a></div>
                 </div>
             </div>
         </nav>
-
-
-
     </header>
+
+
+
 
     <?php wp_footer(); ?>
 </body>
