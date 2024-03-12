@@ -304,11 +304,11 @@
     max-width: 100%;
     height: auto;
     @include respond-to("average") {
-      max-width: 50%;
+      max-width: 30%;
     }
 
     @include respond-to("medium") {
-      max-width: 60%;
+      max-width: 40%;
     }
 
     @include respond-to("large") {
@@ -317,11 +317,11 @@
   }
 
   @include respond-to("average") {
-    display: flex;
+    display: none;
   }
 
   @include respond-to("medium") {
-    display: flex;
+    display: none;
   }
 
   @include respond-to("large") {
@@ -339,11 +339,11 @@
     max-width: 100%;
     height: auto;
     @include respond-to("average") {
-      max-width: 50%;
+      max-width: 40%;
     }
 
     @include respond-to("medium") {
-      max-width: 60%;
+      max-width: 40%;
     }
 
     @include respond-to("large") {
@@ -352,17 +352,446 @@
   }
 
   @include respond-to("average") {
-    display: flex;
-    right: -18%;
+    display: none;
   }
 
   @include respond-to("medium") {
-    display: flex;
-    right: -14%;
+    display: none;
   }
 
   @include respond-to("large") {
     display: flex;
     right: -7%;
+  }
+}
+
+.main-point {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  h2.wp-block-heading {
+    display: block;
+    flex-direction: column;
+    text-align: left;
+    font-size: 18px;
+    margin: 0;
+  }
+  p {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 0;
+  }
+  img {
+    width: 70px;
+    margin-right: 10px;
+    @include respond-to("average") {
+      width: 70px;
+      margin-right: 0;
+    }
+
+    @include respond-to("medium") {
+      width: 80px;
+      margin-right: 0;
+    }
+
+    @include respond-to("large") {
+      width: 90px;
+      margin-right: 0;
+    }
+  }
+  .point-one {
+    position: relative;
+    padding-bottom: 2em;
+    .wp-block-columns {
+      width: 260px;
+      @include respond-to("average") {
+        width: 100%;
+      }
+
+      @include respond-to("medium") {
+        width: 100%;
+      }
+
+      @include respond-to("large") {
+        width: 100%;
+      }
+    }
+    @include respond-to("average") {
+      position: absolute;
+      top: 23%;
+      left: 0%;
+    }
+
+    @include respond-to("medium") {
+      position: absolute;
+      top: 23%;
+      left: 0%;
+    }
+
+    @include respond-to("large") {
+      position: absolute;
+      top: 0%;
+      left: 23%;
+    }
+    .one {
+      flex-direction: row-reverse;
+      justify-content: center;
+      @include respond-to("average") {
+        flex-direction: row-reverse;
+      }
+
+      @include respond-to("medium") {
+        flex-direction: row-reverse;
+      }
+
+      @include respond-to("large") {
+        flex-direction: row;
+      }
+    }
+  }
+  .point-two {
+    position: relative;
+    padding-bottom: 2em;
+    .wp-block-columns {
+      width: 260px;
+      @include respond-to("average") {
+        width: 100%;
+      }
+
+      @include respond-to("medium") {
+        width: 100%;
+      }
+
+      @include respond-to("large") {
+        width: 100%;
+      }
+    }
+    @include respond-to("average") {
+      position: absolute;
+      top: 43%;
+      right: 0%;
+    }
+
+    @include respond-to("medium") {
+      position: absolute;
+      top: 43%;
+      right: 0%;
+    }
+
+    @include respond-to("large") {
+      position: absolute;
+      top: 45%;
+      left: 11%;
+    }
+    .two {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      @include respond-to("average") {
+        flex-direction: row;
+      }
+
+      @include respond-to("medium") {
+        flex-direction: row;
+      }
+
+      @include respond-to("large") {
+        flex-direction: row;
+      }
+    }
+  }
+  .point-three {
+    position: relative;
+    padding-bottom: 2em;
+    flex-direction: row;
+    @include respond-to("average") {
+      flex-direction: row;
+    }
+
+    @include respond-to("medium") {
+      flex-direction: row;
+    }
+
+    @include respond-to("large") {
+      flex-direction: row;
+    }
+    .wp-block-columns {
+      width: 260px;
+      @include respond-to("average") {
+        width: 100%;
+      }
+
+      @include respond-to("medium") {
+        width: 100%;
+      }
+
+      @include respond-to("large") {
+        width: 100%;
+      }
+    }
+    @include respond-to("average") {
+      position: absolute;
+      top: 75%;
+      right: 0%;
+    }
+
+    @include respond-to("medium") {
+      position: absolute;
+      top: 75%;
+      right: 0%;
+    }
+
+    @include respond-to("large") {
+      position: absolute;
+      top: 85%;
+      left: 25%;
+    }
+    .three {
+      flex-direction: row-reverse;
+      justify-content: center;
+      @include respond-to("average") {
+        flex-direction: row;
+      }
+
+      @include respond-to("medium") {
+        flex-direction: row;
+      }
+
+      @include respond-to("large") {
+        flex-direction: row;
+      }
+    }
+  }
+  .point-four {
+    position: relative;
+    padding-bottom: 2em;
+    .wp-block-columns {
+      width: 260px;
+      @include respond-to("average") {
+        width: 100%;
+      }
+
+      @include respond-to("medium") {
+        width: 100%;
+      }
+
+      @include respond-to("large") {
+        width: 100%;
+      }
+    }
+    @include respond-to("average") {
+      position: absolute;
+      top: 11%;
+      right: 0%;
+    }
+
+    @include respond-to("medium") {
+      position: absolute;
+      top: 11%;
+      right: 0%;
+    }
+
+    @include respond-to("large") {
+      position: absolute;
+      top: 14%;
+      left: 58%;
+    }
+    .four {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      @include respond-to("average") {
+        flex-direction: row;
+      }
+
+      @include respond-to("medium") {
+        flex-direction: row;
+      }
+
+      @include respond-to("large") {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  .point-five {
+    position: relative;
+    padding-bottom: 2em;
+    .wp-block-columns {
+      width: 260px;
+      @include respond-to("average") {
+        width: 100%;
+      }
+
+      @include respond-to("medium") {
+        width: 100%;
+      }
+
+      @include respond-to("large") {
+        width: 100%;
+      }
+    }
+    @include respond-to("average") {
+      position: absolute;
+      top: 55%;
+      left: 0%;
+    }
+
+    @include respond-to("medium") {
+      position: absolute;
+      top: 55%;
+      left: 0%;
+    }
+
+    @include respond-to("large") {
+      position: absolute;
+      top: 76%;
+      left: 56%;
+    }
+    .five {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+  }
+}
+.point-one p,
+// .point-two p,
+.point-three p {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 0;
+  text-align: left;
+
+  @include respond-to("average") {
+    text-align: left;
+  }
+
+  @include respond-to("medium") {
+    text-align: left;
+  }
+
+  @include respond-to("large") {
+    text-align: right;
+  }
+}
+
+.point-one h2.wp-block-heading,
+// .point-two h2.wp-block-heading,
+.point-three h2.wp-block-heading {
+  display: block;
+  flex-direction: column;
+  text-align: left;
+  font-size: 18px;
+  margin: 0;
+  @include respond-to("average") {
+    text-align: left;
+  }
+
+  @include respond-to("medium") {
+    text-align: left;
+  }
+
+  @include respond-to("large") {
+    text-align: right;
+  }
+}
+.point-four h2.wp-block-heading,
+.point-three h2.wp-block-heading {
+  display: block;
+  flex-direction: column;
+  text-align: left;
+  font-size: 18px;
+  margin: 0;
+
+  @include respond-to("average") {
+    text-align: right;
+  }
+
+  @include respond-to("medium") {
+    text-align: right;
+  }
+
+  @include respond-to("large") {
+    text-align: left;
+  }
+}
+.point-two h2.wp-block-heading {
+  display: block;
+  flex-direction: column;
+  text-align: left;
+  font-size: 18px;
+  margin: 0;
+  @include respond-to("average") {
+    text-align: right;
+  }
+
+  @include respond-to("medium") {
+    text-align: right;
+  }
+
+  @include respond-to("large") {
+    text-align: left;
+    border: 1px solid red;
+  }
+}
+
+.point-two p,
+.point-three p,
+.point-four p {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 0;
+  text-align: left;
+
+  @include respond-to("average") {
+    text-align: right;
+  }
+
+  @include respond-to("medium") {
+    text-align: right;
+  }
+
+  @include respond-to("large") {
+    text-align: left;
+  }
+}
+
+.point-two p,
+.point-three p,
+.point-four p {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 0;
+  text-align: left;
+
+  @include respond-to("average") {
+    text-align: right;
+  }
+
+  @include respond-to("medium") {
+    text-align: right;
+  }
+
+  @include respond-to("large") {
+    text-align: left;
+  }
+}
+
+.top-section-order {
+  padding-bottom: 60px;
+  @include respond-to("average") {
+    padding-bottom: 0;
+  }
+
+  @include respond-to("medium") {
+    padding-bottom: 0;
+  }
+
+  @include respond-to("large") {
+    padding-bottom: 0;
   }
 }
