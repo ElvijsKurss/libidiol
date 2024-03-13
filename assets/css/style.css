@@ -1996,7 +1996,7 @@ Header SCSS end
 }
 @media (min-width: 1080px) {
   .bowl-left img {
-    max-width: 75%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -2019,7 +2019,7 @@ Header SCSS end
   display: none;
   position: absolute !important;
   bottom: 5%;
-  right: -8%;
+  right: -15%;
 }
 .bowl-right img {
   max-width: 100%;
@@ -2037,7 +2037,7 @@ Header SCSS end
 }
 @media (min-width: 1080px) {
   .bowl-right img {
-    max-width: 75%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -2053,7 +2053,7 @@ Header SCSS end
 @media (min-width: 1080px) {
   .bowl-right {
     display: flex;
-    right: -7%;
+    right: -13%;
   }
 }
 

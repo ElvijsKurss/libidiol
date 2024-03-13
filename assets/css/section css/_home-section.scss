@@ -312,7 +312,7 @@
     }
 
     @include respond-to("large") {
-      max-width: 75%;
+      max-width: 50%;
     }
   }
 
@@ -333,7 +333,7 @@
   display: none;
   position: absolute !important;
   bottom: 5%;
-  right: -8%;
+  right: -15%;
 
   img {
     max-width: 100%;
@@ -347,7 +347,7 @@
     }
 
     @include respond-to("large") {
-      max-width: 75%;
+      max-width: 50%;
     }
   }
 
@@ -361,7 +361,7 @@
 
   @include respond-to("large") {
     display: flex;
-    right: -7%;
+    right: -13%;
   }
 }
 
