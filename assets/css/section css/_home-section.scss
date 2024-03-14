@@ -361,6 +361,11 @@
 
     @include respond-to("large") {
       position: absolute;
+      top: 23%;
+      left: 0%;
+    }
+    @include respond-to("extralarge") {
+      position: absolute;
       top: 0%;
       left: 29%;
     }
@@ -376,6 +381,9 @@
       }
 
       @include respond-to("large") {
+        flex-direction: row-reverse;
+      }
+      @include respond-to("extralarge") {
         flex-direction: row;
       }
     }
@@ -399,6 +407,11 @@
     }
 
     @include respond-to("large") {
+      position: absolute;
+      top: 43%;
+      right: 0%;
+    }
+    @include respond-to("extralarge") {
       position: absolute;
       top: 42%;
       left: 19%;
@@ -455,6 +468,11 @@
 
     @include respond-to("large") {
       position: absolute;
+      top: 75%;
+      right: 0%;
+    }
+    @include respond-to("extralarge") {
+      position: absolute;
       top: 87%;
       right: 55%;
     }
@@ -505,6 +523,11 @@
 
     @include respond-to("large") {
       position: absolute;
+      top: 11%;
+      right: 0%;
+    }
+    @include respond-to("extralarge") {
+      position: absolute;
       top: 14%;
       left: 57%;
     }
@@ -521,6 +544,9 @@
       }
 
       @include respond-to("large") {
+        flex-direction: row;
+      }
+      @include respond-to("extralarge") {
         flex-direction: row-reverse;
       }
     }
@@ -556,6 +582,11 @@
 
     @include respond-to("large") {
       position: absolute;
+      top: 55%;
+      left: 0%;
+    }
+    @include respond-to("extralarge") {
+      position: absolute;
       top: 73%;
       left: 56%;
     }
@@ -566,7 +597,6 @@
     }
   }
 }
-.point-one p,
 .point-two p,
 .point-three p {
   display: block;
@@ -584,6 +614,28 @@
   }
 
   @include respond-to("large") {
+    text-align: right;
+  }
+}
+.point-one p {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 0;
+  text-align: left;
+
+  @include respond-to("average") {
+    text-align: left;
+  }
+
+  @include respond-to("medium") {
+    text-align: left;
+  }
+
+  @include respond-to("large") {
+    text-align: left;
+  }
+  @include respond-to("extralarge") {
     text-align: right;
   }
 }
@@ -624,6 +676,9 @@
   }
 
   @include respond-to("large") {
+    text-align: right;
+  }
+  @include respond-to("extralarge") {
     text-align: left;
   }
 }
@@ -683,6 +738,9 @@
   }
 
   @include respond-to("large") {
+    text-align: right;
+  }
+  @include respond-to("extralarge") {
     text-align: left;
   }
 }
@@ -699,5 +757,43 @@
 
   @include respond-to("large") {
     padding-bottom: 0;
+  }
+}
+
+.point-one,
+.point-five {
+  padding-left: 0;
+  @include respond-to("average") {
+    padding-left: 10px;
+  }
+
+  @include respond-to("medium") {
+    padding-left: 20px;
+  }
+
+  @include respond-to("large") {
+    padding-left: 50px;
+  }
+  @include respond-to("extralarge") {
+    padding-left: 0;
+  }
+}
+.point-two,
+.point-three,
+.point-four {
+  padding-right: 0;
+  @include respond-to("average") {
+    padding-right: 10px;
+  }
+
+  @include respond-to("medium") {
+    padding-right: 20px;
+  }
+
+  @include respond-to("large") {
+    padding-right: 50px;
+  }
+  @include respond-to("extralarge") {
+    padding-right: 0;
   }
 }

@@ -3,6 +3,7 @@ $breakpoints: (
   "average": 768px,
   "medium": 992px,
   "large": 1080px,
+  "extralarge": 1610px,
 ) !default;
 
 @mixin respond-to($breakpoint) {

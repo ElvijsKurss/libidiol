@@ -2029,6 +2029,13 @@ Header SCSS end
 @media (min-width: 1080px) {
   .main-point .point-one {
     position: absolute;
+    top: 23%;
+    left: 0%;
+  }
+}
+@media (min-width: 1610px) {
+  .main-point .point-one {
+    position: absolute;
     top: 0%;
     left: 29%;
   }
@@ -2048,6 +2055,11 @@ Header SCSS end
   }
 }
 @media (min-width: 1080px) {
+  .main-point .point-one .one {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 1610px) {
   .main-point .point-one .one {
     flex-direction: row;
   }
@@ -2074,6 +2086,13 @@ Header SCSS end
   }
 }
 @media (min-width: 1080px) {
+  .main-point .point-two {
+    position: absolute;
+    top: 43%;
+    right: 0%;
+  }
+}
+@media (min-width: 1610px) {
   .main-point .point-two {
     position: absolute;
     top: 42%;
@@ -2143,6 +2162,13 @@ Header SCSS end
 @media (min-width: 1080px) {
   .main-point .point-three {
     position: absolute;
+    top: 75%;
+    right: 0%;
+  }
+}
+@media (min-width: 1610px) {
+  .main-point .point-three {
+    position: absolute;
     top: 87%;
     right: 55%;
   }
@@ -2205,6 +2231,13 @@ Header SCSS end
 @media (min-width: 1080px) {
   .main-point .point-four {
     position: absolute;
+    top: 11%;
+    right: 0%;
+  }
+}
+@media (min-width: 1610px) {
+  .main-point .point-four {
+    position: absolute;
     top: 14%;
     left: 57%;
   }
@@ -2225,6 +2258,11 @@ Header SCSS end
   }
 }
 @media (min-width: 1080px) {
+  .main-point .point-four .four {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1610px) {
   .main-point .point-four .four {
     flex-direction: row-reverse;
   }
@@ -2268,6 +2306,13 @@ Header SCSS end
 @media (min-width: 1080px) {
   .main-point .point-five {
     position: absolute;
+    top: 55%;
+    left: 0%;
+  }
+}
+@media (min-width: 1610px) {
+  .main-point .point-five {
+    position: absolute;
     top: 73%;
     left: 56%;
   }
@@ -2278,7 +2323,6 @@ Header SCSS end
   justify-content: center;
 }
 
-.point-one p,
 .point-two p,
 .point-three p {
   display: block;
@@ -2288,23 +2332,48 @@ Header SCSS end
   text-align: left;
 }
 @media (min-width: 768px) {
-  .point-one p,
   .point-two p,
   .point-three p {
     text-align: left;
   }
 }
 @media (min-width: 992px) {
-  .point-one p,
   .point-two p,
   .point-three p {
     text-align: left;
   }
 }
 @media (min-width: 1080px) {
-  .point-one p,
   .point-two p,
   .point-three p {
+    text-align: right;
+  }
+}
+
+.point-one p {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 0;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .point-one p {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .point-one p {
+    text-align: left;
+  }
+}
+@media (min-width: 1080px) {
+  .point-one p {
+    text-align: left;
+  }
+}
+@media (min-width: 1610px) {
+  .point-one p {
     text-align: right;
   }
 }
@@ -2358,6 +2427,11 @@ Header SCSS end
   }
 }
 @media (min-width: 1080px) {
+  .point-four h2.wp-block-heading {
+    text-align: right;
+  }
+}
+@media (min-width: 1610px) {
   .point-four h2.wp-block-heading {
     text-align: left;
   }
@@ -2432,6 +2506,11 @@ Header SCSS end
 }
 @media (min-width: 1080px) {
   .point-four p {
+    text-align: right;
+  }
+}
+@media (min-width: 1610px) {
+  .point-four p {
     text-align: left;
   }
 }
@@ -2452,6 +2531,69 @@ Header SCSS end
 @media (min-width: 1080px) {
   .top-section-order {
     padding-bottom: 0;
+  }
+}
+
+.point-one,
+.point-five {
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .point-one,
+  .point-five {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .point-one,
+  .point-five {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  .point-one,
+  .point-five {
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1610px) {
+  .point-one,
+  .point-five {
+    padding-left: 0;
+  }
+}
+
+.point-two,
+.point-three,
+.point-four {
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  .point-two,
+  .point-three,
+  .point-four {
+    padding-right: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .point-two,
+  .point-three,
+  .point-four {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  .point-two,
+  .point-three,
+  .point-four {
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1610px) {
+  .point-two,
+  .point-three,
+  .point-four {
+    padding-right: 0;
   }
 }
 
