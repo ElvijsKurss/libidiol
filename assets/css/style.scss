@@ -11,15 +11,14 @@
 @import "section css/universal-helpers";
 @import "section css/order-now-section";
 @import "section css/become-a-partner";
-@import "section css/reviews-section-mobile";
-@import "section css/reviews-section-desktop";
 @import "section css/home-section";
 
 /* Fonts */
 @import "fonts/fonts";
 
 /* Default main project settings */
-* {
+*,
+html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -30,59 +29,11 @@
   transition: 0.3s ease-in-out;
 }
 
-.circle-container {
-  position: relative;
-
-  .circle-point {
-    position: absolute;
-    // max-width: 300px;
-    font-size: 0.8em;
-    flex-wrap: nowrap;
-
-    img {
-      width: 100px;
-    }
-  }
-
-  .circle-point-one {
-    top: 20%;
-    left: 20%;
-  }
-
-  .circle-point-two {
-    right: 30%;
-    bottom: 20%;
-    display: flex;
-    flex-direction: row-reverse;
-  }
-}
 /* Main Wrapper */
 .main-wrapper {
   max-width: 1170px !important;
   margin-left: auto;
   margin-right: auto;
-
-  // // Both should use the same breakpoint
-  // .welcome-paragraph-text-mobile {
-  //   // Add desktop to hide on desktop
-  // }
-
-  // .welcome-paragraph-text-desktop {
-  //   display: none;
-  //   // Add breakpoint to only display on desktop
-  // }
-
-  // .top-left-container {
-  //   order: 2;
-  // }
-
-  // .top-image-left {
-  //   order: 1;
-  // }
-
-  // .top-section-order {
-  //   display: flex;
-  // }
 }
 
 .container {

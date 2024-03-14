@@ -67,9 +67,34 @@ Header SCSS start
       align-items: center;
       flex-direction: row !important;
       margin: auto;
+
+      .list-inline-item {
+        position: relative;
+
+        .hidden-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          padding: 10px;
+          z-index: 999;
+
+          &:hover {
+            display: block;
+          }
+        }
+
+        .language-link:hover + .hidden-content {
+          display: block;
+        }
+      }
+
       a {
         display: flex;
         text-decoration: none;
+
         .menu-icon {
           width: 32px;
           height: 32px;
@@ -87,6 +112,7 @@ Header SCSS start
             text-decoration: none;
           }
         }
+
         .fa {
           font-size: 8px;
           color: white;
@@ -95,10 +121,6 @@ Header SCSS start
         }
       }
     }
-  }
-
-  .search-icon:hover + #search-window {
-    display: block;
   }
 }
 #search-overlay {
@@ -133,7 +155,7 @@ Header SCSS start
 .head-button-container {
   display: none;
   @include respond-to("average") {
-    display: flex;
+    display: none;
   }
   @include respond-to("medium") {
     display: flex;
@@ -162,8 +184,9 @@ Header SCSS start
   justify-content: flex-start;
   flex-direction: column;
   @include respond-to("average") {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
   }
 
   @include respond-to("medium") {

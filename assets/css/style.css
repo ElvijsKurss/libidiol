@@ -614,6 +614,25 @@ Header SCSS start
     flex-direction: row !important;
     margin: auto;
   }
+  #nav-bar-icons .social-list .list-inline-item {
+    position: relative;
+  }
+  #nav-bar-icons .social-list .list-inline-item .hidden-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 999;
+  }
+  #nav-bar-icons .social-list .list-inline-item .hidden-content:hover {
+    display: block;
+  }
+  #nav-bar-icons .social-list .list-inline-item .language-link:hover + .hidden-content {
+    display: block;
+  }
   #nav-bar-icons .social-list a {
     display: flex;
     text-decoration: none;
@@ -640,9 +659,6 @@ Header SCSS start
     display: flex;
     align-items: center;
   }
-}
-#nav-bar-icons .search-icon:hover + #search-window {
-  display: block;
 }
 
 #search-overlay {
@@ -681,7 +697,7 @@ Header SCSS start
 }
 @media (min-width: 768px) {
   .head-button-container {
-    display: flex;
+    display: none;
   }
 }
 @media (min-width: 992px) {
@@ -717,8 +733,9 @@ Header SCSS start
 }
 @media (min-width: 768px) {
   .mobile-menu {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
   }
 }
 @media (min-width: 992px) {
@@ -914,7 +931,7 @@ Header SCSS end
 .mobile-social-icons-container {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   padding-top: 25px;
   padding-bottom: 15px;
   margin: auto;
@@ -1058,7 +1075,7 @@ Header SCSS end
 .about-us-read-less.about-us-paragraph {
   font-size: 15px !important;
   font-family: HelveticaNeueLight;
-  line-height: 17px;
+  line-height: normal;
   font-weight: 700;
 }
 @media (min-width: 768px) {
@@ -1523,47 +1540,6 @@ Header SCSS end
   padding-bottom: 60px;
 }
 
-.mobile-review {
-  display: flex;
-}
-@media (min-width: 768px) {
-  .mobile-review {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  .mobile-review {
-    display: none;
-  }
-}
-@media (min-width: 1080px) {
-  .mobile-review {
-    display: none;
-  }
-}
-
-.desktop-reviews {
-  display: none !important;
-  height: 100vh;
-  background-size: 100% auto;
-  background-position: center;
-}
-@media (min-width: 768px) {
-  .desktop-reviews {
-    display: block !important;
-  }
-}
-@media (min-width: 992px) {
-  .desktop-reviews {
-    display: block !important;
-  }
-}
-@media (min-width: 1080px) {
-  .desktop-reviews {
-    display: block !important;
-  }
-}
-
 .top-spacer {
   height: 70px !important;
 }
@@ -1974,89 +1950,6 @@ Header SCSS end
   }
 }
 
-.bowl-left {
-  display: none;
-  position: absolute !important;
-  top: 55%;
-  left: 0;
-}
-.bowl-left img {
-  max-width: 100%;
-  height: auto;
-}
-@media (min-width: 768px) {
-  .bowl-left img {
-    max-width: 30%;
-  }
-}
-@media (min-width: 992px) {
-  .bowl-left img {
-    max-width: 40%;
-  }
-}
-@media (min-width: 1080px) {
-  .bowl-left img {
-    max-width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .bowl-left {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  .bowl-left {
-    display: none;
-  }
-}
-@media (min-width: 1080px) {
-  .bowl-left {
-    display: flex;
-  }
-}
-
-.bowl-right {
-  display: none;
-  position: absolute !important;
-  bottom: 5%;
-  right: -15%;
-}
-.bowl-right img {
-  max-width: 100%;
-  height: auto;
-}
-@media (min-width: 768px) {
-  .bowl-right img {
-    max-width: 40%;
-  }
-}
-@media (min-width: 992px) {
-  .bowl-right img {
-    max-width: 40%;
-  }
-}
-@media (min-width: 1080px) {
-  .bowl-right img {
-    max-width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .bowl-right {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  .bowl-right {
-    display: none;
-  }
-}
-@media (min-width: 1080px) {
-  .bowl-right {
-    display: flex;
-    right: -13%;
-  }
-}
-
 .main-point {
   position: relative;
   display: flex;
@@ -2075,25 +1968,25 @@ Header SCSS end
   line-height: 15px;
   margin-bottom: 0;
 }
-.main-point img {
-  width: 70px;
+.main-point .round-image {
+  max-width: 70px;
   margin-right: 10px;
 }
 @media (min-width: 768px) {
-  .main-point img {
-    width: 70px;
+  .main-point .round-image {
+    max-width: 70px;
     margin-right: 0;
   }
 }
 @media (min-width: 992px) {
-  .main-point img {
-    width: 80px;
+  .main-point .round-image {
+    max-width: 80px;
     margin-right: 0;
   }
 }
 @media (min-width: 1080px) {
-  .main-point img {
-    width: 90px;
+  .main-point .round-image {
+    max-width: 80px;
     margin-right: 0;
   }
 }
@@ -2137,7 +2030,7 @@ Header SCSS end
   .main-point .point-one {
     position: absolute;
     top: 0%;
-    left: 23%;
+    left: 29%;
   }
 }
 .main-point .point-one .one {
@@ -2167,21 +2060,6 @@ Header SCSS end
   width: 260px;
 }
 @media (min-width: 768px) {
-  .main-point .point-two .wp-block-columns {
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .main-point .point-two .wp-block-columns {
-    width: 100%;
-  }
-}
-@media (min-width: 1080px) {
-  .main-point .point-two .wp-block-columns {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
   .main-point .point-two {
     position: absolute;
     top: 43%;
@@ -2198,8 +2076,8 @@ Header SCSS end
 @media (min-width: 1080px) {
   .main-point .point-two {
     position: absolute;
-    top: 45%;
-    left: 11%;
+    top: 42%;
+    left: 19%;
   }
 }
 .main-point .point-two .two {
@@ -2210,16 +2088,19 @@ Header SCSS end
 @media (min-width: 768px) {
   .main-point .point-two .two {
     flex-direction: row;
+    justify-content: center;
   }
 }
 @media (min-width: 992px) {
   .main-point .point-two .two {
     flex-direction: row;
+    justify-content: left;
   }
 }
 @media (min-width: 1080px) {
   .main-point .point-two .two {
     flex-direction: row;
+    justify-content: left;
   }
 }
 .main-point .point-three {
@@ -2246,21 +2127,6 @@ Header SCSS end
   width: 260px;
 }
 @media (min-width: 768px) {
-  .main-point .point-three .wp-block-columns {
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .main-point .point-three .wp-block-columns {
-    width: 100%;
-  }
-}
-@media (min-width: 1080px) {
-  .main-point .point-three .wp-block-columns {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
   .main-point .point-three {
     position: absolute;
     top: 75%;
@@ -2277,8 +2143,8 @@ Header SCSS end
 @media (min-width: 1080px) {
   .main-point .point-three {
     position: absolute;
-    top: 85%;
-    left: 25%;
+    top: 87%;
+    right: 55%;
   }
 }
 .main-point .point-three .three {
@@ -2340,7 +2206,7 @@ Header SCSS end
   .main-point .point-four {
     position: absolute;
     top: 14%;
-    left: 58%;
+    left: 57%;
   }
 }
 .main-point .point-four .four {
@@ -2402,7 +2268,7 @@ Header SCSS end
 @media (min-width: 1080px) {
   .main-point .point-five {
     position: absolute;
-    top: 76%;
+    top: 73%;
     left: 56%;
   }
 }
@@ -2413,6 +2279,7 @@ Header SCSS end
 }
 
 .point-one p,
+.point-two p,
 .point-three p {
   display: block;
   font-size: 12px;
@@ -2422,24 +2289,28 @@ Header SCSS end
 }
 @media (min-width: 768px) {
   .point-one p,
+  .point-two p,
   .point-three p {
     text-align: left;
   }
 }
 @media (min-width: 992px) {
   .point-one p,
+  .point-two p,
   .point-three p {
     text-align: left;
   }
 }
 @media (min-width: 1080px) {
   .point-one p,
+  .point-two p,
   .point-three p {
     text-align: right;
   }
 }
 
 .point-one h2.wp-block-heading,
+.point-two h2.wp-block-heading,
 .point-three h2.wp-block-heading {
   display: block;
   flex-direction: column;
@@ -2449,25 +2320,27 @@ Header SCSS end
 }
 @media (min-width: 768px) {
   .point-one h2.wp-block-heading,
+  .point-two h2.wp-block-heading,
   .point-three h2.wp-block-heading {
     text-align: left;
   }
 }
 @media (min-width: 992px) {
   .point-one h2.wp-block-heading,
+  .point-two h2.wp-block-heading,
   .point-three h2.wp-block-heading {
     text-align: left;
   }
 }
 @media (min-width: 1080px) {
   .point-one h2.wp-block-heading,
+  .point-two h2.wp-block-heading,
   .point-three h2.wp-block-heading {
     text-align: right;
   }
 }
 
-.point-four h2.wp-block-heading,
-.point-three h2.wp-block-heading {
+.point-four h2.wp-block-heading {
   display: block;
   flex-direction: column;
   text-align: left;
@@ -2475,20 +2348,17 @@ Header SCSS end
   margin: 0;
 }
 @media (min-width: 768px) {
-  .point-four h2.wp-block-heading,
-  .point-three h2.wp-block-heading {
+  .point-four h2.wp-block-heading {
     text-align: right;
   }
 }
 @media (min-width: 992px) {
-  .point-four h2.wp-block-heading,
-  .point-three h2.wp-block-heading {
+  .point-four h2.wp-block-heading {
     text-align: right;
   }
 }
 @media (min-width: 1080px) {
-  .point-four h2.wp-block-heading,
-  .point-three h2.wp-block-heading {
+  .point-four h2.wp-block-heading {
     text-align: left;
   }
 }
@@ -2512,12 +2382,10 @@ Header SCSS end
 }
 @media (min-width: 1080px) {
   .point-two h2.wp-block-heading {
-    text-align: left;
-    border: 1px solid red;
+    text-align: right;
   }
 }
 
-.point-two p,
 .point-three p,
 .point-four p {
   display: block;
@@ -2527,29 +2395,24 @@ Header SCSS end
   text-align: left;
 }
 @media (min-width: 768px) {
-  .point-two p,
   .point-three p,
   .point-four p {
     text-align: right;
   }
 }
 @media (min-width: 992px) {
-  .point-two p,
   .point-three p,
   .point-four p {
     text-align: right;
   }
 }
 @media (min-width: 1080px) {
-  .point-two p,
   .point-three p,
   .point-four p {
-    text-align: left;
+    text-align: right;
   }
 }
 
-.point-two p,
-.point-three p,
 .point-four p {
   display: block;
   font-size: 12px;
@@ -2558,22 +2421,16 @@ Header SCSS end
   text-align: left;
 }
 @media (min-width: 768px) {
-  .point-two p,
-  .point-three p,
   .point-four p {
     text-align: right;
   }
 }
 @media (min-width: 992px) {
-  .point-two p,
-  .point-three p,
   .point-four p {
     text-align: right;
   }
 }
 @media (min-width: 1080px) {
-  .point-two p,
-  .point-three p,
   .point-four p {
     text-align: left;
   }
@@ -2612,33 +2469,12 @@ Header SCSS end
   src: url(fonts/HelveticaNeueLight.ttf);
 }
 /* Default main project settings */
-* {
+*,
+html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   transition: 0.3s ease-in-out;
-}
-
-.circle-container {
-  position: relative;
-}
-.circle-container .circle-point {
-  position: absolute;
-  font-size: 0.8em;
-  flex-wrap: nowrap;
-}
-.circle-container .circle-point img {
-  width: 100px;
-}
-.circle-container .circle-point-one {
-  top: 20%;
-  left: 20%;
-}
-.circle-container .circle-point-two {
-  right: 30%;
-  bottom: 20%;
-  display: flex;
-  flex-direction: row-reverse;
 }
 
 /* Main Wrapper */

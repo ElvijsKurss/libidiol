@@ -37,7 +37,7 @@
   &.about-us-paragraph {
     font-size: 15px !important;
     font-family: HelveticaNeueLight;
-    line-height: 17px;
+    line-height: normal;
     font-weight: 700;
     @include respond-to("average") {
       font-size: 15px !important;
