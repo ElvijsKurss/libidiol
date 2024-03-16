@@ -4,6 +4,7 @@
 @import "breakpoints";
 @import "mobile-version";
 @import "logo";
+@import "cart";
 
 /* Section SCSS */
 @import "section css/about-us-section";
@@ -21,12 +22,12 @@
 html {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  // scroll-behavior: smooth;
+  // -webkit-transition: 0.3s ease-in-out;
+  // -moz-transition: 0.3s ease-in-out;
+  // -ms-transition: 0.3s ease-in-out;
+  // -o-transition: 0.3s ease-in-out;
+  // transition: 0.3s ease-in-out;
 }
 
 /* Main Wrapper */
@@ -53,5 +54,32 @@ html {
   @include respond-to("large") {
     padding-right: 15px;
     padding-left: 15px;
+  }
+}
+
+.full-view-background {
+  height: 70vh;
+}
+
+.custome-page-header {
+  font-size: 45px;
+  padding-top: 40px;
+  color: #062a4d;
+  justify-content: center;
+  display: flex;
+  font-family: HelveticaNeueMedium;
+  @include respond-to("average") {
+    font-size: 45px;
+    padding-top: 40px;
+  }
+
+  @include respond-to("medium") {
+    font-size: 45px;
+    padding-top: 40px;
+  }
+
+  @include respond-to("large") {
+    font-size: 45px;
+    padding-top: 40px;
   }
 }

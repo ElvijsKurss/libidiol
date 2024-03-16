@@ -1,0 +1,30 @@
+/* Hide cart content initially */
+.cart-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 9999;
+}
+
+/* Show cart content on hover */
+#cart-icon:hover .cart-content {
+  display: block;
+  z-index: 9999;
+}
+
+/* Style for the cart content */
+.cart-content a {
+  display: block;
+  margin-bottom: 5px;
+  z-index: 9999;
+}
+/* Style for the return to shop*/
+.return-to-shop {
+  display: block;
+  width: auto;
+  z-index: 9999;
+}

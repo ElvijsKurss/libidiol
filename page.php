@@ -4,8 +4,14 @@ get_header();
 
 ?>
 
-<!-- <h1><?= $post->post_title; ?>123</h1>
-<div><?= $post->post_content; ?>123</div> -->
+<body>
+    <div class="container main-wrapper">
+        <h1 class="custome-page-header"><?php the_title(); ?></h1>
+    </div>
+    <div class=" container main-wrapper">
+        <p class="custome-page-paragraph"><?php the_content(); ?></p>
+    </div>
+</body>
 
 <?php
 get_footer();

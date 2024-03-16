@@ -19,7 +19,7 @@
                 <h3>Useful Links</h3>
             </div>
             <div id="column-two-text">
-                <div><a href="#about-us-section">
+                <div><a href="http://custom-theme-website.test/about/">
                         <p class="footer-content-text-two">About us</p>
                     </a></div>
                 <hr class="seperator-hr-element">

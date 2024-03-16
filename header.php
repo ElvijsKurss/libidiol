@@ -65,11 +65,16 @@
                                 <?php echo do_shortcode('[google-translator]'); ?>
                             </div>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="icon-shopping-basket menu-icon"></i></a>
+                        <li class="list-inline-item" id="cart-icon">
+                            <a href="<?php echo wc_get_cart_url(); ?>"><i class="icon-shopping-basket menu-icon"></i></a>
+                            <!-- Add the cart shortcode here -->
+                            <div class="cart-content hidden">
+                                <?php echo do_shortcode('[woocommerce_cart]'); ?>
+                            </div>
                         </li>
                     </ul>
                 </div>
+
 
                 <div class="head-button-container">
                     <div class="head-button-body"><a href="#order-now-section" class="header-button-link">Order now</a></div>
