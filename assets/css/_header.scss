@@ -257,3 +257,8 @@ Header SCSS end
     height: 30px !important;
   }
 }
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+}

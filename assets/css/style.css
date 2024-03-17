@@ -807,6 +807,11 @@ Header SCSS end
   }
 }
 
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
 .mobile-button {
   display: flex;
   padding: 20px 0 40px 0;
@@ -1955,6 +1960,7 @@ Header SCSS end
   position: relative;
   display: flex;
   max-width: 100%;
+  max-width: 1880px !important;
 }
 .main-point h2.wp-block-heading {
   display: block;

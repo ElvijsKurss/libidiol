@@ -56,9 +56,9 @@
 
                 <div id="nav-bar-icons">
                     <ul class="social-list">
-                        <li class="list-inline-item">
+                        <!-- <li class="list-inline-item">
                             <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-euro menu-icon"></i></a>
-                        </li>
+                        </li> -->
                         <li class="list-inline-item">
                             <a href="#" class="language-link"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></a>
                             <div class="hidden-content">
@@ -67,7 +67,6 @@
                         </li>
                         <li class="list-inline-item" id="cart-icon">
                             <a href="<?php echo wc_get_cart_url(); ?>"><i class="icon-shopping-basket menu-icon"></i></a>
-                            <!-- Add the cart shortcode here -->
                             <div class="cart-content hidden">
                                 <?php echo do_shortcode('[woocommerce_cart]'); ?>
                             </div>
