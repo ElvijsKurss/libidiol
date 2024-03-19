@@ -70,25 +70,7 @@ footer {
   justify-content: left;
   width: 100%;
   padding-top: 13px;
-  font-size: 12px;
-}
-@media (min-width: 768px) {
-  #footer-container .column #input-container-email,
-  #footer-container .column #input-container-text {
-    padding-top: 10px;
-  }
-}
-@media (min-width: 992px) {
-  #footer-container .column #input-container-email,
-  #footer-container .column #input-container-text {
-    padding-top: 10px;
-  }
-}
-@media (min-width: 1080px) {
-  #footer-container .column #input-container-email,
-  #footer-container .column #input-container-text {
-    padding-top: 10px;
-  }
+  font-size: 16px;
 }
 #footer-container .column #input-container-email input,
 #footer-container .column #input-container-text input {
@@ -310,7 +292,6 @@ footer {
     justify-content: left;
     margin: 0 0 0 90px;
     padding: 0;
-    font-size: 12px;
   }
 }
 @media (min-width: 992px) {
@@ -320,7 +301,6 @@ footer {
     justify-content: left;
     margin: 0 0 0 90px;
     padding: 0;
-    font-size: 12px;
   }
 }
 @media (min-width: 1080px) {
@@ -330,8 +310,12 @@ footer {
     justify-content: left;
     margin: 0 0 0 90px;
     padding: 0;
-    font-size: 12px;
   }
+}
+#footer-container .column #column-two-text a .footer-content-text-two:hover,
+#footer-container .column #column-three-text a .footer-content-text-two:hover,
+#footer-container .column #column-four-text a .footer-content-text-two:hover {
+  color: white;
 }
 #footer-container .column .footer-content-text {
   color: white;
@@ -342,12 +326,12 @@ footer {
   justify-content: center;
   margin: 0;
   padding-top: 25px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   #footer-container .column .footer-content-text {
     margin: 0 0 0 40px;
     text-align: left;
-    font-size: 12px;
     padding-top: 0;
   }
 }
@@ -355,7 +339,6 @@ footer {
   #footer-container .column .footer-content-text {
     margin: 0 0 0 43px;
     text-align: left;
-    font-size: 12px;
     padding-top: 0;
   }
 }
@@ -363,17 +346,23 @@ footer {
   #footer-container .column .footer-content-text {
     margin: 0 0 0 45px;
     text-align: left;
-    font-size: 12px;
     padding-top: 0;
   }
 }
+#footer-container .column .footer-content-text:hover {
+  color: #969696;
+}
 #footer-container .column .footer-content-text-three {
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   margin: 0;
   padding: 5px 0;
   display: flex;
   justify-content: left;
+  cursor: pointer;
+}
+#footer-container .column .footer-content-text-three:hover {
+  color: #969696;
 }
 #footer-container .column .social-icons {
   display: flex;
@@ -427,23 +416,23 @@ footer {
 }
 @media (min-width: 768px) {
   #footer-container .column .social-icons .footer-icons a .fab {
-    font-size: 13px;
+    font-size: 16px;
     width: 30px;
     height: 30px;
   }
 }
 @media (min-width: 992px) {
   #footer-container .column .social-icons .footer-icons a .fab {
-    font-size: 13px;
-    width: 30px;
-    height: 30px;
+    font-size: 17px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media (min-width: 1080px) {
   #footer-container .column .social-icons .footer-icons a .fab {
-    font-size: 13px;
-    width: 30px;
-    height: 30px;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -523,6 +512,13 @@ footer {
   #desktop-version-useful-links {
     display: flex !important;
   }
+}
+
+.copyright {
+  color: white;
+  font-size: 16px;
+  padding-bottom: 5px;
+  opacity: 80%;
 }
 
 /*
@@ -940,17 +936,17 @@ Header SCSS end
 }
 @media (min-width: 768px) {
   .bottom-logo {
-    width: 140px;
+    width: 160px;
   }
 }
 @media (min-width: 992px) {
   .bottom-logo {
-    width: 140px;
+    width: 180px;
   }
 }
 @media (min-width: 1080px) {
   .bottom-logo {
-    width: 140px;
+    width: 200px;
   }
 }
 
@@ -959,17 +955,17 @@ Header SCSS end
 }
 @media (min-width: 768px) {
   .top-logo {
-    width: 140px;
+    width: 160px;
   }
 }
 @media (min-width: 992px) {
   .top-logo {
-    width: 140px;
+    width: 180px;
   }
 }
 @media (min-width: 1080px) {
   .top-logo {
-    width: 140px;
+    width: 200px;
   }
 }
 

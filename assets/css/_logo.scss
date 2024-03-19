@@ -3,25 +3,25 @@
   width: 160px;
   padding-bottom: 30px;
   @include respond-to("average") {
-    width: 140px;
+    width: 160px;
   }
   @include respond-to("medium") {
-    width: 140px;
+    width: 180px;
   }
   @include respond-to("large") {
-    width: 140px;
+    width: 200px;
   }
 }
 
 .top-logo {
   width: 120px;
   @include respond-to("average") {
-    width: 140px;
+    width: 160px;
   }
   @include respond-to("medium") {
-    width: 140px;
+    width: 180px;
   }
   @include respond-to("large") {
-    width: 140px;
+    width: 200px;
   }
 }

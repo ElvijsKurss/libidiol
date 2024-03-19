@@ -97,6 +97,9 @@
         </div>
 
     </div>
+    <div class="copyright">
+        © Copyright 2024 Libidiol. All rights reserved.
+    </div>
 </footer>
 
 </div>
