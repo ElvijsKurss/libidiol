@@ -66,11 +66,22 @@
                             </div>
                         </li>
                         <li class="list-inline-item" id="cart-icon">
-                            <a href="<?php echo wc_get_cart_url(); ?>"><i class="icon-shopping-basket menu-icon"></i></a>
+                            <a href="<?php echo wc_get_cart_url(); ?>" class="cart-icon-link">
+                                <i class="icon-shopping-basket menu-icon"></i>
+                                <?php
+                                $cart_count = WC()->cart->get_cart_contents_count();
+                                if ($cart_count > 0) {
+                                    echo '<span class="cart-count"><span class="cart-count-inner">' . $cart_count . '</span></span>';
+                                }
+                                ?>
+                            </a>
                             <div class="header-cart-content hidden">
                                 <?php echo do_shortcode('[woocommerce_cart]'); ?>
                             </div>
                         </li>
+
+
+
                     </ul>
                 </div>
 
