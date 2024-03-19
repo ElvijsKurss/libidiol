@@ -728,7 +728,7 @@ Header SCSS start
   color: #fff;
 }
 .main-header .navbar {
-  padding: 1rem 1rem;
+  padding: 0 1rem;
 }
 .main-header .navbar .navbar-dark .navbar-toggler {
   border: none;
@@ -2694,7 +2694,7 @@ html {
 }
 
 .custome-page-header {
-  font-size: 45px;
+  font-size: 40px;
   padding-top: 40px;
   color: #062a4d;
   justify-content: center;
@@ -2722,4 +2722,8 @@ html {
 
 #flags {
   width: 100% !important;
+}
+
+#flags a:hover {
+  transform: scale(1.5);
 }/*# sourceMappingURL=style.css.map */

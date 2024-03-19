@@ -62,7 +62,7 @@ html {
 }
 
 .custome-page-header {
-  font-size: 45px;
+  font-size: 40px;
   padding-top: 40px;
   color: #062a4d;
   justify-content: center;
@@ -86,4 +86,8 @@ html {
 
 #flags {
   width: 100% !important;
+}
+
+#flags a:hover {
+  transform: scale(1.5);
 }
