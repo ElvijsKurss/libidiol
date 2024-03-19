@@ -39,8 +39,8 @@ html {
 
 .container {
   width: 100%;
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 20px;
+  padding-left: 20px;
   @include respond-to("average") {
     padding-right: 15px;
     padding-left: 15px;
@@ -82,4 +82,8 @@ html {
     font-size: 45px;
     padding-top: 40px;
   }
+}
+
+#flags {
+  width: 100% !important;
 }

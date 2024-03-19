@@ -974,27 +974,19 @@ Header SCSS end
 }
 
 /* Hide cart content initially */
-.cart-content {
+.header-cart-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
+  color: black;
   z-index: 9999;
 }
 
 /* Show cart content on hover */
-#cart-icon:hover .cart-content {
+#cart-icon:hover .header-cart-content {
   display: block;
-  z-index: 9999;
-}
-
-/* Style for the cart content */
-.cart-content a {
-  display: block;
-  margin-bottom: 5px;
   z-index: 9999;
 }
 
@@ -2633,8 +2625,8 @@ html {
 
 .container {
   width: 100%;
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 @media (min-width: 768px) {
   .container {
@@ -2684,4 +2676,8 @@ html {
     font-size: 45px;
     padding-top: 40px;
   }
+}
+
+#flags {
+  width: 100% !important;
 }/*# sourceMappingURL=style.css.map */

@@ -67,7 +67,7 @@
                         </li>
                         <li class="list-inline-item" id="cart-icon">
                             <a href="<?php echo wc_get_cart_url(); ?>"><i class="icon-shopping-basket menu-icon"></i></a>
-                            <div class="cart-content hidden">
+                            <div class="header-cart-content hidden">
                                 <?php echo do_shortcode('[woocommerce_cart]'); ?>
                             </div>
                         </li>
