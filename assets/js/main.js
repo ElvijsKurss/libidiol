@@ -41,25 +41,16 @@ $(document).ready(function () {
   });
 });
 
-/* Navbar expand/collapse script*/
-jQuery(document).ready(function ($) {
-  // Ensure DOM is fully loaded
-  $(".navbar-toggler").click(function () {
-    // Toggle the collapse class on navbar-collapse
-    $(".navbar-collapse").toggleClass("collapse");
-  });
-});
-
 /*Scritp for search function*/
 jQuery(document).ready(function ($) {
   // Ensure DOM is fully loaded
   $(".search-icon").click(function (e) {
-    e.preventDefault(); // Prevent default action of anchor tag
-    $("#search-overlay").fadeIn(); // Show search overlay
+    e.preventDefault();
+    $("#search-overlay").fadeIn();
   });
 
   // Close search overlay when close button is clicked
   $(".close-search").click(function () {
-    $("#search-overlay").fadeOut(); // Hide search overlay
+    $("#search-overlay").fadeOut();
   });
 });

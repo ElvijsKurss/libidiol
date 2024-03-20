@@ -262,3 +262,12 @@ Header SCSS end
   display: flex;
   flex-direction: column;
 }
+
+/*Flag plugin extra css*/
+#flags {
+  width: 100% !important;
+}
+
+#flags a:hover {
+  transform: scale(1.5);
+}
