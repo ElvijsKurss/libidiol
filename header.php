@@ -15,11 +15,30 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="mobile-cart-container">
+                <ul class="social-list">
+                    <li class="list-inline-item" id="cart-icon">
+                        <a href="<?php echo wc_get_cart_url(); ?>" class="cart-icon-link">
+                            <i class="icon-shopping-basket menu-icon"></i>
+                            <?php
+                            $cart_count = WC()->cart->get_cart_contents_count();
+                            if ($cart_count > 0) {
+                                echo '<span class="cart-count"><span class="cart-count-inner">' . $cart_count . '</span></span>';
+                            }
+                            ?>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
             <a class="navbar-brand" href="http://custom-theme-website.test/">
                 <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
 
             <div class="mobile-menu collapse navbar-collapse" id="navigation">
+
+
+
 
                 <?php
                 wp_nav_menu(
@@ -33,7 +52,7 @@
                 );
                 ?>
 
-                <div class="mobile-contact-us-container">
+                <!-- <div class="mobile-contact-us-container">
                     <div>
                         <p class="header-content-text-mobile">Thailand, Ramkhamhaeng road</p>
                     </div>
@@ -43,16 +62,16 @@
                     <div>
                         <p class="header-content-text-mobile">office@libidiol.com</p>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="mobile-social-icons-container">
+                <!-- <div class="mobile-social-icons-container">
                     <ul class="mobile-social-icons-container-content">
                         <li class="footer-icons"><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                         <li class="footer-icons"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                         <li class="footer-icons"><a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
                         <li class="footer-icons"><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                     </ul>
-                </div>
+                </div> -->
 
                 <div id="nav-bar-icons">
                     <ul class="social-list">

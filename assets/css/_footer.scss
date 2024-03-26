@@ -296,17 +296,16 @@ footer {
     }
 
     .social-icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row;
-      list-style-type: none;
-      padding: 0;
-      margin-top: 35px;
-      margin-bottom: 30px;
+      display: none;
       @include respond-to("average") {
         margin-top: 20px;
         margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        list-style-type: none;
+        padding: 0;
       }
       @include respond-to("medium") {
         margin-top: 20px;
@@ -398,6 +397,7 @@ footer {
 
 #mobile-version-useful-links {
   display: flex !important;
+  padding-top: 40px;
   @include respond-to("average") {
     display: none !important;
   }
@@ -449,5 +449,48 @@ footer {
   @include respond-to("large") {
     margin: 0;
     padding-top: 0;
+  }
+}
+
+/* Follow us styling*/
+
+.follow-us-mobile {
+  display: flex;
+  color: white;
+  font-size: 16px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  padding: 10px 0 20px 0 !important;
+  transition: 0.3s ease-in-out;
+  @include respond-to("average") {
+    display: none;
+  }
+  @include respond-to("medium") {
+    display: none;
+  }
+  @include respond-to("large") {
+    display: none;
+  }
+}
+
+.follow-us-icons {
+  display: flex;
+  color: grey;
+  list-style: none;
+  .footer-icons-mobile {
+    .fab {
+      color: white;
+      width: 30px;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      flex-direction: row;
+      background-color: transparent;
+      border-radius: 0;
+    }
   }
 }

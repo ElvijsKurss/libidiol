@@ -12,18 +12,7 @@
       "code": 59392,
       "src": "entypo"
     },
-    // {
-    //   "uid": "486b835e9eebf54eee78ed12b4291b86",
-    //   "css": "euro",
-    //   "code": 61779,
-    //   "src": "fontawesome"
-    // },
-    // {
-    //   "uid": "7222571caa5c15f83dcfd447c58d68d9",
-    //   "css": "search",
-    //   "code": 59393,
-    //   "src": "entypo"
-    // },
+    
     {
       "uid": "90e0aff5c929e444038355746a952aaf",
       "css": "shopping-basket",

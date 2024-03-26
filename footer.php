@@ -7,10 +7,8 @@
             </a>
             <p class="footer-content-text-no-hover">Unleash Natures Power For Passionate <br /> Living with Libidiol</p>
             <ul class="social-icons">
-                <li class="footer-icons"><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                <li class="footer-icons"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li class="footer-icons"><a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
-                <li class="footer-icons"><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                <li class="footer-icons"><a href="https://www.facebook.com/libidiol"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="footer-icons"><a href="https://www.linkedin.com/company/libidiol/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
         </div>
         <!-- Desktop version for Useful links -->
@@ -52,7 +50,9 @@
                     </a>
                 </div>
                 <div>
-                    <p class="footer-content-text-three">+66858576671</p>
+                    <p class="footer-content-text-three">
+                        <a href="tel:+66858576671">+66858576671</a>
+                    </p>
                 </div>
                 <div>
                     <p class="footer-content-text-three"><a href="mailto:office@libidiol.com">office@libidiol.com</a></p>
@@ -96,6 +96,13 @@
                 <div><a href="http://custom-theme-website.test/terms-and-conditions/">
                         <p class="footer-content-text-two">Terms & Conditions</p>
                     </a></div>
+            </div>
+            <div>
+                <p class="follow-us-mobile">Follow Us</p>
+                <ul class="follow-us-icons">
+                    <li class="footer-icons-mobile"><a href="https://www.facebook.com/libidiol"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="footer-icons-mobile"><a href="https://www.linkedin.com/company/libidiol/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
         </div>
 

@@ -19,11 +19,14 @@
   text-align: center;
   margin: auto;
   align-content: center;
+  padding-top: 20px;
 }
 
 /*Contact field*/
 #wpforms-638-field_2 {
   align-content: center;
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* Email field*/
@@ -44,4 +47,44 @@
   @include respond-to("large") {
     padding-bottom: 50px;
   }
+}
+
+/* Button CSS*/
+div.wpforms-container-full input[type="submit"],
+div.wpforms-container-full button[type="submit"],
+div.wpforms-container-full .wpforms-page-button {
+  display: flex;
+  background-color: #76b600 !important;
+  text-decoration: none;
+  padding: 15px 45px;
+  font-size: 14px;
+  color: white;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  cursor: pointer;
+  @include transition(0.3s ease-in-out);
+  &:hover {
+    background-color: darken(#76b600, 10%) !important;
+  }
+  @include respond-to("average") {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+  @include respond-to("medium") {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+  @include respond-to("large") {
+    padding: 10px 30px;
+    font-size: 15px;
+  }
+}
+
+/* Button text css styling*/
+#wpforms-submit-638 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

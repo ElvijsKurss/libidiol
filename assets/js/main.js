@@ -40,17 +40,3 @@ $(document).ready(function () {
     }
   });
 });
-
-/*Scritp for search function*/
-jQuery(document).ready(function ($) {
-  // Ensure DOM is fully loaded
-  $(".search-icon").click(function (e) {
-    e.preventDefault();
-    $("#search-overlay").fadeIn();
-  });
-
-  // Close search overlay when close button is clicked
-  $(".close-search").click(function () {
-    $("#search-overlay").fadeOut();
-  });
-});

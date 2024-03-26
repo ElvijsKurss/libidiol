@@ -3,8 +3,6 @@
 @import "header";
 @import "breakpoints";
 @import "mobile-version";
-@import "logo";
-@import "cart";
 @import "root";
 
 /* Section SCSS */
@@ -15,7 +13,11 @@
 @import "section css/become-a-partner";
 @import "section css/home-section";
 @import "section css/contact-form";
-@import "section css/products";
+
+/* Element SCSS */
+@import "element css/logo";
+@import "element css/cart";
+@import "element css/products";
 
 /* Fonts */
 @import "fonts/fonts";
@@ -54,11 +56,13 @@ html {
     padding-left: 15px;
   }
 }
+/* Wrapper code end*/
 
 .full-view-background {
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .custome-page-header {
@@ -77,5 +81,32 @@ html {
   }
   @include respond-to("large") {
     font-size: 45px;
+  }
+}
+
+/* Mobile version wp bar, needs adjusting since its a custom created theme*/
+#wpadminbar {
+  top: -45px;
+  @include respond-to("average") {
+    top: 0;
+  }
+  @include respond-to("medium") {
+    top: 0;
+  }
+  @include respond-to("large") {
+    top: 0;
+  }
+}
+
+html #wpadminbar {
+  height: 47px;
+  @include respond-to("average") {
+    height: 35px;
+  }
+  @include respond-to("medium") {
+    height: 35px;
+  }
+  @include respond-to("large") {
+    height: 35px;
   }
 }
