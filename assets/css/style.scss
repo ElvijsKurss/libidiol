@@ -13,21 +13,25 @@
 @import "section css/become-a-partner";
 @import "section css/home-section";
 @import "section css/contact-form";
+@import "section css/shop";
 
 /* Element SCSS */
 @import "element css/logo";
 @import "element css/cart";
 @import "element css/products";
+@import "element css/checkout-button";
+@import "element css/related-products";
 
 /* Fonts */
 @import "fonts/fonts";
 
 /* Default main project settings */
-*,
+
 html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 /* Main Wrapper */
@@ -56,6 +60,14 @@ html {
     padding-left: 15px;
   }
 }
+
+/* Specific for cart and shop page*/
+.container-mobile {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 /* Wrapper code end*/
 
 .full-view-background {

@@ -1,0 +1,13 @@
+/* Shop Showing all items css
+Uncomment flex and comment none to display this*/
+.woocommerce-result-count {
+  display: none;
+  //   display: flex;
+}
+
+.woocommerce-ordering {
+  .orderby {
+    border-radius: 5px;
+    border-color: lightgray;
+  }
+}

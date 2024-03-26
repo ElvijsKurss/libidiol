@@ -1,0 +1,16 @@
+.related.products {
+  padding-top: 50px;
+  h2 {
+    padding-bottom: 20px;
+  }
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  float: left;
+  margin: 0 3.8% 2.992em 0;
+  padding: 0;
+  position: relative;
+  width: 35.05%;
+  margin-left: 0;
+}

@@ -687,6 +687,7 @@ Header SCSS start
 @media (min-width: 1080px) {
   #nav-bar-icons {
     display: flex;
+    padding-top: 5px;
   }
   #nav-bar-icons .social-list {
     display: flex;
@@ -728,18 +729,20 @@ Header SCSS start
     text-decoration: none;
     flex-direction: row;
     position: relative;
-    color: #54ade1;
-    font-size: 17px;
+    color: #ffffff;
+    font-size: 21px;
   }
   #nav-bar-icons .social-list a .menu-icon:hover {
     color: #76b600 !important;
     text-decoration: none;
   }
   #nav-bar-icons .social-list a .fa {
-    font-size: 8px;
+    font-size: 9px;
     color: white;
     display: flex;
     align-items: center;
+    padding-right: 3px;
+    padding-top: 5px;
   }
 }
 
@@ -856,14 +859,12 @@ Header SCSS end
 
 /* Fontello icon scss*/
 .icon-euro,
-.icon-search,
 .icon-language {
   position: relative;
   display: flex;
   padding-right: 8px;
 }
 .icon-euro:nth-child(-n+3)::after,
-.icon-search:nth-child(-n+3)::after,
 .icon-language:nth-child(-n+3)::after {
   content: "";
   position: absolute;
@@ -928,10 +929,15 @@ Header SCSS end
   display: flex;
   font-size: 1.3rem;
   justify-content: flex-start;
-  padding-left: 15px;
+  align-items: flex-start;
   padding-top: 15px;
   flex: 1;
   position: relative;
+}
+.mobile-cart-container .social-list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
 }
 .mobile-cart-container .icon-shopping-basket:before {
   color: white;
@@ -951,11 +957,21 @@ Header SCSS end
     display: none;
   }
 }
-.mobile-cart-container .cart-count {
+.mobile-cart-container .cart-count-mobile {
   position: absolute;
-  left: 40px;
-  top: 12px;
+  left: 25px;
+  top: 25px;
   text-decoration: none;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 0px 5px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.icon-language {
+  font-size: 24px !important;
 }
 
 .mobile-button {
@@ -2763,6 +2779,17 @@ div.wpforms-container-full .wpforms-page-button:hover {
   justify-content: center;
 }
 
+/* Shop Showing all items css
+Uncomment flex and comment none to display this*/
+.woocommerce-result-count {
+  display: none;
+}
+
+.woocommerce-ordering .orderby {
+  border-radius: 5px;
+  border-color: lightgray;
+}
+
 /* Element SCSS */
 /* Logo */
 .bottom-logo {
@@ -2809,12 +2836,13 @@ div.wpforms-container-full .wpforms-page-button:hover {
   display: none;
   position: absolute;
   top: 100%;
-  left: -150%;
+  left: -200%;
   background-color: #fff;
   color: black;
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 9999;
+  min-width: 300px;
 }
 
 /* Show cart content on hover */
@@ -2835,6 +2863,10 @@ div.wpforms-container-full .wpforms-page-button:hover {
   display: block;
   width: auto;
   z-index: 9999;
+}
+.return-to-shop .button.wc-backward {
+  display: flex;
+  justify-content: center;
 }
 
 .cart-count {
@@ -2888,6 +2920,17 @@ div.wpforms-container-full .wpforms-page-button:hover {
   text-align: center;
   padding-bottom: 10px;
   line-height: 20px;
+}
+
+/* Css to overwrite default woocommerce cart style*/
+.cart_totals {
+  float: right;
+  width: 100% !important;
+}
+
+.checkout-button.button.alt.wc-forward {
+  display: flex;
+  justify-content: center;
 }
 
 /* Overll product styling*/
@@ -2944,6 +2987,59 @@ div.wpforms-container-full .wpforms-page-button:hover {
   }
 }
 
+.wc-block-cart__submit-container .components-button.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained {
+  display: flex;
+  background-color: #76b600 !important;
+  text-decoration: none;
+  padding: 15px 45px;
+  font-size: 14px;
+  color: white;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.wc-block-cart__submit-container .components-button.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained:hover {
+  background-color: #558300 !important;
+}
+@media (min-width: 768px) {
+  .wc-block-cart__submit-container .components-button.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .wc-block-cart__submit-container .components-button.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 1080px) {
+  .wc-block-cart__submit-container .components-button.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained {
+    padding: 10px 30px;
+    font-size: 15px;
+  }
+}
+
+.related.products {
+  padding-top: 50px;
+}
+.related.products h2 {
+  padding-bottom: 20px;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  float: left;
+  margin: 0 3.8% 2.992em 0;
+  padding: 0;
+  position: relative;
+  width: 35.05%;
+  margin-left: 0;
+}
+
 /* Fonts */
 @font-face {
   font-family: HelveticaNeueBlack;
@@ -2958,11 +3054,11 @@ div.wpforms-container-full .wpforms-page-button:hover {
   src: url(fonts/HelveticaNeueLight.ttf);
 }
 /* Default main project settings */
-*,
 html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 /* Main Wrapper */
@@ -2994,6 +3090,13 @@ html {
     padding-right: 15px;
     padding-left: 15px;
   }
+}
+
+/* Specific for cart and shop page*/
+.container-mobile {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* Wrapper code end*/

@@ -23,7 +23,7 @@
                             <?php
                             $cart_count = WC()->cart->get_cart_contents_count();
                             if ($cart_count > 0) {
-                                echo '<span class="cart-count"><span class="cart-count-inner">' . $cart_count . '</span></span>';
+                                echo '<span class="cart-count-mobile"><span class="cart-count-inner">' . $cart_count . '</span></span>';
                             }
                             ?>
                         </a>
@@ -52,32 +52,8 @@
                 );
                 ?>
 
-                <!-- <div class="mobile-contact-us-container">
-                    <div>
-                        <p class="header-content-text-mobile">Thailand, Ramkhamhaeng road</p>
-                    </div>
-                    <div>
-                        <p class="header-content-text-mobile">+66858576671</p>
-                    </div>
-                    <div>
-                        <p class="header-content-text-mobile">office@libidiol.com</p>
-                    </div>
-                </div> -->
-
-                <!-- <div class="mobile-social-icons-container">
-                    <ul class="mobile-social-icons-container-content">
-                        <li class="footer-icons"><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                        <li class="footer-icons"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li class="footer-icons"><a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
-                        <li class="footer-icons"><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div> -->
-
                 <div id="nav-bar-icons">
                     <ul class="social-list">
-                        <!-- <li class="list-inline-item">
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-euro menu-icon"></i></a>
-                        </li> -->
                         <li class="list-inline-item">
                             <a href="#" class="language-link"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></a>
                             <div class="hidden-content">
@@ -108,11 +84,3 @@
             </div>
         </nav>
     </header>
-
-
-
-
-    <?php wp_footer(); ?>
-</body>
-
-</html>

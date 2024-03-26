@@ -58,9 +58,10 @@ Header SCSS start
   margin: 0;
   padding: 0;
   display: none;
+
   @include respond-to("large") {
     display: flex;
-
+    padding-top: 5px;
     .social-list {
       display: flex;
       justify-content: center;
@@ -105,8 +106,8 @@ Header SCSS start
           text-decoration: none;
           flex-direction: row;
           position: relative;
-          color: #54ade1;
-          font-size: 17px;
+          color: #ffffff;
+          font-size: 21px;
 
           &:hover {
             color: #76b600 !important;
@@ -115,10 +116,12 @@ Header SCSS start
         }
 
         .fa {
-          font-size: 8px;
+          font-size: 9px;
           color: white;
           display: flex;
           align-items: center;
+          padding-right: 3px;
+          padding-top: 5px;
         }
       }
     }
@@ -232,7 +235,6 @@ Header SCSS end
 
 /* Fontello icon scss*/
 .icon-euro,
-.icon-search,
 .icon-language {
   position: relative;
   display: flex;
@@ -292,10 +294,15 @@ Header SCSS end
   display: flex;
   font-size: 1.3rem;
   justify-content: flex-start;
-  padding-left: 15px;
+  align-items: flex-start;
   padding-top: 15px;
   flex: 1;
   position: relative;
+  .social-list {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+  }
   .icon-shopping-basket:before {
     color: white;
   }
@@ -310,10 +317,20 @@ Header SCSS end
   @include respond-to("large") {
     display: none;
   }
-  .cart-count {
+  .cart-count-mobile {
     position: absolute;
-    left: 40px;
-    top: 12px;
+    left: 25px;
+    top: 25px;
     text-decoration: none;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 0px 5px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
   }
+}
+
+.icon-language {
+  font-size: 24px !important;
 }
