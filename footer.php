@@ -5,7 +5,7 @@
             <a href="http://custom-theme-website.test/">
                 <img class="bottom-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
-            <p class="footer-content-text">Unleash Natures Power For Passionate <br /> Living with Libidiol</p>
+            <p class="footer-content-text-no-hover">Unleash Natures Power For Passionate <br /> Living with Libidiol</p>
             <ul class="social-icons">
                 <li class="footer-icons"><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li class="footer-icons"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -47,18 +47,21 @@
                     <h3>Contact Us</h3>
                 </div>
                 <div>
-                    <p class="footer-content-text-three">Thailand, Ramkhamhaeng road</p>
+                    <a href="https://maps.app.goo.gl/FLaKRV3Gobmfj7ah9">
+                        <p class="footer-content-text-three">Thailand, Ramkhamhaeng road</p>
+                    </a>
                 </div>
                 <div>
                     <p class="footer-content-text-three">+66858576671</p>
                 </div>
                 <div>
-                    <p class="footer-content-text-three">office@libidiol.com</p>
+                    <p class="footer-content-text-three"><a href="mailto:office@libidiol.com">office@libidiol.com</a></p>
                 </div>
+
             </div>
 
         </div>
-        <div class="column four" id="contact-us">
+        <!-- <div class="column four" id="contact-us">
             <div id="column-four-content">
                 <div id="bottom-form-header">
                     <h3>Send Your Message</h3>
@@ -70,7 +73,7 @@
                 </div>
                 <div type="submit" name="send" class="putSend" value="Send" id="send-email"><button>Submit</button></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Mobile version Useful links content -->
         <div class="column two" id="mobile-version-useful-links">

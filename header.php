@@ -84,7 +84,7 @@
 
 
                 <div class="head-button-container">
-                    <div class="head-button-body"><a href="#order-now-section" class="header-button-link">Order now</a></div>
+                    <div class="head-button-body"><a href="libidiol.com/shop" class="header-button-link">Order now</a></div>
                 </div>
             </div>
         </nav>

@@ -1,0 +1,47 @@
+/* Main forms styling*/
+#wpforms-form-638 {
+  padding: 10px 10px 10px 10px;
+  @include respond-to("average") {
+    padding: 50px 10px 10px 10px;
+  }
+  @include respond-to("medium") {
+    padding: 50px 10px 10px 10px;
+  }
+  @include respond-to("large") {
+    padding: 50px 10px 10px 10px;
+  }
+}
+
+/* Heading element left to form styling*/
+.side-heading-for-from {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  align-content: center;
+}
+
+/*Contact field*/
+#wpforms-638-field_2 {
+  align-content: center;
+}
+
+/* Email field*/
+#wpforms-638-field_1 {
+  min-width: 100%;
+}
+
+.form-section {
+  padding-bottom: 20px;
+  @include respond-to("average") {
+    padding-bottom: 50px;
+  }
+
+  @include respond-to("medium") {
+    padding-bottom: 50px;
+  }
+
+  @include respond-to("large") {
+    padding-bottom: 50px;
+  }
+}
