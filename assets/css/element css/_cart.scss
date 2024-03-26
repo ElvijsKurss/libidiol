@@ -3,7 +3,7 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: -200%;
+  left: -600%;
   background-color: #fff;
   color: black;
   border: 1px solid #ccc;
@@ -100,4 +100,37 @@
 .checkout-button.button.alt.wc-forward {
   display: flex;
   justify-content: center;
+}
+
+/* Style for checkout button gwhen hoverin over the cart on desktop*/
+.wc-proceed-to-checkout {
+  .checkout-button {
+    display: flex;
+    background-color: #76b600 !important;
+    text-decoration: none;
+    padding: 15px 45px;
+    font-size: 14px;
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+    cursor: pointer;
+    @include transition(0.3s ease-in-out);
+    &:hover {
+      background-color: darken(#76b600, 10%) !important;
+    }
+    @include respond-to("average") {
+      padding: 10px 25px;
+      font-size: 15px;
+    }
+    @include respond-to("medium") {
+      padding: 10px 25px;
+      font-size: 15px;
+    }
+    @include respond-to("large") {
+      padding: 10px 30px;
+      font-size: 15px;
+    }
+  }
 }

@@ -76,6 +76,11 @@ html {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.full-view-background-mobile {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
 
 .custome-page-header {
   font-size: 40px;
