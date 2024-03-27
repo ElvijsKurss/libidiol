@@ -772,8 +772,8 @@ Header SCSS start
   display: flex;
   background-color: #76b600;
   text-decoration: none;
-  padding: 10px 25px;
-  font-size: 15px;
+  padding: 8px 20px;
+  font-size: 16px;
   color: white;
   border-radius: 30px;
   transition: 0.3s ease-in-out;
@@ -1346,14 +1346,6 @@ Header SCSS end
   }
 }
 
-.custome-page-header {
-  font-size: 30px;
-}
-
-.custome-page-paragraph {
-  font-size: 15px;
-}
-
 .universal-separator hr {
   border: none;
   border-bottom: 3px solid #c4c4c4;
@@ -1580,6 +1572,40 @@ Header SCSS end
 
 .text-helper-inspiration {
   color: #76b600;
+}
+
+/*Header for most pages*/
+.custome-page-header {
+  font-size: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #062a4d;
+  justify-content: center;
+  display: flex;
+  font-family: HelveticaNeueMedium;
+}
+@media (min-width: 768px) {
+  .custome-page-header {
+    font-size: 45px;
+    padding-top: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .custome-page-header {
+    font-size: 50px;
+    padding-top: 55px;
+  }
+}
+@media (min-width: 1080px) {
+  .custome-page-header {
+    font-size: 60px;
+    padding-top: 60px;
+  }
+}
+
+/* Paragraph for most pages*/
+.custome-page-paragraph {
+  font-size: 16px;
 }
 
 .libidiol-product-text {
@@ -2934,7 +2960,7 @@ Uncomment flex and comment none to display this*/
   justify-content: center;
 }
 
-/* Style for checkout button gwhen hoverin over the cart on desktop*/
+/* Style for checkout button when hovering over the cart on desktop*/
 .wc-proceed-to-checkout .checkout-button {
   display: flex;
   background-color: #76b600 !important;
@@ -2968,6 +2994,50 @@ Uncomment flex and comment none to display this*/
   .wc-proceed-to-checkout .checkout-button {
     padding: 10px 30px;
     font-size: 15px;
+  }
+}
+
+.wp-block-separator.is-style-dots {
+  padding-bottom: 10em;
+}
+
+.wc-block-cart__empty-cart__title {
+  font-size: 25px !important;
+  padding-top: 2em;
+}
+@media (min-width: 768px) {
+  .wc-block-cart__empty-cart__title {
+    padding-top: 3em;
+  }
+}
+@media (min-width: 992px) {
+  .wc-block-cart__empty-cart__title {
+    padding-top: 4em;
+  }
+}
+@media (min-width: 1080px) {
+  .wc-block-cart__empty-cart__title {
+    padding-top: 5em;
+  }
+}
+
+/* Cart is empty dots*/
+.wp-block-separator.is-style-dots:before {
+  font-size: 2em;
+}
+@media (min-width: 768px) {
+  .wp-block-separator.is-style-dots:before {
+    font-size: 3.5em;
+  }
+}
+@media (min-width: 992px) {
+  .wp-block-separator.is-style-dots:before {
+    font-size: 4.5em;
+  }
+}
+@media (min-width: 1080px) {
+  .wp-block-separator.is-style-dots:before {
+    font-size: 4.5em;
   }
 }
 
@@ -3025,6 +3095,11 @@ Uncomment flex and comment none to display this*/
   }
 }
 
+/* Added to center products when showing New in store section*/
+.wc-block-grid__products {
+  justify-content: center;
+}
+
 .wc-block-cart__submit-container .components-button.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained {
   display: flex;
   background-color: #76b600 !important;
@@ -3076,6 +3151,267 @@ Uncomment flex and comment none to display this*/
   position: relative;
   width: 35.05%;
   margin-left: 0;
+}
+
+/*Dashboard pages*/
+/*Add button in Addressses page*/
+.u-columns.woocommerce-Addresses.col2-set.addresses a.edit {
+  display: flex;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  border: 2px solid #54ade1;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.u-columns.woocommerce-Addresses.col2-set.addresses a.edit:hover {
+  background-color: #e6e6e6 !important;
+}
+@media (min-width: 768px) {
+  .u-columns.woocommerce-Addresses.col2-set.addresses a.edit {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .u-columns.woocommerce-Addresses.col2-set.addresses a.edit {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1080px) {
+  .u-columns.woocommerce-Addresses.col2-set.addresses a.edit {
+    font-size: 15px;
+  }
+}
+
+/*Addresses main container*/
+.u-columns.woocommerce-Addresses.col2-set.addresses {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Billing address field*/
+.u-column1.col-1.woocommerce-Address {
+  min-width: 100% !important;
+  float: none !important;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(233, 233, 233);
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .u-column1.col-1.woocommerce-Address {
+    min-width: 80% !important;
+    width: 680px;
+  }
+}
+@media (min-width: 992px) {
+  .u-column1.col-1.woocommerce-Address {
+    min-width: 80% !important;
+    width: 760px;
+  }
+}
+@media (min-width: 1080px) {
+  .u-column1.col-1.woocommerce-Address {
+    min-width: 100% !important;
+    width: 850px;
+  }
+}
+.u-column1.col-1.woocommerce-Address > a.edit {
+  order: 2;
+}
+.u-column1.col-1.woocommerce-Address > h3 {
+  order: 3;
+  min-width: 100%;
+}
+.u-column1.col-1.woocommerce-Address > address {
+  order: 1;
+}
+
+/* Shipping address field*/
+.u-column2.col-2.woocommerce-Address {
+  min-width: 100% !important;
+  float: none !important;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(233, 233, 233);
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .u-column2.col-2.woocommerce-Address {
+    min-width: 80% !important;
+  }
+}
+@media (min-width: 992px) {
+  .u-column2.col-2.woocommerce-Address {
+    min-width: 80% !important;
+  }
+}
+@media (min-width: 1080px) {
+  .u-column2.col-2.woocommerce-Address {
+    min-width: 100% !important;
+  }
+}
+.u-column2.col-2.woocommerce-Address > h3 {
+  order: 3;
+}
+.u-column2.col-2.woocommerce-Address > a.edit {
+  order: 2;
+}
+.u-column2.col-2.woocommerce-Address > address {
+  order: 1;
+}
+
+.woocommerce-Address-title title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Set to none to disable Downloads part in Dashboard. Change to flex to display it*/
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {
+  display: none;
+}
+
+/*Nav side bar section Dashboard, Order, Addresses, Account Details, Log out*/
+nav.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding-left: 5px;
+}
+nav.woocommerce-MyAccount-navigation ul li {
+  padding: 5px;
+}
+nav.woocommerce-MyAccount-navigation a {
+  color: #062a4d;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+nav.woocommerce-MyAccount-navigation a:hover {
+  text-decoration: underline;
+  color: #76b600;
+}
+
+.additional-custome-page-paragraph {
+  display: flex;
+}
+.additional-custome-page-paragraph .woocommerce {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .additional-custome-page-paragraph .woocommerce {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 992px) {
+  .additional-custome-page-paragraph .woocommerce {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 1080px) {
+  .additional-custome-page-paragraph .woocommerce {
+    flex-direction: row-reverse;
+  }
+}
+.additional-custome-page-paragraph .woocommerce .woocommerce-MyAccount-navigation {
+  order: 2 !important;
+}
+.additional-custome-page-paragraph .woocommerce .woocommerce-MyAccount-content {
+  order: 1 !important;
+}
+
+/*Account details for EYE to show password*/
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+  top: 0.2em;
+}
+@media (min-width: 768px) {
+  .woocommerce form .show-password-input,
+  .woocommerce-page form .show-password-input {
+    top: 0.5em;
+  }
+}
+@media (min-width: 992px) {
+  .woocommerce form .show-password-input,
+  .woocommerce-page form .show-password-input {
+    top: 0.5em;
+  }
+}
+@media (min-width: 1080px) {
+  .woocommerce form .show-password-input,
+  .woocommerce-page form .show-password-input {
+    top: 0.7em;
+  }
+}
+
+.woocommerce-Button.wc-forward.button {
+  display: flex;
+  background-color: #76b600 !important;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 14px;
+  color: white;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 60px;
+}
+.woocommerce-Button.wc-forward.button:hover {
+  color: white;
+  background-color: #558300 !important;
+}
+@media (min-width: 768px) {
+  .woocommerce-Button.wc-forward.button {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .woocommerce-Button.wc-forward.button {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 1080px) {
+  .woocommerce-Button.wc-forward.button {
+    padding: 15px 45px;
+    font-size: 15px;
+  }
+}
+
+.additional-custome-page-paragraph .woocommerce-info {
+  margin: 2em 0 3em 0;
+  display: flex;
+  min-width: 100% !important;
+}
+@media (min-width: 768px) {
+  .additional-custome-page-paragraph .woocommerce-info {
+    min-width: 80% !important;
+    width: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .additional-custome-page-paragraph .woocommerce-info {
+    min-width: 80% !important;
+    width: 680px;
+  }
+}
+@media (min-width: 1080px) {
+  .additional-custome-page-paragraph .woocommerce-info {
+    min-width: 100% !important;
+    width: 740px;
+  }
 }
 
 /* Fonts */
@@ -3151,31 +3487,6 @@ html {
   flex-direction: column;
 }
 
-.custome-page-header {
-  font-size: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: #062a4d;
-  justify-content: center;
-  display: flex;
-  font-family: HelveticaNeueMedium;
-}
-@media (min-width: 768px) {
-  .custome-page-header {
-    font-size: 45px;
-  }
-}
-@media (min-width: 992px) {
-  .custome-page-header {
-    font-size: 45px;
-  }
-}
-@media (min-width: 1080px) {
-  .custome-page-header {
-    font-size: 45px;
-  }
-}
-
 /* Mobile version wp bar, needs adjusting since its a custom created theme*/
 #wpadminbar {
   top: -45px;
@@ -3196,21 +3507,22 @@ html {
   }
 }
 
+/* WORDPRESS admin bar*/
 html #wpadminbar {
   height: 47px;
 }
 @media (min-width: 768px) {
   html #wpadminbar {
-    height: 35px;
+    height: 46px;
   }
 }
 @media (min-width: 992px) {
   html #wpadminbar {
-    height: 35px;
+    height: 46px;
   }
 }
 @media (min-width: 1080px) {
   html #wpadminbar {
-    height: 35px;
+    height: 46px;
   }
 }/*# sourceMappingURL=style.css.map */

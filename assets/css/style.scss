@@ -22,6 +22,12 @@
 @import "element css/checkout-button";
 @import "element css/related-products";
 
+/*Dashboard pages*/
+@import "dashboard/address";
+@import "dashboard/dashboard";
+@import "dashboard/account-details";
+@import "dashboard/orders";
+
 /* Fonts */
 @import "fonts/fonts";
 
@@ -82,25 +88,6 @@ html {
   flex-direction: column;
 }
 
-.custome-page-header {
-  font-size: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: #062a4d;
-  justify-content: center;
-  display: flex;
-  font-family: HelveticaNeueMedium;
-  @include respond-to("average") {
-    font-size: 45px;
-  }
-  @include respond-to("medium") {
-    font-size: 45px;
-  }
-  @include respond-to("large") {
-    font-size: 45px;
-  }
-}
-
 /* Mobile version wp bar, needs adjusting since its a custom created theme*/
 #wpadminbar {
   top: -45px;
@@ -115,15 +102,16 @@ html {
   }
 }
 
+/* WORDPRESS admin bar*/
 html #wpadminbar {
   height: 47px;
   @include respond-to("average") {
-    height: 35px;
+    height: 46px;
   }
   @include respond-to("medium") {
-    height: 35px;
+    height: 46px;
   }
   @include respond-to("large") {
-    height: 35px;
+    height: 46px;
   }
 }

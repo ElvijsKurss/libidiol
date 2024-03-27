@@ -102,7 +102,7 @@
   justify-content: center;
 }
 
-/* Style for checkout button gwhen hoverin over the cart on desktop*/
+/* Style for checkout button when hovering over the cart on desktop*/
 .wc-proceed-to-checkout {
   .checkout-button {
     display: flex;
@@ -132,5 +132,37 @@
       padding: 10px 30px;
       font-size: 15px;
     }
+  }
+}
+
+.wp-block-separator.is-style-dots {
+  padding-bottom: 10em;
+}
+
+.wc-block-cart__empty-cart__title {
+  font-size: 25px !important;
+  padding-top: 2em;
+  @include respond-to("average") {
+    padding-top: 3em;
+  }
+  @include respond-to("medium") {
+    padding-top: 4em;
+  }
+  @include respond-to("large") {
+    padding-top: 5em;
+  }
+}
+
+/* Cart is empty dots*/
+.wp-block-separator.is-style-dots:before {
+  font-size: 2em;
+  @include respond-to("average") {
+    font-size: 3.5em;
+  }
+  @include respond-to("medium") {
+    font-size: 4.5em;
+  }
+  @include respond-to("large") {
+    font-size: 4.5em;
   }
 }

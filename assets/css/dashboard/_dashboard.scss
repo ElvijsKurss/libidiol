@@ -1,0 +1,26 @@
+/* Set to none to disable Downloads part in Dashboard. Change to flex to display it*/
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {
+  display: none;
+  //   display: flex;
+}
+
+/*Nav side bar section Dashboard, Order, Addresses, Account Details, Log out*/
+nav.woocommerce-MyAccount-navigation {
+  ul {
+    list-style: none;
+    padding-left: 5px;
+    li {
+      padding: 5px;
+    }
+  }
+  a {
+    color: #062a4d;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+      color: #76b600;
+    }
+  }
+}

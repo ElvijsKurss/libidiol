@@ -39,3 +39,8 @@
     min-width: 0;
   }
 }
+
+/* Added to center products when showing New in store section*/
+.wc-block-grid__products {
+  justify-content: center;
+}

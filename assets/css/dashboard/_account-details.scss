@@ -1,0 +1,41 @@
+.additional-custome-page-paragraph {
+  display: flex;
+  .woocommerce {
+    display: flex;
+    flex-direction: column;
+    @include respond-to("average") {
+      flex-direction: row-reverse;
+    }
+
+    @include respond-to("medium") {
+      flex-direction: row-reverse;
+    }
+
+    @include respond-to("large") {
+      flex-direction: row-reverse;
+    }
+    .woocommerce-MyAccount-navigation {
+      order: 2 !important;
+    }
+    .woocommerce-MyAccount-content {
+      order: 1 !important;
+    }
+  }
+}
+
+/*Account details for EYE to show password*/
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+  top: 0.2em;
+  @include respond-to("average") {
+    top: 0.5em;
+  }
+
+  @include respond-to("medium") {
+    top: 0.5em;
+  }
+
+  @include respond-to("large") {
+    top: 0.7em;
+  }
+}
