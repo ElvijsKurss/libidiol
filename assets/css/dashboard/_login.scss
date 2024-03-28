@@ -1,0 +1,20 @@
+.woocommerce-form.woocommerce-form-login.login {
+  border: 1px solid red;
+}
+
+/* Account details text margin*/
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  outline: 0;
+  line-height: normal;
+  border-radius: 10px;
+  padding: 1px 5px;
+}
+
+.woocommerce form .form-row label {
+  line-height: 2;
+  margin-bottom: 5px;
+}

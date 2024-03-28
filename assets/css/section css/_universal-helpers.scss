@@ -204,27 +204,33 @@
 /*Header for most pages*/
 .custome-page-header {
   font-size: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 0px;
   color: #062a4d;
   justify-content: center;
   display: flex;
   font-family: HelveticaNeueMedium;
+  text-align: center;
   @include respond-to("average") {
     font-size: 45px;
     padding-top: 50px;
+    padding-bottom: 40px;
   }
   @include respond-to("medium") {
     font-size: 50px;
     padding-top: 55px;
+    padding-bottom: 45;
   }
   @include respond-to("large") {
     font-size: 60px;
     padding-top: 60px;
+    padding-bottom: 45px;
   }
 }
 
 /* Paragraph for most pages*/
 .custome-page-paragraph {
   font-size: 16px;
+  display: inline-block;
+  text-align: justify;
 }

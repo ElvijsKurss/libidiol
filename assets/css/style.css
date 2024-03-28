@@ -699,7 +699,25 @@ Header SCSS start
   }
   #nav-bar-icons .social-list .list-inline-item {
     position: relative;
+    padding-left: 5px;
   }
+}
+@media (min-width: 1080px) and (min-width: 768px) {
+  #nav-bar-icons .social-list .list-inline-item {
+    padding-left: 0px;
+  }
+}
+@media (min-width: 1080px) and (min-width: 992px) {
+  #nav-bar-icons .social-list .list-inline-item {
+    padding-left: 0px;
+  }
+}
+@media (min-width: 1080px) and (min-width: 1080px) {
+  #nav-bar-icons .social-list .list-inline-item {
+    padding-left: 0px;
+  }
+}
+@media (min-width: 1080px) {
   #nav-bar-icons .social-list .list-inline-item .hidden-content {
     display: none;
     position: absolute;
@@ -719,7 +737,6 @@ Header SCSS start
   #nav-bar-icons .social-list a {
     display: flex;
     text-decoration: none;
-    transition: 0.3s ease-in-out;
   }
   #nav-bar-icons .social-list a .menu-icon {
     width: 32px;
@@ -732,12 +749,13 @@ Header SCSS start
     position: relative;
     color: #ffffff;
     font-size: 21px;
+    transition: 0.3s ease-in-out;
   }
   #nav-bar-icons .social-list a .menu-icon:hover {
     color: #76b600 !important;
     text-decoration: none;
   }
-  #nav-bar-icons .social-list a .fa {
+  #nav-bar-icons .social-list a .fa-chevron-down {
     font-size: 9px;
     color: white;
     display: flex;
@@ -859,13 +877,11 @@ Header SCSS end
 }
 
 /* Fontello icon scss*/
-.icon-euro,
 .icon-language {
   position: relative;
   display: flex;
   padding-right: 8px;
 }
-.icon-euro:nth-child(-n+3)::after,
 .icon-language:nth-child(-n+3)::after {
   content: "";
   position: absolute;
@@ -973,6 +989,43 @@ Header SCSS end
 
 .icon-language {
   font-size: 24px !important;
+}
+
+.fa-user {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  flex-direction: row !important;
+  position: relative !important;
+  color: #ffffff !important;
+  font-size: 21px !important;
+}
+.fa-user::after {
+  content: none;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 1px;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .fa-user::after {
+    content: "";
+  }
+}
+@media (min-width: 992px) {
+  .fa-user::after {
+    content: "";
+  }
+}
+@media (min-width: 1080px) {
+  .fa-user::after {
+    content: "";
+  }
 }
 
 .mobile-button {
@@ -1577,35 +1630,41 @@ Header SCSS end
 /*Header for most pages*/
 .custome-page-header {
   font-size: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 0px;
   color: #062a4d;
   justify-content: center;
   display: flex;
   font-family: HelveticaNeueMedium;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .custome-page-header {
     font-size: 45px;
     padding-top: 50px;
+    padding-bottom: 40px;
   }
 }
 @media (min-width: 992px) {
   .custome-page-header {
     font-size: 50px;
     padding-top: 55px;
+    padding-bottom: 45;
   }
 }
 @media (min-width: 1080px) {
   .custome-page-header {
     font-size: 60px;
     padding-top: 60px;
+    padding-bottom: 45px;
   }
 }
 
 /* Paragraph for most pages*/
 .custome-page-paragraph {
   font-size: 16px;
+  display: inline-block;
+  text-align: justify;
 }
 
 .libidiol-product-text {
@@ -1732,7 +1791,12 @@ Header SCSS end
   font-family: HelveticaNeueMedium;
   font-weight: 700;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .welcome-heading {
+    margin-bottom: 20px;
+  }
 }
 
 .welcome-paragraph-text-desktop {
@@ -2026,6 +2090,7 @@ Header SCSS end
 
 .hide {
   display: none;
+  padding: 0 4px;
 }
 @media (min-width: 768px) {
   .hide {
@@ -2086,7 +2151,22 @@ Header SCSS end
 }
 .main-point .point-one {
   position: relative;
-  padding-bottom: 2em;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main-point .point-one {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .main-point .point-one {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 1080px) {
+  .main-point .point-one {
+    padding-bottom: 2em;
+  }
 }
 .main-point .point-one .wp-block-columns {
   width: 260px;
@@ -2160,7 +2240,22 @@ Header SCSS end
 }
 .main-point .point-two {
   position: relative;
-  padding-bottom: 2em;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main-point .point-two {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .main-point .point-two {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 1080px) {
+  .main-point .point-two {
+    padding-bottom: 2em;
+  }
 }
 .main-point .point-two .wp-block-columns {
   width: 260px;
@@ -2218,8 +2313,23 @@ Header SCSS end
 }
 .main-point .point-three {
   position: relative;
-  padding-bottom: 2em;
   flex-direction: row;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main-point .point-three {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .main-point .point-three {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 1080px) {
+  .main-point .point-three {
+    padding-bottom: 2em;
+  }
 }
 @media (min-width: 768px) {
   .main-point .point-three {
@@ -2288,7 +2398,22 @@ Header SCSS end
 }
 .main-point .point-four {
   position: relative;
-  padding-bottom: 2em;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main-point .point-four {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .main-point .point-four {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 1080px) {
+  .main-point .point-four {
+    padding-bottom: 2em;
+  }
 }
 .main-point .point-four .wp-block-columns {
   width: 260px;
@@ -2363,7 +2488,22 @@ Header SCSS end
 }
 .main-point .point-five {
   position: relative;
-  padding-bottom: 2em;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main-point .point-five {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .main-point .point-five {
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 1080px) {
+  .main-point .point-five {
+    padding-bottom: 2em;
+  }
 }
 .main-point .point-five .wp-block-columns {
   width: 260px;
@@ -2610,7 +2750,7 @@ Header SCSS end
 }
 
 .top-section-order {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 @media (min-width: 768px) {
   .top-section-order {
@@ -2812,9 +2952,26 @@ Uncomment flex and comment none to display this*/
   display: none;
 }
 
+.woocommerce-ordering {
+  min-width: 100%;
+  float: none;
+  display: flex;
+  justify-content: right;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .woocommerce-ordering {
+    padding-right: 37px;
+  }
+}
 .woocommerce-ordering .orderby {
   border-radius: 5px;
   border-color: lightgray;
+  padding: 2px;
+}
+
+.wpcp-carousel-section.nav-vertical-center {
+  padding: 20px 0px;
 }
 
 /* Element SCSS */
@@ -3039,6 +3196,37 @@ Uncomment flex and comment none to display this*/
   .wp-block-separator.is-style-dots:before {
     font-size: 4.5em;
   }
+}
+
+/*Cart Coupon field*/
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text,
+#add_payment_method table.cart td.actions .coupon .input-text {
+  float: none;
+  box-sizing: border-box;
+  border: 1px solid #cfc8d8;
+  padding: 1px 1px 4px;
+  margin: 0 4px 0 0;
+  outline: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+/*Coupon code field width*/
+.woocommerce table.cart td.actions .input-text,
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text {
+  width: 100px;
+  height: 35px;
+  padding: 0;
+}
+
+.coupon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Overll product styling*/
@@ -3274,12 +3462,16 @@ Uncomment flex and comment none to display this*/
   justify-content: flex-start;
 }
 
-/* Set to none to disable Downloads part in Dashboard. Change to flex to display it*/
+/* Set to none to disable Downloads field in Dashboard. Change to flex to display it*/
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {
   display: none;
 }
 
 /*Nav side bar section Dashboard, Order, Addresses, Account Details, Log out*/
+nav.woocommerce-MyAccount-navigation {
+  position: relative;
+  display: flex;
+}
 nav.woocommerce-MyAccount-navigation ul {
   list-style: none;
   padding-left: 5px;
@@ -3296,6 +3488,128 @@ nav.woocommerce-MyAccount-navigation a {
 nav.woocommerce-MyAccount-navigation a:hover {
   text-decoration: underline;
   color: #76b600;
+}
+
+/*Dashboard icons for each a element*/
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 768px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:after {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:after {
+    margin-right: 60px;
+  }
+}
+@media (min-width: 1080px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:after {
+    margin-right: 60px;
+  }
+}
+
+/* For "dashboard" link */
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 768px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a:after {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a:after {
+    margin-right: 60px;
+  }
+}
+@media (min-width: 1080px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a:after {
+    margin-right: 60px;
+  }
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 768px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a:after {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a:after {
+    margin-right: 60px;
+  }
+}
+@media (min-width: 1080px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a:after {
+    margin-right: 60px;
+  }
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-address a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 768px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-address a:after {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-address a:after {
+    margin-right: 60px;
+  }
+}
+@media (min-width: 1080px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-address a:after {
+    margin-right: 60px;
+  }
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 768px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:after {
+    margin-right: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:after {
+    margin-right: 60px;
+  }
+}
+@media (min-width: 1080px) {
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:after {
+    margin-right: 60px;
+  }
 }
 
 .additional-custome-page-paragraph {
@@ -3325,6 +3639,7 @@ nav.woocommerce-MyAccount-navigation a:hover {
 }
 .additional-custome-page-paragraph .woocommerce .woocommerce-MyAccount-content {
   order: 1 !important;
+  padding: 30px 0px 30px 10px;
 }
 
 /*Account details for EYE to show password*/
@@ -3347,7 +3662,7 @@ nav.woocommerce-MyAccount-navigation a:hover {
 @media (min-width: 1080px) {
   .woocommerce form .show-password-input,
   .woocommerce-page form .show-password-input {
-    top: 0.7em;
+    top: 0.5em;
   }
 }
 
@@ -3412,6 +3727,27 @@ nav.woocommerce-MyAccount-navigation a:hover {
     min-width: 100% !important;
     width: 740px;
   }
+}
+
+.woocommerce-form.woocommerce-form-login.login {
+  border: 1px solid red;
+}
+
+/* Account details text margin*/
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  outline: 0;
+  line-height: normal;
+  border-radius: 10px;
+  padding: 1px 5px;
+}
+
+.woocommerce form .form-row label {
+  line-height: 2;
+  margin-bottom: 5px;
 }
 
 /* Fonts */
@@ -3523,6 +3859,6 @@ html #wpadminbar {
 }
 @media (min-width: 1080px) {
   html #wpadminbar {
-    height: 46px;
+    height: 32px;
   }
 }/*# sourceMappingURL=style.css.map */

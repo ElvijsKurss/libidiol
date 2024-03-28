@@ -14,6 +14,7 @@
 @import "section css/home-section";
 @import "section css/contact-form";
 @import "section css/shop";
+@import "section css/available-products";
 
 /* Element SCSS */
 @import "element css/logo";
@@ -27,6 +28,7 @@
 @import "dashboard/dashboard";
 @import "dashboard/account-details";
 @import "dashboard/orders";
+@import "dashboard/login";
 
 /* Fonts */
 @import "fonts/fonts";
@@ -112,6 +114,6 @@ html #wpadminbar {
     height: 46px;
   }
   @include respond-to("large") {
-    height: 46px;
+    height: 32px;
   }
 }

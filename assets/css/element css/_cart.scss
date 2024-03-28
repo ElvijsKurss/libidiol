@@ -166,3 +166,34 @@
     font-size: 4.5em;
   }
 }
+
+/*Cart Coupon field*/
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text,
+#add_payment_method table.cart td.actions .coupon .input-text {
+  float: none;
+  box-sizing: border-box;
+  border: 1px solid #cfc8d8;
+  padding: 1px 1px 4px;
+  margin: 0 4px 0 0;
+  outline: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+/*Coupon code field width*/
+.woocommerce table.cart td.actions .input-text,
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text {
+  width: 100px;
+  height: 35px;
+  padding: 0;
+}
+
+.coupon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

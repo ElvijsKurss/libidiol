@@ -6,8 +6,17 @@ Uncomment flex and comment none to display this*/
 }
 
 .woocommerce-ordering {
+  min-width: 100%;
+  float: none;
+  display: flex;
+  justify-content: right;
+  padding-right: 15px;
+  @include respond-to("average") {
+    padding-right: 37px;
+  }
   .orderby {
     border-radius: 5px;
     border-color: lightgray;
+    padding: 2px;
   }
 }

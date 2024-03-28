@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <body>
-    <div class="container main-wrapper container-mobile-cart">
+    <div class="container main-wrapper container-mobile">
         <div class="full-view-background-mobile">
             <?php
             if (have_posts()) :

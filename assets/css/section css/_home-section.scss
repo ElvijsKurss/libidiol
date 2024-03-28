@@ -76,7 +76,10 @@
   font-family: HelveticaNeueMedium;
   font-weight: 700;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  @include respond-to("average") {
+    margin-bottom: 20px;
+  }
 }
 
 .welcome-paragraph-text-desktop {
@@ -281,6 +284,7 @@
 
 .hide {
   display: none;
+  padding: 0 4px;
   @include respond-to("average") {
     display: inline-block;
   }
@@ -333,7 +337,18 @@
   }
   .point-one {
     position: relative;
-    padding-bottom: 2em;
+    padding-bottom: 0;
+    @include respond-to("average") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("medium") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("large") {
+      padding-bottom: 2em;
+    }
     .wp-block-columns {
       width: 260px;
       @include respond-to("average") {
@@ -391,7 +406,18 @@
   }
   .point-two {
     position: relative;
-    padding-bottom: 2em;
+    padding-bottom: 0;
+    @include respond-to("average") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("medium") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("large") {
+      padding-bottom: 2em;
+    }
     .wp-block-columns {
       width: 260px;
     }
@@ -439,8 +465,19 @@
   }
   .point-three {
     position: relative;
-    padding-bottom: 2em;
     flex-direction: row;
+    padding-bottom: 0;
+    @include respond-to("average") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("medium") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("large") {
+      padding-bottom: 2em;
+    }
     @include respond-to("average") {
       flex-direction: row;
     }
@@ -495,7 +532,18 @@
   }
   .point-four {
     position: relative;
-    padding-bottom: 2em;
+    padding-bottom: 0;
+    @include respond-to("average") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("medium") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("large") {
+      padding-bottom: 2em;
+    }
     .wp-block-columns {
       width: 260px;
       @include respond-to("average") {
@@ -554,7 +602,18 @@
   }
   .point-five {
     position: relative;
-    padding-bottom: 2em;
+    padding-bottom: 0;
+    @include respond-to("average") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("medium") {
+      padding-bottom: 2em;
+    }
+
+    @include respond-to("large") {
+      padding-bottom: 2em;
+    }
     .wp-block-columns {
       width: 260px;
       @include respond-to("average") {
@@ -747,7 +806,7 @@
 }
 
 .top-section-order {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   @include respond-to("average") {
     padding-bottom: 0;
   }

@@ -28,6 +28,11 @@
                             ?>
                         </a>
                     </li>
+                    <li class="list-inline-item" id="account-icon">
+                        <a href="http://custom-theme-website.test/my-account/">
+                            <i class="fa fa-user menu-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -73,6 +78,11 @@
                             <div class="header-cart-content hidden">
                                 <?php echo do_shortcode('[woocommerce_cart]'); ?>
                             </div>
+                        </li>
+                        <li class="list-inline-item" id="account-icon">
+                            <a href="http://custom-theme-website.test/my-account/">
+                                <i class="fa fa-user menu-icon" aria-hidden="true"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>

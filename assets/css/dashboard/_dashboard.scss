@@ -1,4 +1,4 @@
-/* Set to none to disable Downloads part in Dashboard. Change to flex to display it*/
+/* Set to none to disable Downloads field in Dashboard. Change to flex to display it*/
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {
   display: none;
   //   display: flex;
@@ -6,6 +6,8 @@
 
 /*Nav side bar section Dashboard, Order, Addresses, Account Details, Log out*/
 nav.woocommerce-MyAccount-navigation {
+  position: relative;
+  display: flex;
   ul {
     list-style: none;
     padding-left: 5px;
@@ -22,5 +24,114 @@ nav.woocommerce-MyAccount-navigation {
       text-decoration: underline;
       color: #76b600;
     }
+  }
+}
+
+/*Dashboard icons for each a element*/
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--customer-logout
+  a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  @include respond-to("average") {
+    margin-right: 50px;
+  }
+  @include respond-to("medium") {
+    margin-right: 60px;
+  }
+
+  @include respond-to("large") {
+    margin-right: 60px;
+  }
+}
+/* For "dashboard" link */
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--dashboard
+  a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  @include respond-to("average") {
+    margin-right: 50px;
+  }
+  @include respond-to("medium") {
+    margin-right: 60px;
+  }
+
+  @include respond-to("large") {
+    margin-right: 60px;
+  }
+}
+
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--orders
+  a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  @include respond-to("average") {
+    margin-right: 50px;
+  }
+  @include respond-to("medium") {
+    margin-right: 60px;
+  }
+
+  @include respond-to("large") {
+    margin-right: 60px;
+  }
+}
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--edit-address
+  a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  @include respond-to("average") {
+    margin-right: 50px;
+  }
+  @include respond-to("medium") {
+    margin-right: 60px;
+  }
+
+  @include respond-to("large") {
+    margin-right: 60px;
+  }
+}
+.woocommerce-MyAccount-navigation
+  ul
+  li.woocommerce-MyAccount-navigation-link--edit-account
+  a:after {
+  font-family: "Font Awesome";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  @include respond-to("average") {
+    margin-right: 50px;
+  }
+  @include respond-to("medium") {
+    margin-right: 60px;
+  }
+
+  @include respond-to("large") {
+    margin-right: 60px;
   }
 }
