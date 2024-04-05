@@ -7,8 +7,8 @@
             </a>
             <p class="footer-content-text-no-hover">Unleash Natures Power For Passionate <br /> Living with Libidiol</p>
             <ul class="social-icons">
-                <li class="footer-icons"><a href="https://www.facebook.com/libidiol"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                <li class="footer-icons"><a href="https://www.linkedin.com/company/libidiol/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                <li class="footer-icons"><a href="https://www.facebook.com/libidiol"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="footer-icons"><a href="https://www.linkedin.com/company/libidiol/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
         </div>
         <!-- Desktop version for Useful links -->
@@ -87,8 +87,8 @@
             <div>
                 <p class="follow-us-mobile">Follow Us</p>
                 <ul class="follow-us-icons">
-                    <li class="footer-icons-mobile"><a href="https://www.facebook.com/libidiol"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li class="footer-icons-mobile"><a href="https://www.linkedin.com/company/libidiol/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="footer-icons-mobile"><a href="https://www.facebook.com/libidiol"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="footer-icons-mobile"><a href="https://www.linkedin.com/company/libidiol/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>

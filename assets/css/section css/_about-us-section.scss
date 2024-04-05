@@ -15,22 +15,10 @@
   @include respond-to("average") {
     padding: 0px 10px 20px 20px !important;
   }
-  @include respond-to("medium") {
-    padding: 0px 10px 20px 20px !important;
-  }
-  @include respond-to("large") {
-    padding: 0px 10px 20px 20px !important;
-  }
   &.about-us-header {
     font-size: 23px !important;
     font-family: HelveticaNeueMedium;
     @include respond-to("average") {
-      font-size: 30px;
-    }
-    @include respond-to("medium") {
-      font-size: 30px;
-    }
-    @include respond-to("large") {
       font-size: 30px;
     }
   }
@@ -39,21 +27,19 @@
     font-family: HelveticaNeueLight;
     line-height: normal;
     font-weight: 700;
-    @include respond-to("average") {
-      font-size: 15px !important;
-    }
-    @include respond-to("medium") {
-      font-size: 15px !important;
-    }
-    @include respond-to("large") {
-      font-size: 15px !important;
-    }
   }
   &.about-us-read-more {
-    color: #009f1e;
     font-size: 15px !important;
     cursor: pointer;
     font-family: HelveticaNeueMedium;
+    a {
+      text-decoration: none;
+      color: #009f1e;
+      @include transition(0.3s ease-in-out);
+      &:hover {
+        color: darken(#009f1e, 10%);
+      }
+    }
     @include respond-to("average") {
       font-size: 14px !important;
     }

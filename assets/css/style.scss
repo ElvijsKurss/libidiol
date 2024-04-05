@@ -4,6 +4,7 @@
 @import "breakpoints";
 @import "mobile-version";
 @import "root";
+@import "main";
 
 /* Section SCSS */
 @import "section css/about-us-section";
@@ -30,90 +31,8 @@
 @import "dashboard/orders";
 @import "dashboard/login";
 
+/* Pages css*/
+@import "pages css/about-us-page";
+
 /* Fonts */
 @import "fonts/fonts";
-
-/* Default main project settings */
-
-html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
-/* Main Wrapper */
-.main-wrapper {
-  max-width: 1170px !important;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container {
-  width: 100%;
-  padding-right: 5px;
-  padding-left: 5px;
-  @include respond-to("average") {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  @include respond-to("medium") {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  @include respond-to("large") {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-/* Specific for cart and shop page*/
-.container-mobile {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-/* Wrapper code end*/
-
-.full-view-background {
-  min-height: 70vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.full-view-background-mobile {
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Mobile version wp bar, needs adjusting since its a custom created theme*/
-#wpadminbar {
-  top: -45px;
-  @include respond-to("average") {
-    top: 0;
-  }
-  @include respond-to("medium") {
-    top: 0;
-  }
-  @include respond-to("large") {
-    top: 0;
-  }
-}
-
-/* WORDPRESS admin bar*/
-html #wpadminbar {
-  height: 47px;
-  @include respond-to("average") {
-    height: 46px;
-  }
-  @include respond-to("medium") {
-    height: 46px;
-  }
-  @include respond-to("large") {
-    height: 32px;
-  }
-}

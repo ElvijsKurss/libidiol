@@ -10,14 +10,6 @@ Header SCSS start
     flex-direction: row;
     display: flex;
   }
-  @include respond-to("medium") {
-    flex-direction: row;
-    display: flex;
-  }
-  @include respond-to("large") {
-    flex-direction: row;
-    display: flex;
-  }
 }
 #nav-bar-categories {
   flex: 2;
@@ -31,23 +23,9 @@ Header SCSS start
     @include respond-to("average") {
       font-size: 15px;
     }
-    @include respond-to("medium") {
-      font-size: 15px;
-    }
-    @include respond-to("large") {
-      font-size: 15px;
-    }
   }
   @include respond-to("average") {
     flex-direction: row !important;
-    justify-content: center;
-  }
-  @include respond-to("medium") {
-    flex-direction: row !important;
-    justify-content: center;
-  }
-  @include respond-to("large") {
-    flex-direction: row;
     justify-content: center;
   }
 }
@@ -73,12 +51,6 @@ Header SCSS start
         position: relative;
         padding-left: 5px;
         @include respond-to("average") {
-          padding-left: 0px;
-        }
-        @include respond-to("medium") {
-          padding-left: 0px;
-        }
-        @include respond-to("large") {
           padding-left: 0px;
         }
         .hidden-content {
@@ -145,9 +117,6 @@ Header SCSS start
   @include respond-to("medium") {
     display: flex;
   }
-  @include respond-to("large") {
-    display: flex;
-  }
   .head-button-body {
     display: flex;
     .header-button-link {
@@ -169,6 +138,7 @@ Header SCSS start
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+
   @include respond-to("average") {
     flex-direction: column;
     justify-content: flex-start;
@@ -176,11 +146,6 @@ Header SCSS start
   }
 
   @include respond-to("medium") {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  @include respond-to("large") {
     flex-direction: row;
     justify-content: center;
   }
@@ -280,12 +245,6 @@ Header SCSS end
   @include respond-to("average") {
     padding-left: 40px;
   }
-  @include respond-to("medium") {
-    padding-left: 40px;
-  }
-  @include respond-to("large") {
-    padding-left: 40px;
-  }
 }
 
 /*Flag plugin extra css*/
@@ -318,13 +277,6 @@ Header SCSS end
     display: none;
   }
 
-  @include respond-to("medium") {
-    display: none;
-  }
-
-  @include respond-to("large") {
-    display: none;
-  }
   .cart-count-mobile {
     position: absolute;
     left: 25px;
@@ -353,7 +305,7 @@ Header SCSS end
   flex-direction: row !important;
   position: relative !important;
   color: #ffffff !important;
-  font-size: 21px !important;
+  font-size: 24px !important;
 
   &::after {
     content: none;
@@ -364,14 +316,6 @@ Header SCSS end
     width: 1px;
     background-color: white;
     @include respond-to("average") {
-      content: "";
-    }
-
-    @include respond-to("medium") {
-      content: "";
-    }
-
-    @include respond-to("large") {
       content: "";
     }
   }

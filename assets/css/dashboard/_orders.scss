@@ -35,19 +35,23 @@
     margin: 2em 0 3em 0;
     display: flex;
     min-width: 100% !important;
+    flex-direction: column;
     @include respond-to("average") {
       min-width: 80% !important;
       width: 600px;
+      flex-direction: column;
     }
 
     @include respond-to("medium") {
       min-width: 80% !important;
       width: 680px;
+      flex-direction: row;
     }
 
     @include respond-to("large") {
       min-width: 100% !important;
       width: 740px;
+      flex-direction: row;
     }
   }
 }

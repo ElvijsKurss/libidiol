@@ -1,25 +1,41 @@
 .additional-custome-page-paragraph {
   display: flex;
+  justify-content: center;
   .woocommerce {
     display: flex;
     flex-direction: column;
     @include respond-to("average") {
-      flex-direction: row-reverse;
+      flex-direction: column;
     }
 
     @include respond-to("medium") {
       flex-direction: row-reverse;
     }
 
-    @include respond-to("large") {
-      flex-direction: row-reverse;
-    }
     .woocommerce-MyAccount-navigation {
       order: 2 !important;
+      min-width: 340px;
+      width: 75%;
     }
     .woocommerce-MyAccount-content {
       order: 1 !important;
       padding: 30px 0px 30px 10px;
+      min-width: 340px;
+      max-width: 740px;
+      @include respond-to("average") {
+        min-width: 440px;
+        max-width: 740px;
+      }
+
+      @include respond-to("medium") {
+        min-width: 540px;
+        max-width: 740px;
+      }
+
+      @include respond-to("large") {
+        min-width: 740px;
+        max-width: 740px;
+      }
     }
   }
 }
@@ -37,6 +53,16 @@
   }
 
   @include respond-to("large") {
-    top: 0.5em;
+    top: 0.2em;
+  }
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  .woocommerce {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
   }
 }

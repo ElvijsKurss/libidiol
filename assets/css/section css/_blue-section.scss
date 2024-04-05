@@ -46,10 +46,6 @@
     font-size: 20px;
     padding: 20px 10px 0 10px;
   }
-  @include respond-to("large") {
-    font-size: 20px;
-    padding: 20px 10px 0 10px;
-  }
 }
 
 #blue-section-sub-paragraph {
@@ -63,8 +59,4 @@
   @include respond-to("medium") {
     font-size: 20px;
   }
-  @include respond-to("large") {
-    font-size: 20px;
-  }
 }
-

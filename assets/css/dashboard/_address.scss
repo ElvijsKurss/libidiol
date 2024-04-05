@@ -43,22 +43,25 @@
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(233, 233, 233);
-  padding: 15px;
+  padding: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
   @include respond-to("average") {
     min-width: 80% !important;
     width: 680px;
+    padding: 15px;
   }
 
   @include respond-to("medium") {
     min-width: 80% !important;
     width: 760px;
+    padding: 15px;
   }
 
   @include respond-to("large") {
     min-width: 100% !important;
     width: 850px;
+    padding: 15px;
   }
 
   > a.edit {
@@ -82,19 +85,22 @@
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(233, 233, 233);
-  padding: 15px;
+  padding: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
   @include respond-to("average") {
     min-width: 80% !important;
+    padding: 15px;
   }
 
   @include respond-to("medium") {
     min-width: 80% !important;
+    padding: 15px;
   }
 
   @include respond-to("large") {
     min-width: 100% !important;
+    padding: 15px;
   }
 
   > h3 {

@@ -4,14 +4,6 @@
   @include respond-to("average") {
     padding: 0;
   }
-
-  @include respond-to("medium") {
-    padding: 0;
-  }
-
-  @include respond-to("large") {
-    padding: 0;
-  }
 }
 
 .mobile-bowl-container {
@@ -26,14 +18,6 @@
   @include respond-to("average") {
     display: none;
   }
-
-  @include respond-to("medium") {
-    display: none;
-  }
-
-  @include respond-to("large") {
-    display: none;
-  }
 }
 
 /* MOBILE HEADER CSS*/
@@ -46,12 +30,6 @@
   width: 100%;
   padding: 15px 0px;
   @include respond-to("average") {
-    display: none;
-  }
-  @include respond-to("medium") {
-    display: none;
-  }
-  @include respond-to("large") {
     display: none;
   }
 

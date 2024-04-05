@@ -162,9 +162,6 @@
   @include respond-to("medium") {
     font-size: 4.5em;
   }
-  @include respond-to("large") {
-    font-size: 4.5em;
-  }
 }
 
 /*Cart Coupon field*/
@@ -196,4 +193,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Specific for cart and shop page*/
+.container-mobile {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }

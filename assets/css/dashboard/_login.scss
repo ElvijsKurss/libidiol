@@ -1,5 +1,5 @@
 .woocommerce-form.woocommerce-form-login.login {
-  border: 1px solid red;
+  max-width: 500px;
 }
 
 /* Account details text margin*/
@@ -17,4 +17,38 @@
 .woocommerce form .form-row label {
   line-height: 2;
   margin-bottom: 5px;
+}
+
+.woocommerce-EditAccountForm.edit-account {
+  display: flex;
+  padding: 30px 0px 30px 10px;
+  min-width: 100% !important;
+  flex-direction: column;
+  @include respond-to("average") {
+    min-width: 80% !important;
+    width: 600px;
+  }
+
+  @include respond-to("medium") {
+    min-width: 80% !important;
+    width: 600px;
+  }
+
+  @include respond-to("large") {
+    min-width: 100% !important;
+    width: 740px;
+  }
+  fieldset {
+    flex-direction: column;
+  }
+  p {
+    flex-direction: column;
+  }
+}
+
+.woocommerce form .form-row {
+  padding: 3px;
+  margin: 0 0 6px;
+  display: flex;
+  flex-direction: column;
 }

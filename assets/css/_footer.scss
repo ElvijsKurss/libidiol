@@ -22,29 +22,12 @@ footer {
     padding: 4em 0em;
     flex-direction: row;
   }
-  @include respond-to("medium") {
-    display: flex;
-    padding: 4em 0em;
-    flex-direction: row;
-  }
-  @include respond-to("large") {
-    display: flex;
-    padding: 4em 0em;
-    flex-direction: row;
-  }
-
   .column {
     width: 100%;
     max-width: 300px;
     display: flex;
     flex-direction: column;
     @include respond-to("average") {
-      max-width: 250px;
-    }
-    @include respond-to("medium") {
-      max-width: 250px;
-    }
-    @include respond-to("large") {
       max-width: 250px;
     }
     #bottom-form-header {
@@ -60,15 +43,6 @@ footer {
       width: 100%;
       padding-top: 13px;
       font-size: 16px;
-      // @include respond-to("average") {
-      //   padding-top: 10px;
-      // }
-      // @include respond-to("medium") {
-      //   padding-top: 10px;
-      // }
-      // @include respond-to("large") {
-      //   padding-top: 10px;
-      // }
       input {
         align-items: center;
         justify-content: center;
@@ -78,12 +52,6 @@ footer {
         height: 45px;
         padding: 5px;
         @include respond-to("average") {
-          height: 30px;
-        }
-        @include respond-to("medium") {
-          height: 30px;
-        }
-        @include respond-to("large") {
           height: 30px;
         }
       }
@@ -117,10 +85,6 @@ footer {
           justify-content: left;
           padding-top: 10px;
         }
-        @include respond-to("large") {
-          justify-content: left;
-          padding-top: 10px;
-        }
         button {
           background-color: #76b600;
           color: white;
@@ -142,14 +106,6 @@ footer {
             padding: 10px 35px;
             font-size: 13px;
           }
-          @include respond-to("medium") {
-            padding: 10px 35px;
-            font-size: 13px;
-          }
-          @include respond-to("large") {
-            padding: 10px 35px;
-            font-size: 13px;
-          }
         }
       }
     }
@@ -163,24 +119,10 @@ footer {
       @include respond-to("average") {
         justify-content: center;
       }
-      @include respond-to("medium") {
-        justify-content: center;
-      }
-      @include respond-to("large") {
-        justify-content: center;
-      }
       &#column-two-content {
         justify-content: left;
         padding-top: 20px;
         @include respond-to("average") {
-          justify-content: center;
-          padding-top: 0;
-        }
-        @include respond-to("medium") {
-          justify-content: center;
-          padding-top: 0;
-        }
-        @include respond-to("large") {
           justify-content: center;
           padding-top: 0;
         }
@@ -190,12 +132,6 @@ footer {
         font-size: 16px;
         margin: 0;
         @include respond-to("average") {
-          font-size: 15px;
-        }
-        @include respond-to("medium") {
-          font-size: 15px;
-        }
-        @include respond-to("large") {
           font-size: 15px;
         }
       }
@@ -221,21 +157,7 @@ footer {
           @include transition(0.3s ease-in-out);
           @include respond-to("average") {
             justify-content: center;
-            // margin: 0 0 0 90px;
             padding: 0;
-            // font-size: 12px;
-          }
-          @include respond-to("medium") {
-            justify-content: center;
-            // margin: 0 0 0 90px;
-            padding: 0;
-            // font-size: 12px;
-          }
-          @include respond-to("large") {
-            justify-content: center;
-            // margin: 0 0 0 90px;
-            padding: 0;
-            // font-size: 12px;
           }
           &:hover {
             color: white;
@@ -256,16 +178,6 @@ footer {
       cursor: pointer;
       @include respond-to("average") {
         margin: 0;
-        // font-size: 12px;
-        padding-top: 0;
-      }
-      @include respond-to("medium") {
-        // font-size: 12px;
-        margin: 0;
-        padding-top: 0;
-      }
-      @include respond-to("large") {
-        margin: 0;
         padding-top: 0;
       }
       &:hover {
@@ -282,12 +194,6 @@ footer {
       cursor: pointer;
       @include transition(0.3s ease-in-out);
       @include respond-to("average") {
-        justify-content: center;
-      }
-      @include respond-to("medium") {
-        justify-content: center;
-      }
-      @include respond-to("large") {
         justify-content: center;
       }
       &:hover {
@@ -311,11 +217,6 @@ footer {
         margin-top: 20px;
         margin-bottom: 0;
       }
-      @include respond-to("large") {
-        margin-top: 20px;
-        margin-bottom: 0;
-      }
-
       .footer-icons {
         padding: 0;
         margin: 0;
@@ -323,7 +224,7 @@ footer {
         a {
           text-decoration: none;
 
-          .fab {
+          .fa {
             color: white;
             background-color: #76b600;
             width: 40px;
@@ -350,8 +251,6 @@ footer {
             }
             @include respond-to("large") {
               font-size: 18px;
-              width: 40px;
-              height: 40px;
             }
           }
         }
@@ -363,12 +262,6 @@ footer {
   display: none !important;
   @include respond-to("average") {
     display: none !important;
-  }
-  @include respond-to("medium") {
-    display: flex !important;
-  }
-  @include respond-to("large") {
-    display: flex !important;
   }
   a {
     text-decoration: none;
@@ -387,12 +280,6 @@ footer {
   @include respond-to("average") {
     display: none !important;
   }
-  @include respond-to("medium") {
-    display: none !important;
-  }
-  @include respond-to("large") {
-    display: none !important;
-  }
 }
 
 #mobile-version-useful-links {
@@ -401,23 +288,11 @@ footer {
   @include respond-to("average") {
     display: none !important;
   }
-  @include respond-to("medium") {
-    display: none !important;
-  }
-  @include respond-to("large") {
-    display: none !important;
-  }
 }
 
 #desktop-version-useful-links {
   display: none !important;
   @include respond-to("average") {
-    display: flex !important;
-  }
-  @include respond-to("medium") {
-    display: flex !important;
-  }
-  @include respond-to("large") {
     display: flex !important;
   }
 }
@@ -442,14 +317,6 @@ footer {
     margin: 0;
     padding-top: 0;
   }
-  @include respond-to("medium") {
-    margin: 0;
-    padding-top: 0;
-  }
-  @include respond-to("large") {
-    margin: 0;
-    padding-top: 0;
-  }
 }
 
 /* Follow us styling*/
@@ -467,12 +334,6 @@ footer {
   @include respond-to("average") {
     display: none;
   }
-  @include respond-to("medium") {
-    display: none;
-  }
-  @include respond-to("large") {
-    display: none;
-  }
 }
 
 .follow-us-icons {
@@ -481,7 +342,7 @@ footer {
   list-style: none;
   padding-left: 0;
   .footer-icons-mobile {
-    .fab {
+    .fa {
       color: white;
       width: 30px;
       height: 10px;

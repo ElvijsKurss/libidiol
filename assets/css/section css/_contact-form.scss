@@ -4,12 +4,6 @@
   @include respond-to("average") {
     padding: 50px 10px 10px 10px;
   }
-  @include respond-to("medium") {
-    padding: 50px 10px 10px 10px;
-  }
-  @include respond-to("large") {
-    padding: 50px 10px 10px 10px;
-  }
 }
 
 /* Heading element left to form styling*/
@@ -39,14 +33,6 @@
   @include respond-to("average") {
     padding-bottom: 50px;
   }
-
-  @include respond-to("medium") {
-    padding-bottom: 50px;
-  }
-
-  @include respond-to("large") {
-    padding-bottom: 50px;
-  }
 }
 
 /* Button CSS*/
@@ -70,14 +56,6 @@ div.wpforms-container-full .wpforms-page-button {
   }
   @include respond-to("average") {
     padding: 10px 25px;
-    font-size: 15px;
-  }
-  @include respond-to("medium") {
-    padding: 10px 25px;
-    font-size: 15px;
-  }
-  @include respond-to("large") {
-    padding: 10px 30px;
     font-size: 15px;
   }
 }

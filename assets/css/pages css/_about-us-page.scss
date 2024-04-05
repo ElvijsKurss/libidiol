@@ -1,0 +1,55 @@
+.about-us-paragraph-page {
+  padding: 0px 0px 20px 0px;
+  font-size: 15px !important;
+  font-family: HelveticaNeueLight;
+  line-height: normal;
+  font-weight: 700;
+  width: 100%;
+  display: block;
+  text-align: justify;
+  line-height: 20px;
+  justify-content: space-around;
+  color: #747373;
+  @include respond-to("average") {
+    font-size: 15px !important;
+    padding: 0px 10px 20px 20px;
+    line-height: 30px;
+  }
+  @include respond-to("medium") {
+    font-size: 16px !important;
+    text-align: left;
+  }
+  @include respond-to("large") {
+    font-size: 17px !important;
+  }
+}
+
+.about-us-header-page {
+  padding: 0px 0px 20px 0px;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.42;
+  @include respond-to("average") {
+    padding: 0px 10px 20px 20px;
+    font-size: 25px;
+  }
+  @include respond-to("medium") {
+    padding: 10px 10px 20px 20px;
+    font-size: 35px;
+  }
+}
+
+.strong-font {
+  font-weight: bold;
+  color: rgb(48, 1, 1);
+  font-size: 18px;
+}
+
+.green-doodle {
+  background-image: url(https://www.vidyard.com/wp-content/themes/vidyard-website/img/pages/company/about-us/green-doodle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 170px;
+}

@@ -17,26 +17,27 @@ $(document).ready(function () {
       $element.text(truncatedText);
 
       const $showMoreElement = $(
-        "<div class='about-us-read-more'>Read more...</div>"
+        "<div class='about-us-read-more'><a href=\"custom-theme-website.test/about/?v=cb21c4d7dea9\">Read more...</a></div>"
       );
+
       $showMoreElement.on("click", () => {
-        $showMoreElement.hide();
-        $showLessElement.show();
-        $element.text(originalText);
+        $showMoreElement.show();
+        // $showLessElement.show();
+        // $element.text(originalText);
       });
       $element.after($showMoreElement);
 
-      const $showLessElement = $(
-        "<div class='about-us-read-less'>Read less...</div>"
-      ).hide();
-      $showLessElement.on("click", () => {
-        console.log($showMoreElement, $showLessElement);
+      // const $showLessElement = $(
+      //   "<div class='about-us-read-less'>Read less...</div>"
+      // ).hide();
+      // $showLessElement.on("click", () => {
+      //   console.log($showMoreElement, $showLessElement);
 
-        $showMoreElement.show();
-        $showLessElement.hide();
-        $element.text(truncatedText);
-      });
-      $element.after($showLessElement);
+      //   $showMoreElement.show();
+      //   $showLessElement.hide();
+      //   $element.text(truncatedText);
+      // });
+      // $element.after($showLessElement);
     }
   });
 });

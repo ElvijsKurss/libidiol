@@ -7,12 +7,6 @@
   @include respond-to("average") {
     flex-direction: row;
   }
-  @include respond-to("medium") {
-    flex-direction: row;
-  }
-  @include respond-to("large") {
-    flex-direction: row;
-  }
 }
 
 /* Reletaded products header styling*/
@@ -30,12 +24,6 @@
   padding: 10px !important;
   min-width: 90%;
   @include respond-to("average") {
-    min-width: 0;
-  }
-  @include respond-to("medium") {
-    min-width: 0;
-  }
-  @include respond-to("large") {
     min-width: 0;
   }
 }

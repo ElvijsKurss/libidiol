@@ -24,7 +24,7 @@ function libidiol_register_styles()
 {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
-    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", array(), '5.13.0', 'all');
+    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css", array(), '4.7.0', 'all');
     wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.css", array('libidiol-bootstrap'), $version, 'all');
     wp_enqueue_style('libidiol-fontello', get_template_directory_uri() . "/assets/css/fontello.css", array('libidiol-bootstrap'), $version, 'all');
 }
@@ -35,7 +35,7 @@ function libidiol_register_admin_styles()
 {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('libidiol-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
-    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", array(), '5.13.0', 'all');
+    wp_enqueue_style('libidiol-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css", array(), '4.7.0', 'all');
     wp_enqueue_style('libidiol-style', get_template_directory_uri() . "/assets/css/style.css", array('libidiol-bootstrap'), $version, 'all');
     wp_enqueue_style('libidiol-fontello', get_template_directory_uri() . "/assets/css/fontello.css", array('libidiol-bootstrap'), $version, 'all');
 }

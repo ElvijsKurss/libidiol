@@ -1,10 +1,7 @@
 <?php
 get_header();
 
-$loginClass = "";
-if (!is_user_logged_in()) {
-    $loginClass = " login";
-}
+
 ?>
 
 <body>
@@ -17,7 +14,7 @@ if (!is_user_logged_in()) {
                     the_post();
             ?>
                     <h1 class="custome-page-header"><?php the_title(); ?></h1>
-                    <div class="additional-custome-page-paragraph<?= $loginClass ?>"><?php the_content(); ?></div>
+                    <div class="additional-custome-page-paragraph"><?php the_content(); ?></div>
             <?php
                 endwhile;
             endif;
