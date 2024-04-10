@@ -23,6 +23,7 @@ $(document).ready(function () {
       $showMoreElement.on("click", () => {
         $showMoreElement.show();
       });
+
       $element.after($showMoreElement);
     }
   });
