@@ -29,14 +29,14 @@
                         </a>
                     </li>
                     <li class="list-inline-item" id="account-icon">
-                        <a href="http://custom-theme-website.test/my-account/">
+                        <a href="http://libidiol.com/my-account/">
                             <i class="fa fa-user menu-icon" aria-hidden="true"></i>
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <a class="navbar-brand" href="http://custom-theme-website.test/">
+            <a class="navbar-brand" href="http://libidiol.com">
                 <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
 
@@ -80,7 +80,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item" id="account-icon">
-                            <a href="http://custom-theme-website.test/my-account/">
+                            <a href="http://libidiol.com/my-account/">
                                 <i class="fa fa-user menu-icon" aria-hidden="true"></i>
                             </a>
                         </li>

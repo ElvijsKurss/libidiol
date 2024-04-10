@@ -2357,6 +2357,7 @@ div.wpforms-container-full .wpforms-page-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 /* Shop Showing all items css
@@ -3049,6 +3050,11 @@ nav.woocommerce-MyAccount-navigation a:hover {
   }
 }
 @media (min-width: 992px) {
+  .additional-custome-page-paragraph .woocommerce {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1080px) {
   .additional-custome-page-paragraph .woocommerce {
     flex-direction: row-reverse;
   }

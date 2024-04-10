@@ -9,6 +9,9 @@
     }
 
     @include respond-to("medium") {
+      flex-direction: column;
+    }
+    @include respond-to("large") {
       flex-direction: row-reverse;
     }
 

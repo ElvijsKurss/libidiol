@@ -2,7 +2,7 @@
     <div id="footer-container" class="main-wrapper container">
 
         <div class="column one">
-            <a href="http://custom-theme-website.test/">
+            <a href="http://libidiol.com/">
                 <img class="bottom-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
             <p class="footer-content-text-no-hover">Unleash Natures Power For Passionate <br /> Living with Libidiol</p>
@@ -17,23 +17,23 @@
                 <h3>Useful Links</h3>
             </div>
             <div id="column-two-text">
-                <div><a href="http://custom-theme-website.test/about/">
+                <div><a href="http://libidiol.com/about/">
                         <p class="footer-content-text-two">About us</p>
                     </a></div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://custom-theme-website.test/delivery-information/">
+                <div><a href="http://libidiol.com/delivery-information/">
                         <p class="footer-content-text-two">Delivery Information</p>
                     </a></div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://custom-theme-website.test/terms-and-conditions/">
+                <div><a href="http://libidiol.com/terms-and-conditions/">
                         <p class="footer-content-text-two">Terms & Conditions</p>
                     </a></div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://custom-theme-website.test/privacy-policy/">
+                <div><a href="http://libidiol.com/privacy-policy/">
                         <p class="footer-content-text-two">Privacy Policy</p>
                     </a></div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://custom-theme-website.test/refund-policy/">
+                <div><a href="http://libidiol.com/refund-policy/">
                         <p class="footer-content-text-two">Refund Policy</p>
                     </a></div>
             </div>
@@ -72,15 +72,15 @@
                         <p class="footer-content-text-two">About</p>
                     </a></div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://custom-theme-website.test/privacy-policy/">
+                <div><a href="http://libidiol.com/privacy-policy/">
                         <p class="footer-content-text-two">Privacy Policy</p>
                     </a></div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://custom-theme-website.test/refund-policy/">
+                <div><a href="http://libidiol.com/refund-policy/">
                         <p class="footer-content-text-two">Refund</p>
                     </a></div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://custom-theme-website.test/terms-and-conditions/">
+                <div><a href="http://libidiol.com/terms-and-conditions/">
                         <p class="footer-content-text-two">Terms & Conditions</p>
                     </a></div>
             </div>
