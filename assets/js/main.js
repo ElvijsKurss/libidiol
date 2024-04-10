@@ -22,22 +22,9 @@ $(document).ready(function () {
 
       $showMoreElement.on("click", () => {
         $showMoreElement.show();
-        // $showLessElement.show();
-        // $element.text(originalText);
       });
+
       $element.after($showMoreElement);
-
-      // const $showLessElement = $(
-      //   "<div class='about-us-read-less'>Read less...</div>"
-      // ).hide();
-      // $showLessElement.on("click", () => {
-      //   console.log($showMoreElement, $showLessElement);
-
-      //   $showMoreElement.show();
-      //   $showLessElement.hide();
-      //   $element.text(truncatedText);
-      // });
-      // $element.after($showLessElement);
     }
   });
 });
