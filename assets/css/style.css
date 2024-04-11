@@ -455,6 +455,9 @@ Header SCSS start
   #nav-bar-icons {
     display: flex;
     padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
   #nav-bar-icons .social-list {
     display: flex;
@@ -479,9 +482,6 @@ Header SCSS start
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
     z-index: 999;
   }
   #nav-bar-icons .social-list .list-inline-item .hidden-content:hover {
@@ -741,6 +741,20 @@ Header SCSS end
   .fa-user::after {
     content: "";
   }
+}
+
+/*Custom css for header language plugin*/
+.wpml-ls-legacy-dropdown-click {
+  width: 15.5em;
+  max-width: 100px !important;
+}
+
+.wpml-ls-legacy-dropdown-click > ul {
+  position: relative;
+  padding: 0;
+  margin: 0 !important;
+  list-style-type: none;
+  max-width: 117px !important;
 }
 
 .mobile-button {
@@ -2357,7 +2371,7 @@ div.wpforms-container-full .wpforms-page-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: white !important;
 }
 
 div.wpforms-container-full .wpforms-form input[type=submit],
