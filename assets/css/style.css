@@ -2360,6 +2360,17 @@ div.wpforms-container-full .wpforms-page-button:hover {
   color: white;
 }
 
+div.wpforms-container-full .wpforms-form input[type=submit],
+div.wpforms-container-full .wpforms-form button[type=submit],
+div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  color: white !important;
+  font-size: 1em;
+  font-family: inherit;
+  padding: 10px 15px;
+}
+
 /* Shop Showing all items css
 Uncomment flex and comment none to display this*/
 .woocommerce-result-count {

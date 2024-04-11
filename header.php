@@ -59,12 +59,6 @@
 
                 <div id="nav-bar-icons">
                     <ul class="social-list">
-                        <li class="list-inline-item">
-                            <a href="#" class="language-link"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></a>
-                            <div class="hidden-content">
-                                <?php echo do_shortcode('[google-translator]'); ?>
-                            </div>
-                        </li>
                         <li class="list-inline-item" id="cart-icon">
                             <a href="<?php echo wc_get_cart_url(); ?>" class="cart-icon-link">
                                 <i class="icon-shopping-basket menu-icon"></i>
@@ -89,7 +83,7 @@
 
 
                 <div class="head-button-container">
-                    <div class="head-button-body"><a href="libidiol.com/shop" class="header-button-link">Order now</a></div>
+                    <div class="head-button-body"><a href="http://libidiol.com/shop/" class="header-button-link">Order now</a></div>
                 </div>
             </div>
         </nav>
