@@ -28,3 +28,13 @@ $(document).ready(function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var languageLink = document.querySelector(".language-link");
+  var hiddenContent = document.querySelector(".hidden-content-mobile");
+
+  languageLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    hiddenContent.classList.toggle("show");
+  });
+});

@@ -483,12 +483,20 @@ Header SCSS start
     top: 100%;
     left: 0;
     z-index: 999;
+    background-color: white;
+    border: 1px solid rgb(203, 200, 200);
+    box-shadow: 0 0.2rem 1.2rem rgba(34, 34, 34, 0.175);
   }
   #nav-bar-icons .social-list .list-inline-item .hidden-content:hover {
     display: block;
   }
   #nav-bar-icons .social-list .list-inline-item .language-link:hover + .hidden-content {
     display: block;
+    text-decoration: none;
+  }
+  #nav-bar-icons .social-list .list-inline-item .language-link:hover + .hidden-content:hover {
+    color: #76b600 !important;
+    text-decoration: none;
   }
   #nav-bar-icons .social-list a {
     display: flex;
@@ -625,16 +633,32 @@ Header SCSS end
 .icon-language {
   position: relative;
   display: flex;
-  padding-right: 8px;
+  padding-right: 0;
+}
+@media (min-width: 992px) {
+  .icon-language {
+    padding-right: 10px;
+  }
+}
+.icon-language:hover {
+  color: #76b600 !important;
+  text-decoration: none;
 }
 .icon-language:nth-child(-n+3)::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  background-color: white;
-  right: 0;
-  top: 0;
+  display: none;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .icon-language:nth-child(-n+3)::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    right: 0;
+    top: 0;
+  }
 }
 
 .header-spacer {
@@ -668,14 +692,6 @@ Header SCSS end
 }
 
 /*Flag plugin extra css*/
-#flags {
-  width: 100% !important;
-}
-
-#flags a:hover {
-  transform: scale(1.5);
-}
-
 /* Mobile cart container*/
 .mobile-cart-container {
   display: flex;
@@ -694,7 +710,7 @@ Header SCSS end
 .mobile-cart-container .icon-shopping-basket:before {
   color: white;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mobile-cart-container {
     display: none;
   }
@@ -712,10 +728,6 @@ Header SCSS end
   font-size: 12px;
 }
 
-.icon-language {
-  font-size: 24px !important;
-}
-
 .fa-user {
   width: 32px !important;
   height: 32px !important;
@@ -727,6 +739,7 @@ Header SCSS end
   position: relative !important;
   color: #ffffff !important;
   font-size: 24px !important;
+  padding-top: 2px !important;
 }
 .fa-user::after {
   content: none;
@@ -755,6 +768,49 @@ Header SCSS end
   margin: 0 !important;
   list-style-type: none;
   max-width: 117px !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .hidden-content-mobile {
+    display: none;
+  }
+  .hidden-content-mobile.show {
+    display: block;
+    background-color: white;
+    border: 1px solid #062a4d;
+    z-index: 999;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    box-shadow: 0 0.2rem 1.2rem rgba(34, 34, 34, 0.175);
+    text-decoration: none;
+  }
+}
+.icon-language:before {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  flex-direction: row !important;
+  position: relative !important;
+  color: #ffffff !important;
+  font-size: 28px !important;
+}
+@media (min-width: 768px) {
+  .icon-language:before {
+    font-size: 24px !important;
+  }
+}
+.icon-language:before:hover {
+  color: #76b600 !important;
+  text-decoration: none;
+}
+
+.language-icon-container:hover {
+  color: #76b600 !important;
+  text-decoration: none;
 }
 
 .mobile-button {

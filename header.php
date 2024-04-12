@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libidiol</title>
     <?php wp_head(); ?>
 </head>
 
@@ -17,6 +18,14 @@
             </button>
             <div class="mobile-cart-container">
                 <ul class="social-list">
+                    <li class="list-inline-item">
+                        <div class="language-link language-icon-container">
+                            <i class="icon-language menu-icon"></i>
+                        </div>
+                        <div class="hidden-content-mobile">
+                            <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
+                        </div>
+                    </li>
                     <li class="list-inline-item" id="cart-icon">
                         <a href="<?php echo wc_get_cart_url(); ?>" class="cart-icon-link">
                             <i class="icon-shopping-basket menu-icon"></i>
@@ -35,6 +44,7 @@
                     </li>
                 </ul>
             </div>
+
 
             <a class="navbar-brand" href="http://libidiol.com">
                 <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
@@ -60,7 +70,7 @@
                 <div id="nav-bar-icons">
                     <ul class="social-list">
                         <li class="list-inline-item">
-                            <a href="#" class="language-link"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></a>
+                            <div class="language-link"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></div>
                             <div class="hidden-content">
                                 <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
                             </div>
