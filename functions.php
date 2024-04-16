@@ -61,3 +61,23 @@ function libidiol_register_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'libidiol_register_scripts');
+
+
+/*Read more js*/
+
+function my_theme_text_domain()
+{
+    load_theme_textdomain('Libidiol.com', get_template_directory() . '/languages');
+}
+
+add_action('after_setup_theme', 'Libidiol.com');
+
+function my_theme_enqueue_scripts()
+{
+    $translation_array = array(
+        'read_more_text' => __('Read more...', 'Libidiol.com'),
+    );
+    wp_localize_script('libidiol-main', 'translation_object', $translation_array);
+}
+
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');

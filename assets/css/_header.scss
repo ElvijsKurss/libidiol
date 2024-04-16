@@ -74,10 +74,6 @@ Header SCSS start
         .language-link:hover + .hidden-content {
           display: block;
           text-decoration: none;
-          &:hover {
-            color: #76b600 !important;
-            text-decoration: none;
-          }
         }
       }
 
@@ -222,10 +218,6 @@ Header SCSS end
   padding-right: 0;
   @include respond-to("medium") {
     padding-right: 10px;
-  }
-  &:hover {
-    color: #76b600 !important;
-    text-decoration: none;
   }
   &:nth-child(-n + 3)::after {
     display: none;
@@ -379,16 +371,26 @@ Header SCSS end
   position: relative !important;
   color: #ffffff !important;
   font-size: 28px !important;
-  @include respond-to("average") {
-    font-size: 24px !important;
-  }
   &:hover {
     color: #76b600 !important;
     text-decoration: none;
   }
 }
 
-.language-icon-container {
+.language-link {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  .fa.fa-chevron-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}
+
+.icon-language {
+  @include transition(0.3s ease-in-out);
   &:hover {
     color: #76b600 !important;
     text-decoration: none;

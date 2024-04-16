@@ -494,10 +494,6 @@ Header SCSS start
     display: block;
     text-decoration: none;
   }
-  #nav-bar-icons .social-list .list-inline-item .language-link:hover + .hidden-content:hover {
-    color: #76b600 !important;
-    text-decoration: none;
-  }
   #nav-bar-icons .social-list a {
     display: flex;
     text-decoration: none;
@@ -639,10 +635,6 @@ Header SCSS end
   .icon-language {
     padding-right: 10px;
   }
-}
-.icon-language:hover {
-  color: #76b600 !important;
-  text-decoration: none;
 }
 .icon-language:nth-child(-n+3)::after {
   display: none;
@@ -798,17 +790,27 @@ Header SCSS end
   color: #ffffff !important;
   font-size: 28px !important;
 }
-@media (min-width: 768px) {
-  .icon-language:before {
-    font-size: 24px !important;
-  }
-}
 .icon-language:before:hover {
   color: #76b600 !important;
   text-decoration: none;
 }
 
-.language-icon-container:hover {
+.language-link {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.language-link .fa.fa-chevron-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.icon-language {
+  transition: 0.3s ease-in-out;
+}
+.icon-language:hover {
   color: #76b600 !important;
   text-decoration: none;
 }
@@ -1893,7 +1895,7 @@ html #wpadminbar {
   .main-point .point-one {
     position: absolute;
     top: 0%;
-    left: 29%;
+    left: 27%;
   }
 }
 .main-point .point-one .one {
@@ -1957,7 +1959,7 @@ html #wpadminbar {
   .main-point .point-two {
     position: absolute;
     top: 42%;
-    left: 19%;
+    left: 19.5%;
   }
 }
 .main-point .point-two .two {

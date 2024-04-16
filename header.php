@@ -99,7 +99,7 @@
 
 
                 <div class="head-button-container">
-                    <div class="head-button-body"><a href="http://libidiol.com/shop/" class="header-button-link">Order now</a></div>
+                    <div class="head-button-body"><a href="http://libidiol.com/shop/" class="header-button-link"><?= __('Order now', 'Libidiol.com') ?></a></div>
                 </div>
             </div>
         </nav>

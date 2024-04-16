@@ -17,12 +17,10 @@ $(document).ready(function () {
       $element.text(truncatedText);
 
       const $showMoreElement = $(
-        "<div class='about-us-read-more'><a href=\"custom-theme-website.test/about/?v=cb21c4d7dea9\">Read more...</a></div>"
+        "<div class='about-us-read-more'><a href=\"Libidiol.com/about\">" +
+          translation_object.read_more_text +
+          "</a></div>"
       );
-
-      $showMoreElement.on("click", () => {
-        $showMoreElement.show();
-      });
 
       $element.after($showMoreElement);
     }
