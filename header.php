@@ -90,7 +90,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item" id="account-icon">
-                            <a href="http://libidiol.com/my-account/">
+                            <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
                                 <i class="fa fa-user menu-icon" aria-hidden="true"></i>
                             </a>
                         </li>

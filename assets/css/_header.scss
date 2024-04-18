@@ -62,6 +62,7 @@ Header SCSS start
           top: 100%;
           left: 0;
           z-index: 999;
+          width: 100px;
           background-color: white;
           border: 1px solid rgb(203, 200, 200);
           box-shadow: 0 0.2rem 1.2rem rgba(34, 34, 34, 0.175);
@@ -98,15 +99,6 @@ Header SCSS start
             color: #76b600 !important;
             text-decoration: none;
           }
-        }
-
-        .fa-chevron-down {
-          font-size: 9px;
-          color: white;
-          display: flex;
-          align-items: center;
-          padding-right: 3px;
-          padding-top: 5px;
         }
       }
     }
@@ -291,7 +283,7 @@ Header SCSS end
 
   .cart-count-mobile {
     position: absolute;
-    left: 25px;
+    left: 65px;
     top: 25px;
     text-decoration: none;
     background-color: #ff0000;
@@ -324,7 +316,7 @@ Header SCSS end
     height: 100%;
     width: 1px;
     background-color: white;
-    @include respond-to("average") {
+    @include respond-to("medium") {
       content: "";
     }
   }
@@ -371,10 +363,12 @@ Header SCSS end
   position: relative !important;
   color: #ffffff !important;
   font-size: 28px !important;
-  &:hover {
-    color: #76b600 !important;
-    text-decoration: none;
-  }
+}
+
+.icon-language:hover:before {
+  @include transition(0.3s ease-in-out);
+  color: #76b600 !important;
+  text-decoration: none;
 }
 
 .language-link {
