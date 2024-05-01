@@ -8,6 +8,11 @@ $(document).ready(function () {
   });
 
   const readMoreMaxLen = 200;
+  const readMoreLinks = [
+    "https://libidiol.com/our-mission/",
+    "https://libidiol.com/our-story/",
+    "https://libidiol.com/libidiol-vs-viagra/",
+  ];
   $(".read-more").each((index, element) => {
     const $element = $(element);
     const originalText = $element.text();
@@ -17,9 +22,7 @@ $(document).ready(function () {
       $element.text(truncatedText);
 
       const $showMoreElement = $(
-        "<div class='about-us-read-more'><a href=\"Libidiol.com/about\">" +
-          translation_object.read_more_text +
-          "</a></div>"
+        `<div class='about-us-read-more'><a href="${readMoreLinks[index]}">${translation_object.read_more_text}</a></div>`
       );
 
       $element.after($showMoreElement);

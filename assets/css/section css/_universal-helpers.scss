@@ -175,7 +175,7 @@
 .custome-page-header {
   font-size: 40px;
   padding-top: 60px;
-  padding-bottom: 0px;
+  padding-bottom: 30px;
   color: #062a4d;
   justify-content: center;
   display: flex;
@@ -202,4 +202,52 @@
   font-size: 16px;
   display: inline-block;
   text-align: justify;
+}
+
+.partner-link {
+  // background-image: url("/assets/images/black-header-bg.png");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  a {
+    color: black;
+    text-decoration-line: none;
+    text-decoration: none;
+    @include transition(0.3s ease-in-out);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 70px;
+  @include respond-to("average") {
+    font-size: 40px;
+    padding-bottom: 70px;
+  }
+  @include respond-to("medium") {
+    font-size: 42px;
+    padding-bottom: 80px;
+  }
+  @include respond-to("large") {
+    font-size: 45px;
+    padding-bottom: 90px;
+  }
+}
+
+.additional-last-p-element {
+}
+
+.universal-separator-os {
+  border-top: 30px solid;
+  padding: 10px 0px;
+  @include respond-to("average") {
+    padding: 20px 0px;
+    border-top: 60px solid;
+  }
 }

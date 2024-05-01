@@ -1,17 +1,16 @@
-<?php
+<?php get_header(); ?>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+        <?php
 
-get_header();
+        while (have_posts()) : the_post();
 
-?>
+            if (comments_open() || get_comments_number()) {
+                comments_template();
+            }
 
-<body>
-    <div class="container main-wrapper">
-        <h1 class="custome-page-header"><?php the_title(); ?></h1>
-    </div>
-    <div class=" container main-wrapper">
-        <p class="custome-page-paragraph"><?php the_content(); ?></p>
-    </div>
-</body>
-
-<?php
-get_footer();
+        endwhile;
+        ?>
+    </main>
+</div>
+<?php get_footer(); ?>

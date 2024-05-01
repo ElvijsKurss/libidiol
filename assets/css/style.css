@@ -672,7 +672,7 @@ Header SCSS end
 }
 @media (min-width: 768px) {
   .navbar-nav {
-    padding-left: 40px;
+    padding-left: 60px;
   }
 }
 
@@ -1361,7 +1361,7 @@ html #wpadminbar {
 .custome-page-header {
   font-size: 40px;
   padding-top: 60px;
-  padding-bottom: 0px;
+  padding-bottom: 30px;
   color: #062a4d;
   justify-content: center;
   display: flex;
@@ -1394,6 +1394,55 @@ html #wpadminbar {
   font-size: 16px;
   display: inline-block;
   text-align: justify;
+}
+
+.partner-link {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 25px;
+  padding-bottom: 70px;
+}
+.partner-link a {
+  color: black;
+  text-decoration-line: none;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.partner-link a:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  .partner-link {
+    font-size: 40px;
+    padding-bottom: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .partner-link {
+    font-size: 42px;
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 1080px) {
+  .partner-link {
+    font-size: 45px;
+    padding-bottom: 90px;
+  }
+}
+
+.universal-separator-os {
+  border-top: 30px solid;
+  padding: 10px 0px;
+}
+@media (min-width: 768px) {
+  .universal-separator-os {
+    padding: 20px 0px;
+    border-top: 60px solid;
+  }
 }
 
 .libidiol-product-text {
@@ -1890,7 +1939,14 @@ html #wpadminbar {
   .main-point .point-one {
     position: absolute;
     top: 0%;
-    left: 27%;
+    left: 25%;
+  }
+}
+@media (min-width: 1720px) {
+  .main-point .point-one {
+    position: absolute;
+    top: 0%;
+    left: 29%;
   }
 }
 .main-point .point-one .one {
@@ -1951,6 +2007,13 @@ html #wpadminbar {
   }
 }
 @media (min-width: 1610px) {
+  .main-point .point-two {
+    position: absolute;
+    top: 42%;
+    left: 13.5%;
+  }
+}
+@media (min-width: 1720px) {
   .main-point .point-two {
     position: absolute;
     top: 42%;
@@ -3398,6 +3461,149 @@ nav.woocommerce-MyAccount-navigation a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 170px;
+}
+
+.privacy-policy-paragraph-first-line {
+  padding-top: 40px;
+}
+
+.privacy-policy-paragraph-last-line {
+  padding-bottom: 40px;
+}
+
+.privacy-policy-paragraph,
+.privacy-policy-paragraph-first-line,
+.privacy-policy-paragraph-last-line {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.our-story-text-first-line {
+  padding-top: 40px;
+}
+
+.our-story-text-last-line {
+  padding-bottom: 40px;
+}
+
+.our-story-text,
+.our-story-text-first-line,
+.our-story-text-last-line {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.last-p-element {
+  padding-bottom: 60px;
+}
+
+.our-story-images {
+  display: flex;
+}
+.our-story-images .os-image-three {
+  display: none;
+}
+@media (min-width: 768px) {
+  .our-story-images .os-image-three {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .our-story-images .os-image-three {
+    display: flex;
+  }
+}
+@media (min-width: 1080px) {
+  .our-story-images .os-image-three {
+    display: flex;
+  }
+}
+.our-story-images .os-image-one {
+  display: none;
+}
+@media (min-width: 768px) {
+  .our-story-images .os-image-one {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .our-story-images .os-image-one {
+    display: flex;
+  }
+}
+@media (min-width: 1080px) {
+  .our-story-images .os-image-one {
+    display: flex;
+  }
+}
+
+.last-p-element-os {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.our-mission-paragraph {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.our-mission-paragraph p {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  .our-mission-paragraph p {
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.media-reverse {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .media-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.media-top-content {
+  padding-bottom: 50px;
+  padding: 20px 0px;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+  direction: ltr;
+  grid-column: 2;
+  grid-row: 1;
+  word-break: break-word;
+  padding: 10px 10px;
+}
+@media (min-width: 768px) {
+  .wp-block-media-text .wp-block-media-text__content {
+    padding: 10px 30px;
+  }
+}
+@media (min-width: 992px) {
+  .wp-block-media-text .wp-block-media-text__content {
+    display: flex;
+  }
+}
+@media (min-width: 1080px) {
+  .wp-block-media-text .wp-block-media-text__content {
+    display: flex;
+  }
+}
+
+.last-p-element {
+  padding-bottom: 60px;
 }
 
 /* Fonts */

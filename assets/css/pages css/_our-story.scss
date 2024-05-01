@@ -1,0 +1,54 @@
+.our-story-text-first-line {
+  padding-top: 40px;
+}
+
+.our-story-text-last-line {
+  padding-bottom: 40px;
+}
+
+.our-story-text,
+.our-story-text-first-line,
+.our-story-text-last-line {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.last-p-element {
+  padding-bottom: 60px;
+}
+
+.our-story-images {
+  display: flex;
+  .os-image-three {
+    display: none;
+    @include respond-to("average") {
+      display: flex;
+    }
+    @include respond-to("medium") {
+      display: flex;
+    }
+    @include respond-to("large") {
+      display: flex;
+    }
+  }
+  .os-image-one {
+    display: none;
+    @include respond-to("average") {
+      display: none;
+    }
+    @include respond-to("medium") {
+      display: flex;
+    }
+    @include respond-to("large") {
+      display: flex;
+    }
+  }
+}
+
+.last-p-element-os {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+  font-weight: 500;
+}

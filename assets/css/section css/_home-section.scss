@@ -343,7 +343,12 @@
     @include respond-to("extralarge") {
       position: absolute;
       top: 0%;
-      left: 27%;
+      left: 25%;
+    }
+    @include respond-to("xxl") {
+      position: absolute;
+      top: 0%;
+      left: 29%;
     }
     .one {
       flex-direction: row-reverse;
@@ -391,6 +396,11 @@
       right: 0%;
     }
     @include respond-to("extralarge") {
+      position: absolute;
+      top: 42%;
+      left: 13.5%;
+    }
+    @include respond-to("xxl") {
       position: absolute;
       top: 42%;
       left: 19.5%;

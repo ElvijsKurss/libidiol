@@ -1,0 +1,45 @@
+.our-mission-paragraph {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    @include respond-to("average") {
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+}
+
+.media-reverse {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  padding-bottom: 50px;
+  @include respond-to("average") {
+    flex-direction: row-reverse;
+  }
+}
+.media-top-content {
+  padding-bottom: 50px;
+  padding: 20px 0px;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+  direction: ltr;
+  grid-column: 2;
+  grid-row: 1;
+  word-break: break-word;
+  padding: 10px 10px;
+  @include respond-to("average") {
+    padding: 10px 30px;
+  }
+  @include respond-to("medium") {
+    display: flex;
+  }
+  @include respond-to("large") {
+    display: flex;
+  }
+}
