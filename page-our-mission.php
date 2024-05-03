@@ -14,7 +14,7 @@ get_header();
                     the_post();
             ?>
                     <h1 class="custome-page-header"><?php the_title(); ?></h1>
-                    <div class="our-mission-paragraph"><?php the_content(); ?></div>
+                    <div class="our-mission-paragraph om-style"><?php the_content(); ?></div>
             <?php
                 endwhile;
             endif;

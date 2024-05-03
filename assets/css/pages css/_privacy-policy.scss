@@ -9,6 +9,33 @@
 .privacy-policy-paragraph,
 .privacy-policy-paragraph-first-line,
 .privacy-policy-paragraph-last-line {
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+    text-align: left !important;
+    @include respond-to("average") {
+      text-align: left;
+    }
+  }
   padding-left: 10px;
   padding-right: 10px;
+  line-height: 30px;
+  text-align: left;
 }
+
+// .privacy-policy-paragraph {
+//   flex-direction: column;
+//   display: flex;
+//   justify-content: flex-start;
+//   text-align: left !important;
+//   p {
+//     font-size: 18px;
+//     line-height: 22px;
+//     text-align: justify;
+//     @include respond-to("average") {
+//       line-height: 30px;
+//       text-align: left !important;
+//     }
+//   }
+// }

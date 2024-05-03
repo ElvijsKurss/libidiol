@@ -20,6 +20,16 @@
 
 .our-story-images {
   display: flex;
+  padding-bottom: 30px;
+  @include respond-to("average") {
+    padding-bottom: 40px;
+  }
+  @include respond-to("medium") {
+    padding-bottom: 50px;
+  }
+  @include respond-to("large") {
+    padding-bottom: 30px;
+  }
   .os-image-three {
     display: none;
     @include respond-to("average") {
@@ -49,6 +59,19 @@
 .last-p-element-os {
   padding-top: 20px;
   padding-bottom: 60px;
-  text-align: center;
+  text-align: center !important;
   font-weight: 500;
+}
+
+.os-footer-text {
+  font-size: 20px;
+  @include respond-to("average") {
+    font-size: 20px;
+  }
+  @include respond-to("medium") {
+    font-size: 20px;
+  }
+  @include respond-to("large") {
+    font-size: 20px;
+  }
 }
