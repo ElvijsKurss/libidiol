@@ -98,7 +98,13 @@
 
     </div>
     <div class="copyright">
-        <?= __(' © Copyright 2024 Libidiol. All rights reserved.', 'Libidiol.com') ?>
+        <?= __(' 164 Ramkamheang 112 Rd.,
+Sammakorn village, 
+Sapansoong district, 
+Bangkok, Thailand 
+10240
+
+BULLPORT CO., LTD', 'Libidiol.com') ?>
     </div>
 </footer>
 
