@@ -57,7 +57,8 @@ function libidiol_register_scripts()
     wp_enqueue_script('libidiol-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('libidiol-jquery'), '4.4.1', true);
 
     // Enqueue your custom script
-    wp_enqueue_script('libidiol-main', get_template_directory_uri() . '/assets/js/main.js', array('libidiol-jquery'), $version, true);
+    $jsVersion = filemtime('./assets/js/main.js');
+    wp_enqueue_script('libidiol-main', get_template_directory_uri() . '/assets/js/main.js', array('libidiol-jquery'), $jsVersion, true);
 }
 
 add_action('wp_enqueue_scripts', 'libidiol_register_scripts');
@@ -83,10 +84,3 @@ function my_theme_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 
 add_filter('woocommerce_product_subcategories_hide_empty', '__return_false');
-
-if (ICL_LANGUAGE_CODE == 'th') {
-    $translated_url = 'https://libidiol.com/th/%e0%b8%82%e0%b8%ad%e0%b8%a1%e0%b8%a5%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%88%e0%b8%94%e0%b8%aa%e0%b8%87/';
-} else {
-    $page_id = 372;
-    $translated_url = get_permalink(icl_object_id($page_id, 'page', true));
-}

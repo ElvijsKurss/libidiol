@@ -28,6 +28,12 @@ $(document).ready(function () {
       $element.after($showMoreElement);
     }
   });
+
+  setInterval(() => {
+    $(".wc-block-components-loading-mask").removeClass(
+      "wc-block-components-loading-mask"
+    );
+  }, 1000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -15,6 +15,7 @@
 
 .top-logo {
   width: 120px;
+  padding: 2px;
   @include respond-to("average") {
     width: 160px;
   }

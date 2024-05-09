@@ -76,17 +76,23 @@
                 <h3><?= __('Useful Links', 'Libidiol.com') ?></h3>
             </div>
             <div id="column-two-text">
-                <div><a href="http://libidiol.com/privacy-policy/">
-                        <p class="footer-content-text-two"><?= __('Privacy Policy', 'Libidiol.com') ?></p>
-                    </a></div>
-                <hr class="seperator-hr-element">
-                <div><a href="http://libidiol.com/refund-policy/">
-                        <p class="footer-content-text-two"><?= __('Refund', 'Libidiol.com') ?></p>
-                    </a></div>
-                <hr class="seperator-hr-element">
-                <div><a href="http://libidiol.com/terms-and-conditions/">
+                <div>
+                    <a href="<?php echo esc_url(apply_filters('wpml_permalink', 'http://libidiol.com/terms-and-conditions/', ICL_LANGUAGE_CODE)); ?>">
                         <p class="footer-content-text-two"><?= __('Terms & Conditions', 'Libidiol.com') ?></p>
-                    </a></div>
+                    </a>
+                </div>
+                <hr class="seperator-hr-element">
+                <div>
+                    <a href="<?php echo esc_url(apply_filters('wpml_permalink', 'http://libidiol.com/privacy-policy/', ICL_LANGUAGE_CODE)); ?>">
+                        <p class="footer-content-text-two"><?= __('Privacy Policy', 'Libidiol.com') ?></p>
+                    </a>
+                </div>
+                <hr class="seperator-hr-element">
+                <div>
+                    <a href="<?php echo esc_url(apply_filters('wpml_permalink', 'http://libidiol.com/refund-policy/', ICL_LANGUAGE_CODE)); ?>">
+                        <p class="footer-content-text-two"><?= __('Refund Policy', 'Libidiol.com') ?></p>
+                    </a>
+                </div>
             </div>
             <div>
                 <p class="follow-us-mobile"><?= __('Follow Us', 'Libidiol.com') ?></p>

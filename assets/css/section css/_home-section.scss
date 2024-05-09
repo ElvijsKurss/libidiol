@@ -697,3 +697,12 @@
     padding-right: 0;
   }
 }
+
+/*Overwritten default WP code for Benefits Of Using Libiiol block*/
+.wp-container-core-columns-is-layout-22.wp-container-core-columns-is-layout-22 {
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: auto;
+}

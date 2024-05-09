@@ -1411,9 +1411,11 @@ html #wpadminbar {
   display: flex;
   justify-content: center;
   text-align: center;
+  border-bottom: 1px solid transparent;
 }
 .partner-link a:hover {
   transform: scale(1.1);
+  border-bottom: 1px solid #062a4d;
 }
 @media (min-width: 768px) {
   .partner-link {
@@ -2411,6 +2413,15 @@ html #wpadminbar {
   }
 }
 
+/*Overwritten default WP code for Benefits Of Using Libiiol block*/
+.wp-container-core-columns-is-layout-22.wp-container-core-columns-is-layout-22 {
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: auto;
+}
+
 /* Main forms styling*/
 #wpforms-form-638 {
   padding: 10px 10px 10px 10px;
@@ -2554,6 +2565,7 @@ Uncomment flex and comment none to display this*/
 
 .top-logo {
   width: 120px;
+  padding: 2px;
 }
 @media (min-width: 768px) {
   .top-logo {

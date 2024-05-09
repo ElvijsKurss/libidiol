@@ -205,10 +205,6 @@
 }
 
 .partner-link {
-  // background-image: url("/assets/images/black-header-bg.png");
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
   a {
     color: black;
     text-decoration-line: none;
@@ -217,8 +213,10 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    border-bottom: 1px solid transparent;
     &:hover {
       transform: scale(1.1);
+      border-bottom: 1px solid #062a4d;
     }
   }
   display: flex;
