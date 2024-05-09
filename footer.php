@@ -20,10 +20,6 @@
                 <h3><?= __('Useful Links', 'Libidiol.com') ?></h3>
             </div>
             <div id="column-two-text">
-                <!-- <div><a href="http://libidiol.com/about/">
-                        <p class="footer-content-text-two"><?= __('About us', 'Libidiol.com') ?></p>
-                    </a></div>
-                <hr class="seperator-hr-element"> -->
                 <div><a href="http://libidiol.com/delivery-information/">
                         <p class="footer-content-text-two"><?= __('Delivery Information', 'Libidiol.com') ?></p>
                     </a></div>
@@ -71,10 +67,6 @@
                 <h3><?= __('Useful Links', 'Libidiol.com') ?></h3>
             </div>
             <div id="column-two-text">
-                <!-- <div><a href="#about-us-section">
-                        <p class="footer-content-text-two"><?= __('About', 'Libidiol.com') ?></p>
-                    </a></div>
-                <hr class="seperator-hr-element"> -->
                 <div><a href="http://libidiol.com/privacy-policy/">
                         <p class="footer-content-text-two"><?= __('Privacy Policy', 'Libidiol.com') ?></p>
                     </a></div>
@@ -118,3 +110,4 @@ wp_footer();
 </body>
 
 </html>
+

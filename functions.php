@@ -83,3 +83,10 @@ function my_theme_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 
 add_filter('woocommerce_product_subcategories_hide_empty', '__return_false');
+
+if (ICL_LANGUAGE_CODE == 'th') {
+    $translated_url = 'https://libidiol.com/th/%e0%b8%82%e0%b8%ad%e0%b8%a1%e0%b8%a5%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%88%e0%b8%94%e0%b8%aa%e0%b8%87/';
+} else {
+    $page_id = 372;
+    $translated_url = get_permalink(icl_object_id($page_id, 'page', true));
+}

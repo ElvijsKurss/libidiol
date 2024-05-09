@@ -99,8 +99,20 @@
 
 
                 <div class="head-button-container">
-                    <div class="head-button-body"><a href="http://libidiol.com/shop/" class="header-button-link"><?= __('Order now', 'Libidiol.com') ?></a></div>
+                    <div class="head-button-body">
+                        <?php
+                        $shop_page_url = '';
+                        if (function_exists('icl_object_id')) {
+                            $shop_page_id = icl_object_id(get_option('woocommerce_shop_page_id'), 'page', false, ICL_LANGUAGE_CODE);
+                            $shop_page_url = get_permalink($shop_page_id);
+                        } else {
+                            $shop_page_url = home_url('/shop/');
+                        }
+                        ?>
+                        <a href="<?php echo esc_url($shop_page_url); ?>" class="header-button-link"><?= __('Order now', 'Libidiol.com') ?></a>
+                    </div>
                 </div>
+
             </div>
         </nav>
     </header>
