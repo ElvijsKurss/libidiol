@@ -72,13 +72,14 @@
 }
 
 .welcome-heading {
-  font-size: 60px !important;
+  font-size: 55px !important;
   font-family: HelveticaNeueMedium;
   font-weight: 700;
   flex-direction: column;
   margin-bottom: 40px;
   @include respond-to("average") {
     margin-bottom: 20px;
+    font-size: 60px !important;
   }
 }
 

@@ -2,7 +2,7 @@
     <div id="footer-container" class="main-wrapper container">
 
         <div class="column one">
-            <a href="http://libidiol.com/">
+            <a href="<?= icl_get_home_url(); ?>">
                 <img class="bottom-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
             <p class="footer-content-text-no-hover">
@@ -20,21 +20,30 @@
                 <h3><?= __('Useful Links', 'Libidiol.com') ?></h3>
             </div>
             <div id="column-two-text">
-                <div><a href="http://libidiol.com/delivery-information/">
+                <div>
+                    <a href="<?php echo esc_url(apply_filters('wpml_permalink', 'http://libidiol.com/delivery-information/', ICL_LANGUAGE_CODE)); ?>">
                         <p class="footer-content-text-two"><?= __('Delivery Information', 'Libidiol.com') ?></p>
-                    </a></div>
+                    </a>
+                </div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://libidiol.com/terms-and-conditions/">
+                <div>
+                    <a href="<?php echo esc_url(apply_filters('wpml_permalink', 'http://libidiol.com/terms-and-conditions/', ICL_LANGUAGE_CODE)); ?>">
                         <p class="footer-content-text-two"><?= __('Terms & Conditions', 'Libidiol.com') ?></p>
-                    </a></div>
+                    </a>
+                </div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://libidiol.com/privacy-policy/">
+                <div>
+                    <a href="<?php echo esc_url(apply_filters('wpml_permalink', 'http://libidiol.com/privacy-policy/', ICL_LANGUAGE_CODE)); ?>">
                         <p class="footer-content-text-two"><?= __('Privacy Policy', 'Libidiol.com') ?></p>
-                    </a></div>
+                    </a>
+                </div>
                 <hr class="seperator-hr-element">
-                <div><a href="http://libidiol.com/refund-policy/">
+                <div>
+                    <a href="<?php echo esc_url(apply_filters('wpml_permalink', 'http://libidiol.com/refund-policy/', ICL_LANGUAGE_CODE)); ?>">
                         <p class="footer-content-text-two"><?= __('Refund Policy', 'Libidiol.com') ?></p>
-                    </a></div>
+                    </a>
+                </div>
+
             </div>
         </div>
 
@@ -110,4 +119,3 @@ wp_footer();
 </body>
 
 </html>
-

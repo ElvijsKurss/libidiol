@@ -1565,7 +1565,7 @@ html #wpadminbar {
 }
 
 .welcome-heading {
-  font-size: 60px !important;
+  font-size: 55px !important;
   font-family: HelveticaNeueMedium;
   font-weight: 700;
   flex-direction: column;
@@ -1574,6 +1574,7 @@ html #wpadminbar {
 @media (min-width: 768px) {
   .welcome-heading {
     margin-bottom: 20px;
+    font-size: 60px !important;
   }
 }
 

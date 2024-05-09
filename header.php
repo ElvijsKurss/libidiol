@@ -46,7 +46,7 @@
             </div>
 
 
-            <a class="navbar-brand" href="http://libidiol.com">
+            <a href="<?= icl_get_home_url(); ?>">
                 <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
 
