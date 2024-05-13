@@ -45,3 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
     hiddenContent.classList.toggle("show");
   });
 });
+
+/*Cart refresh once item is added*/
+jQuery(document).ready(function ($) {
+  $("body").on("added_to_cart", function () {
+    location.reload();
+  });
+});
