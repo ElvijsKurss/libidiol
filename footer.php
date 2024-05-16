@@ -105,13 +105,7 @@
 
     </div>
     <div class="copyright">
-        <?= __(' 164 Ramkamheang 112 Rd.,
-Sammakorn village, 
-Sapansoong district, 
-Bangkok, Thailand 
-10240
-
-BULLPORT CO., LTD', 'Libidiol.com') ?>
+        <?= __(' 164 Ramkamheang 112 Road, Sammakorn Village, Sapansoong District, Bangkok, Thailand 10240 BULLPORT CO., LTD') ?>
     </div>
 </footer>
 

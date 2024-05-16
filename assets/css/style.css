@@ -2513,6 +2513,21 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
   padding: 10px 15px;
 }
 
+.line-icon {
+  display: flex;
+  height: 55px;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.contact-left-side {
+  display: flex;
+  flex-direction: column !important;
+}
+
 /* Shop Showing all items css
 Uncomment flex and comment none to display this*/
 .woocommerce-result-count {
