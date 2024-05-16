@@ -12,6 +12,7 @@
 
 <body <?php body_class(); ?>>
     <header class="main-header text-center" id="home">
+
         <nav class="navbar navbar-expand-lg navbar-dark main-wrapper container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,9 +39,13 @@
                         </a>
                     </li>
                     <li class="list-inline-item" id="account-icon">
-                        <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
+                        <div class="icon-wrapper">
                             <i class="fa fa-user menu-icon" aria-hidden="true"></i>
-                        </a>
+                            <div class="options">
+                                <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">My Account</a>
+                                <a href="https://lbd.libidiol.com/">Become a Partner</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -90,10 +95,15 @@
                             </div>
                         </li>
                         <li class="list-inline-item" id="account-icon">
-                            <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
+                            <div class="icon-wrapper">
                                 <i class="fa fa-user menu-icon" aria-hidden="true"></i>
-                            </a>
+                                <div class="options">
+                                    <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">My Account</a>
+                                    <a href="https://lbd.libidiol.com/">Become a Partner</a>
+                                </div>
+                            </div>
                         </li>
+
                     </ul>
                 </div>
 

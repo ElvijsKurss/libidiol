@@ -80,8 +80,8 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 
 .line-icon {
   display: flex;
-  height: 55px;
-  width: 55px;
+  height: 70px;
+  width: 70px;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -90,4 +90,21 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 .contact-left-side {
   display: flex;
   flex-direction: column !important;
+}
+
+.line-container {
+  display: flex;
+  padding-top: 20px;
+  .line-info-container {
+    display: flex;
+    flex-direction: column;
+    .contact-line-paragraph {
+      display: flex;
+      justify-content: flex-start;
+      align-items: left;
+    }
+    p {
+      margin: 0;
+    }
+  }
 }

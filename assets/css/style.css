@@ -20,7 +20,7 @@ footer {
 @media (min-width: 768px) {
   #footer-container {
     display: flex;
-    padding: 4em 0em;
+    padding: 1em 0em 4em 0em;
     flex-direction: row;
   }
 }
@@ -350,7 +350,9 @@ footer {
   color: white;
   font-size: 12px;
   padding-bottom: 5px;
-  opacity: 80%;
+  opacity: 60%;
+  border-top: 1px solid #494545;
+  padding-top: 7px;
 }
 
 .footer-content-text-no-hover {
@@ -725,6 +727,12 @@ Header SCSS end
   color: #ffffff !important;
   font-size: 24px !important;
   padding-top: 2px !important;
+  cursor: pointer;
+}
+.fa-user:hover {
+  color: #76b600 !important;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 .fa-user::after {
   content: none;
@@ -808,6 +816,35 @@ Header SCSS end
 .icon-language:hover {
   color: #76b600 !important;
   text-decoration: none;
+}
+
+.icon-wrapper .options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 99;
+}
+.icon-wrapper .options a {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-wrapper:hover .options {
+  display: block;
+  z-index: 99;
+  width: 190px;
+  top: 60px;
+}
+@media (min-width: 768px) {
+  .icon-wrapper:hover .options {
+    width: 150px;
+    top: 30px;
+  }
 }
 
 .mobile-button {
@@ -2515,8 +2552,8 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 
 .line-icon {
   display: flex;
-  height: 55px;
-  width: 55px;
+  height: 70px;
+  width: 70px;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -2526,6 +2563,23 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 .contact-left-side {
   display: flex;
   flex-direction: column !important;
+}
+
+.line-container {
+  display: flex;
+  padding-top: 20px;
+}
+.line-container .line-info-container {
+  display: flex;
+  flex-direction: column;
+}
+.line-container .line-info-container .contact-line-paragraph {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+}
+.line-container .line-info-container p {
+  margin: 0;
 }
 
 /* Shop Showing all items css

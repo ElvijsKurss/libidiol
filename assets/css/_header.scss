@@ -307,6 +307,13 @@ Header SCSS end
   color: #ffffff !important;
   font-size: 24px !important;
   padding-top: 2px !important;
+  cursor: pointer;
+
+  &:hover {
+    color: #76b600 !important;
+    text-decoration: none;
+    @include transition(0.3s ease-in-out);
+  }
 
   &::after {
     content: none;
@@ -388,5 +395,32 @@ Header SCSS end
   &:hover {
     color: #76b600 !important;
     text-decoration: none;
+  }
+}
+
+.icon-wrapper .options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 99;
+  a {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.icon-wrapper:hover .options {
+  display: block;
+  z-index: 99;
+  width: 190px;
+  top: 60px;
+  @include respond-to("average") {
+    width: 150px;
+    top: 30px;
   }
 }

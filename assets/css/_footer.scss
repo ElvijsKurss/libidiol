@@ -19,7 +19,7 @@ footer {
 
   @include respond-to("average") {
     display: flex;
-    padding: 4em 0em;
+    padding: 1em 0em 4em 0em;
     flex-direction: row;
   }
   .column {
@@ -301,7 +301,9 @@ footer {
   color: white;
   font-size: 12px;
   padding-bottom: 5px;
-  opacity: 80%;
+  opacity: 60%;
+  border-top: 1px solid #494545;
+  padding-top: 7px;
 }
 
 .footer-content-text-no-hover {
