@@ -620,34 +620,6 @@ Header SCSS end
   text-decoration: none;
 }
 
-/* Fontello icon scss*/
-.icon-language {
-  position: relative;
-  display: flex;
-  padding-right: 0;
-}
-@media (min-width: 992px) {
-  .icon-language {
-    padding-right: 10px;
-  }
-}
-.icon-language:nth-child(-n+3)::after {
-  display: none;
-  position: relative;
-}
-@media (min-width: 992px) {
-  .icon-language:nth-child(-n+3)::after {
-    content: "";
-    position: absolute;
-    display: flex;
-    height: 100%;
-    width: 1px;
-    background-color: white;
-    right: 0;
-    top: 0;
-  }
-}
-
 .header-spacer {
   height: 15px !important;
 }
@@ -678,7 +650,6 @@ Header SCSS end
   }
 }
 
-/*Flag plugin extra css*/
 /* Mobile cart container*/
 .mobile-cart-container {
   display: flex;
@@ -715,40 +686,6 @@ Header SCSS end
   font-size: 12px;
 }
 
-.fa-user {
-  width: 32px !important;
-  height: 32px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  flex-direction: row !important;
-  position: relative !important;
-  color: #ffffff !important;
-  font-size: 24px !important;
-  padding-top: 2px !important;
-  cursor: pointer;
-}
-.fa-user:hover {
-  color: #76b600 !important;
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
-}
-.fa-user::after {
-  content: none;
-  position: absolute;
-  top: 0;
-  left: 0px;
-  height: 100%;
-  width: 1px;
-  background-color: white;
-}
-@media (min-width: 992px) {
-  .fa-user::after {
-    content: "";
-  }
-}
-
 /*Custom css for header language plugin*/
 .wpml-ls-legacy-dropdown-click {
   width: 15.5em;
@@ -779,45 +716,6 @@ Header SCSS end
     text-decoration: none;
   }
 }
-.icon-language:before {
-  width: 32px !important;
-  height: 32px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  flex-direction: row !important;
-  position: relative !important;
-  color: #ffffff !important;
-  font-size: 28px !important;
-}
-
-.icon-language:hover:before {
-  transition: 0.3s ease-in-out;
-  color: #76b600 !important;
-  text-decoration: none;
-}
-
-.language-link {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-}
-.language-link .fa.fa-chevron-down {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-}
-
-.icon-language {
-  transition: 0.3s ease-in-out;
-}
-.icon-language:hover {
-  color: #76b600 !important;
-  text-decoration: none;
-}
-
 .icon-wrapper .options {
   display: none;
   position: absolute;
@@ -837,14 +735,153 @@ Header SCSS end
 .icon-wrapper:hover .options {
   display: block;
   z-index: 99;
-  width: 190px;
+  width: 150px;
   top: 60px;
 }
 @media (min-width: 768px) {
   .icon-wrapper:hover .options {
-    width: 150px;
+    width: 110px;
     top: 30px;
   }
+}
+
+.account-container {
+  display: flex;
+}
+
+.icon-hover-container {
+  display: flex;
+}
+.icon-hover-container .fa-chevron-down.account,
+.icon-hover-container .fa-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.icon-hover-container .fa-chevron-down.account {
+  font-size: 12px;
+  padding-left: 4px;
+}
+.icon-hover-container .fa-chevron-down.account::after {
+  content: none;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 1px;
+  background-color: white;
+}
+@media (min-width: 992px) {
+  .icon-hover-container .fa-chevron-down.account::after {
+    content: "";
+  }
+}
+.icon-hover-container .fa-user {
+  width: 20px !important;
+  height: 32px !important;
+  text-decoration: none !important;
+  flex-direction: row !important;
+  position: relative !important;
+  color: #ffffff !important;
+  font-size: 24px !important;
+  padding-top: 2px !important;
+}
+.icon-hover-container:hover .fa-chevron-down.account, .icon-hover-container:hover .fa-user {
+  color: #76b600 !important;
+  text-decoration: none !important;
+}
+
+.icon-hover-container {
+  display: flex;
+  transition: 0.3s ease-in-out;
+}
+.icon-hover-container .fa-chevron-down.account,
+.icon-hover-container .fa-chevron-down.language,
+.icon-hover-container .fa-user,
+.icon-hover-container .icon-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.icon-hover-container .fa-chevron-down.account {
+  font-size: 12px;
+  padding-left: 4px;
+}
+.icon-hover-container .fa-chevron-down.account::after {
+  content: none;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 1px;
+  background-color: white;
+}
+@media (min-width: 992px) {
+  .icon-hover-container .fa-chevron-down.account::after {
+    content: "";
+  }
+}
+.icon-hover-container .fa-user,
+.icon-hover-container .icon-language {
+  width: 20px !important;
+  height: 32px !important;
+  text-decoration: none !important;
+  flex-direction: row !important;
+  position: relative !important;
+  color: #ffffff !important;
+  font-size: 24px !important;
+  padding-top: 2px !important;
+}
+.icon-hover-container:hover .fa-chevron-down.account, .icon-hover-container:hover .fa-chevron-down.language, .icon-hover-container:hover .fa-user, .icon-hover-container:hover .icon-language {
+  transition: 0.3s ease-in-out;
+  color: #76b600 !important;
+  text-decoration: none !important;
+}
+
+.fa-chevron-down.language {
+  font-size: 12px;
+  padding-right: 4px;
+}
+
+.icon-shopping-basket::after {
+  content: none;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 1px;
+  background-color: white;
+}
+@media (min-width: 992px) {
+  .icon-shopping-basket::after {
+    content: "";
+  }
+}
+
+.fa-user {
+  font-size: 25px;
+  align-items: center;
+  padding-left: 2px;
+}
+
+.icon-shopping-basket {
+  font-size: 22px;
+  align-items: center;
+}
+
+#account-link,
+#language-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-language {
+  font-size: 23px;
+  align-items: center;
 }
 
 .mobile-button {
@@ -2580,6 +2617,10 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 }
 .line-container .line-info-container p {
   margin: 0;
+}
+
+.space {
+  color: transparent;
 }
 
 /* Shop Showing all items css

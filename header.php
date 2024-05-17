@@ -20,10 +20,10 @@
             <div class="mobile-cart-container">
                 <ul class="social-list">
                     <li class="list-inline-item">
-                        <div class="language-link language-icon-container">
+                        <div class="language-link language-icon-container" id="language-link">
                             <i class="icon-language menu-icon"></i>
                         </div>
-                        <div class="hidden-content-mobile">
+                        <div class="hidden-content-mobile" id="language-content">
                             <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
                         </div>
                     </li>
@@ -38,28 +38,37 @@
                             ?>
                         </a>
                     </li>
-                    <li class="list-inline-item" id="account-icon">
+                    <li class="list-inline-item" id="account-link">
                         <div class="icon-wrapper">
                             <i class="fa fa-user menu-icon" aria-hidden="true"></i>
-                            <div class="options">
-                                <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">My Account</a>
-                                <a href="https://lbd.libidiol.com/">Become a Partner</a>
+                            <div class="options" id="account-content">
+                                <?php
+                                $my_account_page_id = get_option('woocommerce_myaccount_page_id');
+                                $my_account_text = __('My Account', 'https://libidiol.com/');
+                                if (function_exists('icl_translate')) {
+                                    $my_account_text = icl_translate('https://libidiol.com/', 'My Account', $my_account_text);
+                                }
+                                ?>
+                                <a href="<?php echo get_permalink($my_account_page_id); ?>"><?php echo $my_account_text; ?></a>
+
+                                <?php
+                                $become_partner_text = __('Partners', 'https://libidiol.com/');
+                                if (function_exists('icl_translate')) {
+                                    $become_partner_text = icl_translate('https://libidiol.com/', 'Partners', $become_partner_text);
+                                }
+                                ?>
+                                <a href="https://lbd.libidiol.com/" target="_blank"><?php echo $become_partner_text; ?></a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
 
-
             <a href="<?= icl_get_home_url(); ?>">
                 <img class="top-logo" src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="logo" />
             </a>
 
             <div class="mobile-menu collapse navbar-collapse" id="navigation">
-
-
-
-
                 <?php
                 wp_nav_menu(
                     array(
@@ -75,7 +84,7 @@
                 <div id="nav-bar-icons">
                     <ul class="social-list">
                         <li class="list-inline-item">
-                            <div class="language-link"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="icon-language menu-icon"></i></div>
+                            <div class="language-link icon-hover-container"><i class="fa fa-chevron-down language" aria-hidden="true"></i><i class="icon-language menu-icon"></i></div>
                             <div class="hidden-content">
                                 <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
                             </div>
@@ -95,18 +104,34 @@
                             </div>
                         </li>
                         <li class="list-inline-item" id="account-icon">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-user menu-icon" aria-hidden="true"></i>
+                            <div class="icon-wrapper account-container">
+                                <div class="icon-hover-container">
+                                    <i class="fa fa-chevron-down account" aria-hidden="true"></i>
+                                    <i class="fa fa-user menu-icon" aria-hidden="true"></i>
+                                </div>
+
                                 <div class="options">
-                                    <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">My Account</a>
-                                    <a href="https://lbd.libidiol.com/">Become a Partner</a>
+                                    <?php
+                                    $my_account_page_id = get_option('woocommerce_myaccount_page_id');
+                                    $my_account_text = __('My Account', 'https://libidiol.com/');
+                                    if (function_exists('icl_translate')) {
+                                        $my_account_text = icl_translate('https://libidiol.com/', 'My Account', $my_account_text);
+                                    }
+                                    ?>
+                                    <a href="<?php echo get_permalink($my_account_page_id); ?>"><?php echo $my_account_text; ?></a>
+
+                                    <?php
+                                    $become_partner_text = __('Partners', 'https://libidiol.com/');
+                                    if (function_exists('icl_translate')) {
+                                        $become_partner_text = icl_translate('https://libidiol.com/', 'Partners', $become_partner_text);
+                                    }
+                                    ?>
+                                    <a href="https://lbd.libidiol.com/" target="_blank"><?php echo $become_partner_text; ?></a>
                                 </div>
                             </div>
                         </li>
-
                     </ul>
                 </div>
-
 
                 <div class="head-button-container">
                     <div class="head-button-body">
@@ -122,7 +147,6 @@
                         <a href="<?php echo esc_url($shop_page_url); ?>" class="header-button-link"><?= __('Order now', 'Libidiol.com') ?></a>
                     </div>
                 </div>
-
             </div>
         </nav>
     </header>

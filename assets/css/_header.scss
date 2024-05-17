@@ -203,30 +203,6 @@ Header SCSS end
   }
 }
 
-/* Fontello icon scss*/
-.icon-language {
-  position: relative;
-  display: flex;
-  padding-right: 0;
-  @include respond-to("medium") {
-    padding-right: 10px;
-  }
-  &:nth-child(-n + 3)::after {
-    display: none;
-    position: relative;
-    @include respond-to("medium") {
-      content: "";
-      position: absolute;
-      display: flex;
-      height: 100%;
-      width: 1px;
-      background-color: white;
-      right: 0;
-      top: 0;
-    }
-  }
-}
-
 .header-spacer {
   height: 15px !important;
   @include respond-to("average") {
@@ -250,15 +226,6 @@ Header SCSS end
     padding-left: 60px;
   }
 }
-
-/*Flag plugin extra css*/
-// #flags {
-//   width: 100% !important;
-// }
-
-// #flags a:hover {
-//   transform: scale(1.5);
-// }
 
 /* Mobile cart container*/
 .mobile-cart-container {
@@ -295,40 +262,6 @@ Header SCSS end
   }
 }
 
-.fa-user {
-  width: 32px !important;
-  height: 32px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  flex-direction: row !important;
-  position: relative !important;
-  color: #ffffff !important;
-  font-size: 24px !important;
-  padding-top: 2px !important;
-  cursor: pointer;
-
-  &:hover {
-    color: #76b600 !important;
-    text-decoration: none;
-    @include transition(0.3s ease-in-out);
-  }
-
-  &::after {
-    content: none;
-    position: absolute;
-    top: 0;
-    left: 0px;
-    height: 100%;
-    width: 1px;
-    background-color: white;
-    @include respond-to("medium") {
-      content: "";
-    }
-  }
-}
-
 /*Custom css for header language plugin*/
 .wpml-ls-legacy-dropdown-click {
   width: 15.5em;
@@ -359,45 +292,6 @@ Header SCSS end
   }
 }
 
-.icon-language:before {
-  width: 32px !important;
-  height: 32px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  flex-direction: row !important;
-  position: relative !important;
-  color: #ffffff !important;
-  font-size: 28px !important;
-}
-
-.icon-language:hover:before {
-  @include transition(0.3s ease-in-out);
-  color: #76b600 !important;
-  text-decoration: none;
-}
-
-.language-link {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  .fa.fa-chevron-down {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-  }
-}
-
-.icon-language {
-  @include transition(0.3s ease-in-out);
-  &:hover {
-    color: #76b600 !important;
-    text-decoration: none;
-  }
-}
-
 .icon-wrapper .options {
   display: none;
   position: absolute;
@@ -417,10 +311,155 @@ Header SCSS end
 .icon-wrapper:hover .options {
   display: block;
   z-index: 99;
-  width: 190px;
+  width: 150px;
   top: 60px;
   @include respond-to("average") {
-    width: 150px;
+    width: 110px;
     top: 30px;
   }
+}
+
+.account-container {
+  display: flex;
+}
+
+.icon-hover-container {
+  display: flex;
+
+  .fa-chevron-down.account,
+  .fa-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include transition(0.3s ease-in-out);
+  }
+
+  .fa-chevron-down.account {
+    font-size: 12px;
+    padding-left: 4px;
+    &::after {
+      content: none;
+      position: absolute;
+      top: 0;
+      left: 0px;
+      height: 100%;
+      width: 1px;
+      background-color: white;
+      @include respond-to("medium") {
+        content: "";
+      }
+    }
+  }
+
+  .fa-user {
+    width: 20px !important;
+    height: 32px !important;
+    text-decoration: none !important;
+    flex-direction: row !important;
+    position: relative !important;
+    color: #ffffff !important;
+    font-size: 24px !important;
+    padding-top: 2px !important;
+  }
+
+  &:hover .fa-chevron-down.account,
+  &:hover .fa-user {
+    color: #76b600 !important;
+    text-decoration: none !important;
+  }
+}
+
+.icon-hover-container {
+  display: flex;
+  @include transition(0.3s ease-in-out);
+
+  .fa-chevron-down.account,
+  .fa-chevron-down.language,
+  .fa-user,
+  .icon-language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .fa-chevron-down.account {
+    font-size: 12px;
+    padding-left: 4px;
+    &::after {
+      content: none;
+      position: absolute;
+      top: 0;
+      left: 0px;
+      height: 100%;
+      width: 1px;
+      background-color: white;
+      @include respond-to("medium") {
+        content: "";
+      }
+    }
+  }
+
+  .fa-user,
+  .icon-language {
+    width: 20px !important;
+    height: 32px !important;
+    text-decoration: none !important;
+    flex-direction: row !important;
+    position: relative !important;
+    color: #ffffff !important;
+    font-size: 24px !important;
+    padding-top: 2px !important;
+  }
+
+  &:hover .fa-chevron-down.account,
+  &:hover .fa-chevron-down.language,
+  &:hover .fa-user,
+  &:hover .icon-language {
+    @include transition(0.3s ease-in-out);
+    color: #76b600 !important;
+    text-decoration: none !important;
+  }
+}
+
+.fa-chevron-down.language {
+  font-size: 12px;
+  padding-right: 4px;
+}
+
+.icon-shopping-basket {
+  &::after {
+    content: none;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    @include respond-to("medium") {
+      content: "";
+    }
+  }
+}
+
+.fa-user {
+  font-size: 25px;
+  align-items: center;
+  padding-left: 2px;
+}
+.icon-shopping-basket {
+  font-size: 22px;
+  align-items: center;
+}
+
+#account-link,
+#language-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-language {
+  font-size: 23px;
+  align-items: center;
 }
