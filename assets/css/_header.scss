@@ -59,10 +59,10 @@ Header SCSS start
         .hidden-content {
           display: none;
           position: absolute;
-          top: 100%;
-          left: 0;
+          top: 110%;
+          left: -8px;
           z-index: 999;
-          width: 100px;
+          width: 42px;
           background-color: white;
           border: 1px solid rgb(203, 200, 200);
           box-shadow: 0 0.2rem 1.2rem rgba(34, 34, 34, 0.175);
@@ -230,7 +230,7 @@ Header SCSS end
 /* Mobile cart container*/
 .mobile-cart-container {
   display: flex;
-  font-size: 1.3rem;
+  font-size: 20px;
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 15px;
@@ -285,7 +285,7 @@ Header SCSS end
     border: 1px solid #062a4d;
     z-index: 999;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 0;
     box-shadow: 0 0.2rem 1.2rem rgba(34, 34, 34, 0.175);
     text-decoration: none;
@@ -299,23 +299,32 @@ Header SCSS end
   left: 0;
   background: #fff;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 5px;
   z-index: 99;
+
   a {
     margin: auto;
     display: flex;
     justify-content: center;
+    font-size: 15px;
+    @include respond-to("medium") {
+      font-size: 12px;
+    }
   }
 }
 
-.icon-wrapper:hover .options {
+.icon-wrapper:hover .options,
+.icon-wrapper .options.show {
   display: block;
   z-index: 99;
-  width: 150px;
-  top: 60px;
+  width: 100px;
+  top: 68px;
+  left: 70px;
+
   @include respond-to("average") {
-    width: 110px;
+    width: 90px;
     top: 30px;
+    left: 0px;
   }
 }
 
@@ -360,7 +369,6 @@ Header SCSS end
     position: relative !important;
     color: #ffffff !important;
     font-size: 24px !important;
-    padding-top: 2px !important;
   }
 
   &:hover .fa-chevron-down.account,
@@ -447,6 +455,7 @@ Header SCSS end
   font-size: 25px;
   align-items: center;
   padding-left: 2px;
+  padding-top: 6px;
 }
 .icon-shopping-basket {
   font-size: 22px;
@@ -460,6 +469,34 @@ Header SCSS end
   justify-content: center;
 }
 .icon-language {
-  font-size: 23px;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* Icons change color on mobilde/tablet devices so user knows its active */
+.language-link.active,
+.icon-wrapper.active {
+  @include transition(0.3s ease-in-out);
+  color: #76b600 !important;
+}
+
+.language-link {
+  padding-top: 3px;
+  img {
+    height: 17px;
+  }
+}
+
+.wpml-ls-flag {
+  @include transition(0.3s ease-in-out);
+  &:hover {
+    transform: scale(1.1);
+    border: 1px solid #062a4d;
+  }
+}
+
+.mobile-flag {
+  display: flex;
+  margin: auto;
   align-items: center;
 }

@@ -8,11 +8,6 @@ $(document).ready(function () {
   });
 
   const readMoreMaxLen = 200;
-  const readMoreLinks = [
-    "https://libidiol.com/our-mission/",
-    "https://libidiol.com/our-story/",
-    "https://libidiol.com/libidiol-vs-viagra/",
-  ];
   $(".read-more").each((index, element) => {
     const $element = $(element);
     const originalText = $element.text();
@@ -20,15 +15,10 @@ $(document).ready(function () {
     if ($element.text().length > readMoreMaxLen) {
       const truncatedText = originalText.substring(0, readMoreMaxLen) + "...";
       $element.text(truncatedText);
-
-      const $showMoreElement = $(
-        `<div class='about-us-read-more'><a href="${readMoreLinks[index]}">${translation_object.read_more_text}</a></div>`
-      );
-
-      $element.after($showMoreElement);
     }
   });
 
+  /* Removes the filter that doesnt removes automaticalyfor paymenys with Debit Card*/
   setInterval(() => {
     $(".wc-block-components-loading-mask").removeClass(
       "wc-block-components-loading-mask"
@@ -38,11 +28,36 @@ $(document).ready(function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   var languageLink = document.querySelector(".language-link");
-  var hiddenContent = document.querySelector(".hidden-content-mobile");
+  var languageContent = document.querySelector(".hidden-content-mobile");
+
+  var accountLink = document.querySelector(".icon-wrapper");
+  var accountContent = document.querySelector(".options");
 
   languageLink.addEventListener("click", function (event) {
     event.preventDefault();
-    hiddenContent.classList.toggle("show");
+    languageContent.classList.toggle("show");
+    accountContent.classList.remove("show"); // Hide account content
+    languageLink.classList.toggle("active"); // Toggle active class for language link
+    accountLink.classList.remove("active"); // Remove active class from account link
+  });
+
+  accountLink.addEventListener("click", function (event) {
+    event.stopPropagation();
+    accountContent.classList.toggle("show");
+    languageContent.classList.remove("show"); // Hide language content
+    accountLink.classList.toggle("active"); // Toggle active class for account link
+    languageLink.classList.remove("active"); // Remove active class from language link
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!languageLink.contains(event.target)) {
+      languageContent.classList.remove("show");
+      languageLink.classList.remove("active"); // Remove active class if click is outside language link
+    }
+    if (!accountLink.contains(event.target)) {
+      accountContent.classList.remove("show");
+      accountLink.classList.remove("active"); // Remove active class if click is outside account link
+    }
   });
 });
 

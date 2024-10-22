@@ -84,3 +84,10 @@ function my_theme_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 
 add_filter('woocommerce_product_subcategories_hide_empty', '__return_false');
+
+
+function my_theme_setup()
+{
+    load_theme_textdomain('libidiol.com', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'my_theme_setup');

@@ -19,9 +19,21 @@
             </button>
             <div class="mobile-cart-container">
                 <ul class="social-list">
-                    <li class="list-inline-item">
+                    <li class="list-inline-item mobile-flag">
                         <div class="language-link language-icon-container" id="language-link">
-                            <i class="icon-language menu-icon"></i>
+                            <?php
+                            $current_language = apply_filters('wpml_current_language', NULL);
+                            $languages = apply_filters('wpml_active_languages', NULL, 'skip_missing=0');
+                            if (!empty($languages)) {
+                                foreach ($languages as $lang) {
+                                    if ($lang['language_code'] == $current_language) {
+
+                                        echo '<img src="' . esc_url($lang['country_flag_url']) . '" alt="' . esc_attr($lang['native_name']) . '">';
+                                        break;
+                                    }
+                                }
+                            }
+                            ?>
                         </div>
                         <div class="hidden-content-mobile" id="language-content">
                             <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
@@ -41,23 +53,17 @@
                     <li class="list-inline-item" id="account-link">
                         <div class="icon-wrapper">
                             <i class="fa fa-user menu-icon" aria-hidden="true"></i>
-                            <div class="options" id="account-content">
+                            <div class="options show-options">
                                 <?php
                                 $my_account_page_id = get_option('woocommerce_myaccount_page_id');
-                                $my_account_text = __('My Account', 'https://libidiol.com/');
-                                if (function_exists('icl_translate')) {
-                                    $my_account_text = icl_translate('https://libidiol.com/', 'My Account', $my_account_text);
-                                }
+                                $my_account_text = __('My Account', 'Libidiol.com');
                                 ?>
-                                <a href="<?php echo get_permalink($my_account_page_id); ?>"><?php echo $my_account_text; ?></a>
+                                <a href="<?php echo get_permalink($my_account_page_id); ?>"><?php echo esc_html($my_account_text); ?></a>
 
                                 <?php
-                                $become_partner_text = __('Partners', 'https://libidiol.com/');
-                                if (function_exists('icl_translate')) {
-                                    $become_partner_text = icl_translate('https://libidiol.com/', 'Partners', $become_partner_text);
-                                }
+                                $become_partner_text = __('Partners', 'Libidiol.com');
                                 ?>
-                                <a href="https://lbd.libidiol.com/" target="_blank"><?php echo $become_partner_text; ?></a>
+                                <a href="https://lbd.libidiol.com/" target="_blank"><?php echo esc_html($become_partner_text); ?></a>
                             </div>
                         </div>
                     </li>
@@ -84,7 +90,21 @@
                 <div id="nav-bar-icons">
                     <ul class="social-list">
                         <li class="list-inline-item">
-                            <div class="language-link icon-hover-container"><i class="fa fa-chevron-down language" aria-hidden="true"></i><i class="icon-language menu-icon"></i></div>
+                            <div class="language-link icon-hover-container">
+                                <?php
+                                $current_language = apply_filters('wpml_current_language', NULL);
+                                $languages = apply_filters('wpml_active_languages', NULL, 'skip_missing=0');
+                                if (!empty($languages)) {
+                                    foreach ($languages as $lang) {
+                                        if ($lang['language_code'] == $current_language) {
+
+                                            echo '<img src="' . esc_url($lang['country_flag_url']) . '" alt="' . esc_attr($lang['native_name']) . '">';
+                                            break;
+                                        }
+                                    }
+                                }
+                                ?>
+                            </div>
                             <div class="hidden-content">
                                 <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
                             </div>
@@ -110,23 +130,17 @@
                                     <i class="fa fa-user menu-icon" aria-hidden="true"></i>
                                 </div>
 
-                                <div class="options">
+                                <div class="options" id="account-content">
                                     <?php
                                     $my_account_page_id = get_option('woocommerce_myaccount_page_id');
-                                    $my_account_text = __('My Account', 'https://libidiol.com/');
-                                    if (function_exists('icl_translate')) {
-                                        $my_account_text = icl_translate('https://libidiol.com/', 'My Account', $my_account_text);
-                                    }
+                                    $my_account_text = __('My Account', 'Libidiol.com');
                                     ?>
-                                    <a href="<?php echo get_permalink($my_account_page_id); ?>"><?php echo $my_account_text; ?></a>
+                                    <a href="<?php echo get_permalink($my_account_page_id); ?>"><?php echo esc_html($my_account_text); ?></a>
 
                                     <?php
-                                    $become_partner_text = __('Partners', 'https://libidiol.com/');
-                                    if (function_exists('icl_translate')) {
-                                        $become_partner_text = icl_translate('https://libidiol.com/', 'Partners', $become_partner_text);
-                                    }
+                                    $become_partner_text = __('Partners', 'Libidiol.com');
                                     ?>
-                                    <a href="https://lbd.libidiol.com/" target="_blank"><?php echo $become_partner_text; ?></a>
+                                    <a href="https://lbd.libidiol.com/" target="_blank"><?php echo esc_html($become_partner_text); ?></a>
                                 </div>
                             </div>
                         </li>

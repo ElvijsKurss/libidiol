@@ -7,7 +7,7 @@
             </a>
             <p class="footer-content-text-no-hover">
                 <?= __('Unleash Natures Power For Passionate', 'Libidiol.com') ?> <br />
-                <?= __('Living with Libidiol', 'Libidiol.com') ?>
+                <?= __('Living with Varomax', 'Libidiol.com') ?>
             </p>
             <ul class="social-icons">
                 <li class="footer-icons"><a href="https://www.facebook.com/libidiol"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

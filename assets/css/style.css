@@ -482,10 +482,10 @@ Header SCSS start
   #nav-bar-icons .social-list .list-inline-item .hidden-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 110%;
+    left: -8px;
     z-index: 999;
-    width: 100px;
+    width: 42px;
     background-color: white;
     border: 1px solid rgb(203, 200, 200);
     box-shadow: 0 0.2rem 1.2rem rgba(34, 34, 34, 0.175);
@@ -653,7 +653,7 @@ Header SCSS end
 /* Mobile cart container*/
 .mobile-cart-container {
   display: flex;
-  font-size: 1.3rem;
+  font-size: 20px;
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 15px;
@@ -710,7 +710,7 @@ Header SCSS end
     border: 1px solid #062a4d;
     z-index: 999;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 0;
     box-shadow: 0 0.2rem 1.2rem rgba(34, 34, 34, 0.175);
     text-decoration: none;
@@ -723,25 +723,35 @@ Header SCSS end
   left: 0;
   background: #fff;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 5px;
   z-index: 99;
 }
 .icon-wrapper .options a {
   margin: auto;
   display: flex;
   justify-content: center;
+  font-size: 15px;
+}
+@media (min-width: 992px) {
+  .icon-wrapper .options a {
+    font-size: 12px;
+  }
 }
 
-.icon-wrapper:hover .options {
+.icon-wrapper:hover .options,
+.icon-wrapper .options.show {
   display: block;
   z-index: 99;
-  width: 150px;
-  top: 60px;
+  width: 100px;
+  top: 68px;
+  left: 70px;
 }
 @media (min-width: 768px) {
-  .icon-wrapper:hover .options {
-    width: 110px;
+  .icon-wrapper:hover .options,
+  .icon-wrapper .options.show {
+    width: 90px;
     top: 30px;
+    left: 0px;
   }
 }
 
@@ -786,7 +796,6 @@ Header SCSS end
   position: relative !important;
   color: #ffffff !important;
   font-size: 24px !important;
-  padding-top: 2px !important;
 }
 .icon-hover-container:hover .fa-chevron-down.account, .icon-hover-container:hover .fa-user {
   color: #76b600 !important;
@@ -865,6 +874,7 @@ Header SCSS end
   font-size: 25px;
   align-items: center;
   padding-left: 2px;
+  padding-top: 6px;
 }
 
 .icon-shopping-basket {
@@ -880,7 +890,35 @@ Header SCSS end
 }
 
 .icon-language {
-  font-size: 23px;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* Icons change color on mobilde/tablet devices so user knows its active */
+.language-link.active,
+.icon-wrapper.active {
+  transition: 0.3s ease-in-out;
+  color: #76b600 !important;
+}
+
+.language-link {
+  padding-top: 3px;
+}
+.language-link img {
+  height: 17px;
+}
+
+.wpml-ls-flag {
+  transition: 0.3s ease-in-out;
+}
+.wpml-ls-flag:hover {
+  transform: scale(1.1);
+  border: 1px solid #062a4d;
+}
+
+.mobile-flag {
+  display: flex;
+  margin: auto;
   align-items: center;
 }
 
@@ -2839,6 +2877,7 @@ Uncomment flex and comment none to display this*/
 .wc-block-cart__empty-cart__title {
   font-size: 25px !important;
   padding-top: 2em;
+  padding-left: 20px;
 }
 @media (min-width: 768px) {
   .wc-block-cart__empty-cart__title {
@@ -2907,6 +2946,9 @@ Uncomment flex and comment none to display this*/
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .woocommerce div.product form.cart {
